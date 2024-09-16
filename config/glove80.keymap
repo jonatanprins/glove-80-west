@@ -522,12 +522,12 @@
 
         layer_colemakdh {
             bindings = <
-&trans      &trans         &trans  &trans    &trans                                                                                            &trans    &trans        &trans      &trans       &trans
-&at_caret   &one           &two    &three    &four      &five                                                                           &six   &seven    &eight        &nine       &zero        &kp MINUS
-&kp TAB     &kp Q          &kp W   &kp F     &kp P      &kp B                                                                           &kp J  &kp L     &kp U         &kp Y       &kp SEMI     &bslh_hash
-&kp ESCAPE  &kp A          &kp R   &kp S     &kp T      &kp G                                                                           &kp M  &kp N     &kp E         &ad_i       &kp O        &kp SQT
-&trans      &kp Z          &kp X   &kp C     &kp D      &kp V  &lsmartshift  &kp LCTRL    &trans    &kp LGUI  &kp RCTRL   &rsmartshift  &kp K  &kp H     &kp COMMA     &kp DOT     &kp FSLH     &trans
-&magic 9 0  &dollar_tilde  &trans  &kp LEFT  &kp RIGHT         &kp BSPC      &key_repeat  &trans    &trans    &kp RETURN  &kp SPACE            &kp DOWN  &kp UP_ARROW  &excl_perc  &pipe_grave  &magic 9 0
+&trans      &trans         &trans  &trans    &trans                                                                                              &trans    &trans        &trans      &trans       &trans
+&at_caret   &one           &two    &three    &four      &five                                                                             &six   &seven    &eight        &nine       &zero        &kp MINUS
+&kp TAB     &kp Q          &kp W   &kp F     &kp P      &kp B                                                                             &kp J  &kp L     &kp U         &kp Y       &kp SEMI     &bslh_hash
+&kp ESCAPE  &kp A          &kp R   &kp S     &kp T      &kp G                                                                             &kp M  &kp N     &kp E         &ad_i       &kp O        &kp SQT
+&trans      &kp Z          &kp X   &kp C     &kp D      &kp V  &lsmartshift  &kp LCTRL    &trans      &kp LGUI  &kp RCTRL   &rsmartshift  &kp K  &kp H     &kp COMMA     &kp DOT     &kp FSLH     &trans
+&magic 9 0  &dollar_tilde  &trans  &kp LEFT  &kp RIGHT         &kp BSPC      &key_repeat  &kp LALT    &kp RALT  &kp RETURN  &kp SPACE            &kp DOWN  &kp UP_ARROW  &excl_perc  &pipe_grave  &magic 9 0
             >;
         };
 
