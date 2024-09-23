@@ -639,12 +639,12 @@
 
         layer_Nav {
             bindings = <
-&trans  &trans      &trans     &trans     &trans                                                                                   &trans         &trans        &trans      &trans        &trans
-&trans  &trans      &trans     &trans     &trans    &trans                                                          &trans         &trans         &trans        &trans      &trans        &trans
-&trans  &trans      &kp LC(W)  &kp LC(F)  &trans    &trans                                                          &kp PAGE_DOWN  &kp HOME       &kp UP_ARROW  &kp END     &kp RS(SEMI)  &trans
-&trans  &sk LSHFT   &sk LCTRL  &sk LALT   &sk LGUI  &trans                                                          &kp PG_UP      &kp LEFT       &kp DOWN      &kp RIGHT   &kp BSPC      &trans
-&trans  &kp ESCAPE  &kp LS(X)  &kp LC(C)  &trans    &kp LC(V)  &trans  &trans  &trans    &trans  &trans  &trans     &trans         &kp BACKSPACE  &kp TAB       &kp ESCAPE  &kp RETURN    &trans
-&trans  &trans      &trans     &trans     &trans               &trans  &trans  &trans    &trans  &trans  &kp ENTER                 &trans         &trans        &trans      &trans        &trans
+&trans  &trans      &trans     &trans     &trans                                                                                    &trans         &trans        &trans      &trans        &trans
+&trans  &trans      &trans     &trans     &trans    &trans                                                           &trans         &trans         &trans        &trans      &trans        &trans
+&trans  &trans      &kp LC(W)  &kp LC(F)  &trans    &trans                                                           &kp PAGE_DOWN  &kp HOME       &kp UP_ARROW  &kp END     &kp RS(SEMI)  &trans
+&trans  &sk LSHFT   &sk LCTRL  &sk LALT   &sk LGUI  &trans                                                           &kp PG_UP      &kp LEFT       &kp DOWN      &kp RIGHT   &kp BSPC      &trans
+&trans  &kp ESCAPE  &kp LS(X)  &kp LC(C)  &trans    &kp LC(V)  &trans  &trans  &trans    &trans  &trans  &kp RETURN  &trans         &kp BACKSPACE  &kp TAB       &kp ESCAPE  &kp RETURN    &trans
+&trans  &trans      &trans     &trans     &trans               &trans  &trans  &trans    &trans  &trans  &trans                     &trans         &trans        &trans      &trans        &trans
             >;
         };
     };
