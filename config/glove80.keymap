@@ -259,9 +259,16 @@
             layernav {
                 timeout-ms = <75>;
                 key-positions = <69 74>;
-                bindings = <&num_word 10>;
+                bindings = <&number_word 10>;
                 slow-release;
             };
+        };
+
+        number_word: number_word {
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <1>;
+            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+            ignore-numbers;
         };
 
         ad_i: adaptive_i {
