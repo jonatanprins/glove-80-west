@@ -12,7 +12,7 @@
 #define LAYER_num_right 5
 #define LAYER_another_thumb 6
 #define LAYER_another_thumb_2 7
-#define LAYER_Nav 8
+#define LAYER_Nav 10
 #define COMBO_REQUIRE_PRIOR_IDLE 160
 #define COMBO_TIMEOUT 50
 #define QUICK_TAP_MS 180
@@ -259,7 +259,7 @@
             layernav {
                 timeout-ms = <75>;
                 key-positions = <69 74>;
-                bindings = <&number_word 10>;
+                bindings = <&number_word 5>;
                 slow-release;
             };
         };
@@ -567,7 +567,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                                                                           &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                                           &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                         &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &thumb_hp LAYER_num_right ESC  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &thumb_hp LAYER_Nav ESC  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
