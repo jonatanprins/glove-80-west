@@ -562,11 +562,11 @@
 
         layer_alt_thumb_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                                           &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                         &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                                                                     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &thumb_hp LAYER_Nav ESC  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
@@ -639,12 +639,12 @@
 
         layer_Nav {
             bindings = <
-&trans  &trans      &trans     &trans     &trans                                                                                   &trans         &trans        &trans     &trans      &trans
-&trans  &trans      &trans     &trans     &trans          &trans                                                    &trans         &trans         &trans        &trans     &trans      &trans
-&trans  &trans      &kp LC(W)  &kp LC(F)  &trans          &trans                                                    &kp PAGE_DOWN  &kp HOME       &kp UP_ARROW  &kp END    &kp PG_UP   &trans
-&trans  &sk LSHFT   &sk LCTRL  &sk LALT   &sk LGUI        &trans                                                    &trans         &kp LEFT       &kp DOWN      &kp RIGHT  &kp BSPC    &trans
-&trans  &kp ESCAPE  &kp LS(X)  &kp LC(C)  &kp LS(LA(N4))  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp BACKSPACE  &kp TAB       &trans     &kp RETURN  &trans
-&trans  &trans      &trans     &trans     &trans                  &trans  &trans  &trans    &trans  &trans  &trans                 &trans         &trans        &trans     &trans      &trans
+&trans  &trans      &trans     &trans     &trans                                                                             &trans         &trans        &trans      &trans      &trans
+&trans  &trans      &trans     &trans     &trans    &trans                                                    &trans         &trans         &trans        &trans      &trans      &trans
+&trans  &trans      &kp LC(W)  &kp LC(F)  &trans    &trans                                                    &kp PAGE_DOWN  &kp HOME       &kp UP_ARROW  &kp END     &kp PG_UP   &trans
+&trans  &sk LSHFT   &sk LCTRL  &sk LALT   &sk LGUI  &trans                                                    &trans         &kp LEFT       &kp DOWN      &kp RIGHT   &kp BSPC    &trans
+&trans  &kp ESCAPE  &kp LS(X)  &kp LC(C)  &trans    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp BACKSPACE  &kp TAB       &kp ESCAPE  &kp RETURN  &trans
+&trans  &trans      &trans     &trans     &trans            &trans  &trans  &trans    &trans  &trans  &trans                 &trans         &trans        &trans      &trans      &trans
             >;
         };
     };
