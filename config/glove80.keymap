@@ -632,12 +632,12 @@
 
         layer_Nav {
             bindings = <
-&trans  &trans          &trans            &trans             &trans                                                                            &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans            &trans             &trans          &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &kp LG(LC(LEFT))  &kp LC(LG(RIGHT))  &kp LA(ESC)     &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LA(N1)      &kp LA(N2)        &kp LA(N3)         &kp LA(N4)      &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(LA(N1))  &kp LS(LA(N2))    &kp LS(LA(N3))     &kp LS(LA(N4))  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans            &trans             &trans                  &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans     &trans     &trans                                                                                   &trans         &trans        &trans     &trans      &trans
+&trans  &trans      &trans     &trans     &trans          &trans                                                    &trans         &trans         &trans        &trans     &trans      &trans
+&trans  &trans      &kp LC(W)  &kp LC(F)  &trans          &trans                                                    &kp PAGE_DOWN  &kp HOME       &kp UP_ARROW  &kp END    &kp PG_UP   &trans
+&trans  &sk LSHFT   &sk LCTRL  &sk LALT   &sk LGUI        &trans                                                    &trans         &kp LEFT       &kp DOWN      &kp RIGHT  &kp BSPC    &trans
+&trans  &kp ESCAPE  &kp LS(X)  &kp LC(C)  &kp LS(LA(N4))  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp BACKSPACE  &kp TAB       &trans     &kp RETURN  &trans
+&trans  &trans      &trans     &trans     &trans                  &trans  &trans  &trans    &trans  &trans  &trans                 &trans         &trans        &trans     &trans      &trans
             >;
         };
     };
