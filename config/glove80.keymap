@@ -529,12 +529,12 @@
 
         layer_colemakdh {
             bindings = <
-&trans      &trans         &trans  &trans    &trans                                                                                              &trans    &trans        &trans      &trans       &trans
-&at_caret   &one           &two    &three    &four      &five                                                                             &six   &seven    &eight        &nine       &zero        &kp MINUS
-&kp TAB     &kp Q          &kp W   &kp F     &kp P      &kp B                                                                             &kp J  &kp L     &kp U         &kp Y       &kp SEMI     &bslh_hash
-&kp ESCAPE  &kp A          &kp R   &kp S     &kp T      &kp G                                                                             &kp M  &kp N     &kp E         &ad_i       &kp O        &kp SQT
-&trans      &kp Z          &kp X   &kp C     &kp D      &kp V  &lsmartshift  &kp LCTRL    &trans      &kp LGUI  &kp RCTRL   &rsmartshift  &kp K  &kp H     &kp COMMA     &kp DOT     &kp FSLH     &trans
-&magic 9 0  &dollar_tilde  &trans  &kp LEFT  &kp RIGHT         &kp BSPC      &key_repeat  &kp LALT    &kp RALT  &kp RETURN  &kp SPACE            &kp DOWN  &kp UP_ARROW  &excl_perc  &pipe_grave  &magic 9 0
+&trans         &trans         &trans  &trans    &trans                                                                                            &trans    &trans        &trans      &trans            &trans
+&at_caret      &one           &two    &three    &four      &five                                                                           &six   &seven    &eight        &nine       &zero             &none
+&at_caret      &kp Q          &kp W   &kp F     &kp P      &kp B                                                                           &kp J  &kp L     &kp U         &kp Y       &kp SINGLE_QUOTE  &bslh_hash
+&kp LS(MINUS)  &kp A          &kp R   &kp S     &kp T      &kp G                                                                           &kp M  &kp N     &kp E         &ad_i       &kp O             &kp MINUS
+&none          &kp Z          &kp X   &kp C     &kp D      &kp V  &lsmartshift  &kp LCTRL  &trans      &kp LGUI  &kp RCTRL   &rsmartshift  &kp K  &kp H     &kp COMMA     &kp DOT     &kp SEMI          &none
+&magic 9 0     &dollar_tilde  &trans  &kp LEFT  &kp RIGHT         &kp BSPC      &kp SLASH  &kp LALT    &kp RALT  &kp RETURN  &kp SPACE            &kp DOWN  &kp UP_ARROW  &excl_perc  &pipe_grave       &magic 9 0
             >;
         };
 
@@ -562,12 +562,12 @@
 
         layer_alt_thumb_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                                     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &thumb_hp LAYER_Nav ESC  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                                                           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &mo LAYER_Nav  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -639,12 +639,12 @@
 
         layer_Nav {
             bindings = <
-&trans  &trans      &trans     &trans     &trans                                                                             &trans         &trans        &trans      &trans      &trans
-&trans  &trans      &trans     &trans     &trans    &trans                                                    &trans         &trans         &trans        &trans      &trans      &trans
-&trans  &trans      &kp LC(W)  &kp LC(F)  &trans    &trans                                                    &kp PAGE_DOWN  &kp HOME       &kp UP_ARROW  &kp END     &kp PG_UP   &trans
-&trans  &sk LSHFT   &sk LCTRL  &sk LALT   &sk LGUI  &trans                                                    &trans         &kp LEFT       &kp DOWN      &kp RIGHT   &kp BSPC    &trans
-&trans  &kp ESCAPE  &kp LS(X)  &kp LC(C)  &trans    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp BACKSPACE  &kp TAB       &kp ESCAPE  &kp RETURN  &trans
-&trans  &trans      &trans     &trans     &trans            &trans  &trans  &trans    &trans  &trans  &trans                 &trans         &trans        &trans      &trans      &trans
+&trans  &trans      &trans     &trans     &trans                                                                                &trans         &trans        &trans      &trans        &trans
+&trans  &trans      &trans     &trans     &trans    &trans                                                       &trans         &trans         &trans        &trans      &trans        &trans
+&trans  &trans      &kp LC(W)  &kp LC(F)  &trans    &trans                                                       &kp PAGE_DOWN  &kp HOME       &kp UP_ARROW  &kp END     &kp RS(SEMI)  &trans
+&trans  &sk LSHFT   &sk LCTRL  &sk LALT   &sk LGUI  &trans                                                       &kp PG_UP      &kp LEFT       &kp DOWN      &kp RIGHT   &kp BSPC      &trans
+&trans  &kp ESCAPE  &kp LS(X)  &kp LC(C)  &trans    &kp LC(V)  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp BACKSPACE  &kp TAB       &kp ESCAPE  &kp RETURN    &trans
+&trans  &trans      &trans     &trans     &trans               &trans  &trans  &trans    &trans  &trans  &trans                 &trans         &trans        &trans      &trans        &trans
             >;
         };
     };
