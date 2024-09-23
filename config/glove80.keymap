@@ -259,7 +259,7 @@
             layernav {
                 timeout-ms = <75>;
                 key-positions = <69 74>;
-                bindings = <&caps_word>;
+                bindings = <&num_word 10>;
                 slow-release;
             };
         };
