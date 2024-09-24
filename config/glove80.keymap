@@ -262,6 +262,18 @@
                 bindings = <&number_word 5>;
                 slow-release;
             };
+
+            search {
+                bindings = <&kp SLASH>;
+                key-positions = <50 48>;
+                timeout-ms = <75>;
+            };
+
+            command {
+                bindings = <&kp LS(SEMI)>;
+                key-positions = <59 61>;
+                timeout-ms = <75>;
+            };
         };
 
         number_word: number_word {
@@ -585,12 +597,12 @@
 
         layer_num_right {
             bindings = <
-&trans  &trans     &trans        &trans     &trans                                                                             &trans  &trans  &trans  &trans     &trans
-&trans  &trans     &trans        &trans     &trans        &trans                                                    &trans     &trans  &trans  &trans  &trans     &trans
-&trans  &trans     &trans        &trans     &trans        &trans                                                    &trans     &kp N7  &kp N8  &kp N9  &kp UNDER  &trans
-&trans  &sk LSHFT  &sk LEFT_ALT  &kp LCTRL  &sk LEFT_GUI  &trans                                                    &trans     &kp N4  &kp N5  &kp N6  &kp N0     &trans
-&trans  &trans     &trans        &trans     &kp BSPC      &trans  &trans  &trans  &trans    &trans  &trans  &trans  &kp MINUS  &kp N1  &kp N2  &kp N3  &kp ENTER  &trans
-&trans  &trans     &trans        &trans     &trans                &trans  &trans  &trans    &trans  &trans  &trans             &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans                                                                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &kp N4  &kp N5  &kp N6  &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
