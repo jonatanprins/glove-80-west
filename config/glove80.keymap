@@ -36,13 +36,18 @@
                           69 52       57 74                \
                            70 53     56 73                 \
 
-&sk { release-after-ms = <700>; };
+&sk {
+    release-after-ms = <700>;
+    quick-release;
+};
 
 &caps_word {
     /delete-property/ ignore-modifiers;
 
     continue-list = <UNDERSCORE MINUS BACKSPACE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
 };
+
+&sl { release-after-ms = <700>; };
 
 / {
     macros {
