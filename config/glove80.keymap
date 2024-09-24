@@ -532,9 +532,9 @@
             bindings = <
 &trans         &trans         &trans  &trans    &trans                                                                                        &trans    &trans        &trans      &trans            &trans
 &at_caret      &one           &two    &three    &four      &five                                                                       &six   &seven    &eight        &nine       &zero             &none
-&at_caret      &kp Q          &kp W   &kp F     &kp P      &kp B                                                                       &kp J  &kp L     &kp U         &kp Y       &kp SINGLE_QUOTE  &bslh_hash
+&excl_perc     &kp Q          &kp W   &kp F     &kp P      &kp B                                                                       &kp J  &kp L     &kp U         &kp Y       &kp SINGLE_QUOTE  &bslh_hash
 &kp LS(MINUS)  &kp A          &kp R   &kp S     &kp T      &kp G                                                                       &kp M  &kp N     &kp E         &ad_i       &kp O             &kp MINUS
-&none          &kp Z          &kp X   &kp C     &kp D      &kp V  &skq LSHFT  &kp LCTRL  &trans      &kp LGUI  &kp RCTRL   &skq RSHFT  &kp K  &kp H     &kp COMMA     &kp DOT     &kp SEMI          &none
+&dollar_tilde  &kp Z          &kp X   &kp C     &kp D      &kp V  &skq LSHFT  &kp LCTRL  &trans      &kp LGUI  &kp RCTRL   &skq RSHFT  &kp K  &kp H     &kp COMMA     &kp DOT     &kp SEMI          &pipe_grave
 &magic 9 0     &dollar_tilde  &trans  &kp LEFT  &kp RIGHT         &kp BSPC    &kp SLASH  &kp LALT    &kp RALT  &kp RETURN  &kp SPACE          &kp DOWN  &kp UP_ARROW  &excl_perc  &pipe_grave       &magic 9 0
             >;
         };
@@ -640,12 +640,12 @@
 
         layer_Nav {
             bindings = <
-&trans  &trans      &trans        &trans     &trans                                                                                     &trans         &trans        &trans     &trans      &trans
-&trans  &trans      &trans        &trans     &trans     &trans                                                           &trans         &trans         &trans        &trans     &trans      &trans
-&trans  &kp ESCAPE  &kp LC(W)     &kp LC(F)  &trans     &trans                                                           &kp PAGE_DOWN  &kp HOME       &kp UP_ARROW  &kp END    &caps_word  &trans
-&trans  &sk LSHFT   &sk LEFT_ALT  &sk LCTRL  &sk LGUI   &trans                                                           &kp PG_UP      &kp LEFT       &kp DOWN      &kp RIGHT  &kp BSPC    &trans
-&trans  &kp ESCAPE  &kp LC(X)     &kp LC(C)  &kp LC(D)  &kp LC(V)  &trans  &trans  &trans    &trans  &trans  &kp RETURN  &kp RETURN     &kp BACKSPACE  &kp TAB       &kp LC(A)  &kp RETURN  &trans
-&trans  &trans      &trans        &trans     &trans                &trans  &trans  &trans    &trans  &trans  &trans                     &trans         &trans        &trans     &trans      &trans
+&trans  &trans      &trans        &trans     &trans                                                                                 &trans    &trans    &trans        &trans         &trans
+&trans  &trans      &trans        &trans     &trans     &trans                                                       &trans         &trans    &trans    &trans        &trans         &trans
+&trans  &kp ESCAPE  &kp LC(W)     &kp LC(F)  &trans     &trans                                                       &kp PAGE_DOWN  &kp BSPC  &kp UP    &kp LC(BSPC)  &caps_word     &trans
+&trans  &sk LSHFT   &sk LEFT_ALT  &sk LCTRL  &sk LGUI   &trans                                                       &kp PG_UP      &kp LEFT  &kp DOWN  &kp RIGHT     &kp RET        &trans
+&trans  &kp ESCAPE  &kp LC(X)     &kp LC(C)  &kp LC(D)  &kp LC(V)  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp TAB   &kp FSLH  &kp LC(A)     &kp LS(COLON)  &trans
+&trans  &trans      &trans        &trans     &trans                &trans  &trans  &trans    &trans  &trans  &trans                 &trans    &trans    &trans        &trans         &trans
             >;
         };
     };
