@@ -286,6 +286,7 @@
         number_word: number_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
+            bindings = <&kp>;
             continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
             ignore-numbers;
             ignore-modifiers;
