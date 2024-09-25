@@ -281,6 +281,16 @@
                 timeout-ms = <75>;
                 require-prior-idle-ms = <100>;
             };
+
+            escape {
+                bindings = <&kp ESCAPE>;
+                key-positions = <24 25>;
+            };
+
+            return {
+                bindings = <&kp RETURN>;
+                key-positions = <25 26>;
+            };
         };
 
         number_word: number_word {
