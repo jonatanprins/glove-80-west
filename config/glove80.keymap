@@ -270,14 +270,16 @@
 
             search {
                 bindings = <&kp SLASH>;
-                key-positions = <50 48>;
+                key-positions = <48 49>;
                 timeout-ms = <75>;
+                require-prior-idle-ms = <100>;
             };
 
             command {
                 bindings = <&kp LS(SEMI)>;
-                key-positions = <59 61>;
+                key-positions = <61 60>;
                 timeout-ms = <75>;
+                require-prior-idle-ms = <100>;
             };
         };
 
