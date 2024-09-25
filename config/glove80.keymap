@@ -588,7 +588,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                                                                 &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                                 &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans    &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &sl LAYER_Nav  &trans  &trans    &trans  &number_word  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &sl LAYER_Nav  &trans  &trans    &trans  &number_word 5  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
