@@ -270,14 +270,14 @@
 
             search {
                 bindings = <&kp SLASH>;
-                key-positions = <48 49>;
+                key-positions = <48 50>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <100>;
             };
 
             command {
                 bindings = <&kp LS(SEMI)>;
-                key-positions = <61 60>;
+                key-positions = <60 62>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <100>;
             };
@@ -549,12 +549,12 @@
 
         layer_colemakdh {
             bindings = <
-&trans         &trans         &trans  &trans    &trans                                                                                        &trans    &trans        &trans      &trans            &trans
-&at_caret      &one           &two    &three    &four      &five                                                                       &six   &seven    &eight        &nine       &zero             &none
-&excl_perc     &kp Q          &kp W   &kp F     &kp P      &kp B                                                                       &kp J  &kp L     &kp U         &kp Y       &kp SINGLE_QUOTE  &bslh_hash
-&kp LS(MINUS)  &kp A          &kp R   &kp S     &kp T      &kp G                                                                       &kp M  &kp N     &kp E         &ad_i       &kp O             &kp MINUS
-&dollar_tilde  &kp Z          &kp X   &kp C     &kp D      &kp V  &skq LSHFT  &kp LCTRL  &trans      &kp LGUI  &kp RCTRL   &skq RSHFT  &kp K  &kp H     &kp COMMA     &kp DOT     &kp SEMI          &pipe_grave
-&magic 9 0     &dollar_tilde  &trans  &kp LEFT  &kp RIGHT         &kp BSPC    &kp SLASH  &kp LALT    &kp RALT  &kp RETURN  &kp SPACE          &kp DOWN  &kp UP_ARROW  &excl_perc  &pipe_grave       &magic 9 0
+&trans         &trans         &trans  &trans    &trans                                                                                            &trans    &trans        &trans      &trans            &trans
+&at_caret      &one           &two    &three    &four      &five                                                                           &six   &seven    &eight        &nine       &zero             &none
+&excl_perc     &kp Q          &kp W   &kp F     &kp P      &kp B                                                                           &kp J  &kp L     &kp U         &kp Y       &kp SINGLE_QUOTE  &bslh_hash
+&kp LS(MINUS)  &kp A          &kp R   &kp S     &kp T      &kp G                                                                           &kp M  &kp N     &kp E         &ad_i       &kp O             &kp MINUS
+&dollar_tilde  &kp Z          &kp X   &kp C     &kp D      &kp V  &skq LSHFT  &kp LCTRL  &trans      &kp LGUI      &kp RCTRL   &skq RSHFT  &kp K  &kp H     &kp COMMA     &kp DOT     &kp SEMI          &pipe_grave
+&magic 9 0     &dollar_tilde  &trans  &kp LEFT  &kp RIGHT         &kp BSPC    &kp SLASH  &kp LALT    &kp LEFT_ALT  &kp RETURN  &kp SPACE          &kp DOWN  &kp UP_ARROW  &excl_perc  &pipe_grave       &magic 9 0
             >;
         };
 
@@ -582,12 +582,12 @@
 
         layer_alt_thumb_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                                 &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                 &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                 &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                 &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans    &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &sl LAYER_Nav  &trans  &trans    &trans  &number_word 5  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                                                           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &sl LAYER_Nav  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
