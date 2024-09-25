@@ -582,12 +582,12 @@
 
         layer_alt_thumb_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                           &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &sl LAYER_Nav  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                                                                 &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                                 &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                                 &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                                 &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans    &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &sl LAYER_Nav  &trans  &trans    &trans  &number_word  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -604,12 +604,12 @@
 
         layer_num_right {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &kp N4  &kp N5  &kp N6  &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans    &trans                                                                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans    &trans    &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans    &trans    &trans                                                    &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
+&trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans                                                    &trans  &kp N4  &kp N5  &kp N6  &kp N0  &trans
+&trans  &trans     &trans     &trans    &trans    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
+&trans  &trans     &trans     &trans    &trans            &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -659,12 +659,12 @@
 
         layer_Nav {
             bindings = <
-&trans  &trans      &trans        &trans     &trans                                                                                 &trans    &trans    &trans        &trans         &trans
-&trans  &trans      &trans        &trans     &trans     &trans                                                       &trans         &trans    &trans    &trans        &trans         &trans
-&trans  &kp ESCAPE  &kp LC(W)     &kp LC(F)  &trans     &trans                                                       &kp PAGE_DOWN  &kp BSPC  &kp UP    &kp LC(BSPC)  &caps_word     &trans
-&trans  &sk LSHFT   &sk LEFT_ALT  &sk LCTRL  &sk LGUI   &trans                                                       &kp PG_UP      &kp LEFT  &kp DOWN  &kp RIGHT     &kp RET        &trans
-&trans  &kp ESCAPE  &kp LC(X)     &kp LC(C)  &kp LC(D)  &kp LC(V)  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp TAB   &kp FSLH  &kp LC(A)     &kp LS(COLON)  &trans
-&trans  &trans      &trans        &trans     &trans                &trans  &trans  &trans    &trans  &trans  &trans                 &trans    &trans    &trans        &trans         &trans
+&trans  &trans      &trans     &trans     &trans                                                                                 &trans    &trans    &trans        &trans         &trans
+&trans  &trans      &trans     &trans     &trans     &trans                                                       &trans         &trans    &trans    &trans        &trans         &trans
+&trans  &kp ESCAPE  &kp LC(W)  &kp LC(F)  &trans     &trans                                                       &kp PAGE_DOWN  &kp BSPC  &kp UP    &kp LC(BSPC)  &caps_word     &trans
+&trans  &sk LSHFT   &sk LCTRL  &sk LALT   &sk LGUI   &trans                                                       &kp PG_UP      &kp LEFT  &kp DOWN  &kp RIGHT     &kp RET        &trans
+&trans  &kp ESCAPE  &kp LC(X)  &kp LC(C)  &kp LC(D)  &kp LC(V)  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp TAB   &kp FSLH  &kp LC(A)     &kp LS(COLON)  &trans
+&trans  &trans      &trans     &trans     &trans                &trans  &trans  &trans    &trans  &trans  &trans                 &trans    &trans    &trans        &trans         &trans
             >;
         };
     };
