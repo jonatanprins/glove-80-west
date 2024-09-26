@@ -284,12 +284,12 @@
 
             escape {
                 bindings = <&kp ESCAPE>;
-                key-positions = <24 25>;
+                key-positions = <24 26>;
             };
 
             return {
                 bindings = <&kp RETURN>;
-                key-positions = <25 26>;
+                key-positions = <29 31>;
             };
         };
 
@@ -669,12 +669,12 @@
 
         layer_Nav {
             bindings = <
-&trans  &trans      &trans     &trans     &trans                                                                                 &trans    &trans    &trans        &trans         &trans
-&trans  &trans      &trans     &trans     &trans     &trans                                                       &trans         &trans    &trans    &trans        &trans         &trans
-&trans  &kp ESCAPE  &kp LC(W)  &kp LC(F)  &trans     &trans                                                       &kp PAGE_DOWN  &kp BSPC  &kp UP    &kp LC(BSPC)  &caps_word     &trans
-&trans  &sk LSHFT   &sk LCTRL  &sk LALT   &sk LGUI   &trans                                                       &kp PG_UP      &kp LEFT  &kp DOWN  &kp RIGHT     &kp RET        &trans
-&trans  &kp ESCAPE  &kp LC(X)  &kp LC(C)  &kp LC(D)  &kp LC(V)  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp TAB   &kp FSLH  &kp LC(A)     &kp LS(COLON)  &trans
-&trans  &trans      &trans     &trans     &trans                &trans  &trans  &trans    &trans  &trans  &trans                 &trans    &trans    &trans        &trans         &trans
+&trans  &trans      &trans     &trans     &trans                                                                                 &trans    &trans    &trans        &trans      &trans
+&trans  &trans      &trans     &trans     &trans     &trans                                                       &trans         &trans    &trans    &trans        &trans      &trans
+&trans  &kp ESCAPE  &kp LC(W)  &kp LC(F)  &trans     &trans                                                       &kp PAGE_DOWN  &kp BSPC  &kp UP    &kp LC(BSPC)  &caps_word  &trans
+&trans  &sk LSHFT   &sk LCTRL  &sk LALT   &sk LGUI   &trans                                                       &kp PG_UP      &kp LEFT  &kp DOWN  &kp RIGHT     &kp BSPC    &trans
+&trans  &kp ESCAPE  &kp LC(X)  &kp LC(C)  &kp LC(D)  &kp LC(V)  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp BSPC  &kp TAB   &kp LC(A)     &kp RETURN  &trans
+&trans  &trans      &trans     &trans     &trans                &trans  &trans  &trans    &trans  &trans  &trans                 &trans    &trans    &trans        &trans      &trans
             >;
         };
     };
