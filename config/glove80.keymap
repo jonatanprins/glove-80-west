@@ -669,12 +669,12 @@
 
         layer_Nav {
             bindings = <
-&trans  &trans      &trans     &trans     &trans                                                                                 &trans    &trans    &trans        &trans      &trans
-&trans  &trans      &trans     &trans     &trans     &trans                                                       &trans         &trans    &trans    &trans        &trans      &trans
-&trans  &kp ESCAPE  &kp LC(W)  &kp LC(F)  &trans     &trans                                                       &kp PAGE_DOWN  &kp BSPC  &kp UP    &kp LC(BSPC)  &caps_word  &trans
-&trans  &sk LSHFT   &sk LCTRL  &sk LALT   &sk LGUI   &trans                                                       &kp PG_UP      &kp LEFT  &kp DOWN  &kp RIGHT     &kp BSPC    &trans
-&trans  &kp ESCAPE  &kp LC(X)  &kp LC(C)  &kp LC(D)  &kp LC(V)  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp BSPC  &kp TAB   &kp LC(A)     &kp RETURN  &trans
-&trans  &trans      &trans     &trans     &trans                &trans  &trans  &trans    &trans  &trans  &trans                 &trans    &trans    &trans        &trans      &trans
+&trans  &trans      &trans     &trans     &trans                                                                            &trans    &trans        &trans        &trans      &trans
+&trans  &trans      &trans     &trans     &trans     &trans                                                       &trans    &trans    &trans        &trans        &trans      &trans
+&trans  &kp ESCAPE  &kp LC(W)  &kp LC(F)  &trans     &trans                                                       &trans    &kp BSPC  &kp LC(U)     &kp LC(BSPC)  &caps_word  &trans
+&trans  &sk LSHFT   &sk LCTRL  &sk LALT   &sk LGUI   &trans                                                       &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT     &kp BSPC    &trans
+&trans  &kp ESCAPE  &kp LC(X)  &kp LC(C)  &kp LC(D)  &kp LC(V)  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &kp BSPC  &kp TAB       &kp LC(A)     &kp RETURN  &trans
+&trans  &trans      &trans     &trans     &trans                &trans  &trans  &trans    &trans  &trans  &trans            &trans    &trans        &trans        &trans      &trans
             >;
         };
     };
