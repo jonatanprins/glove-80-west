@@ -157,6 +157,20 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
+
+        far: far {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp RBRC>;
+            label = "FAR";
+        };
+
+        tar: tar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RPAR &kp SPACE &kp MINUS &kp GT &kp SPACE &kp LBRC &kp RBRC>;
+            label = "TAR";
+        };
     };
 
     #endif
@@ -270,26 +284,36 @@
 
             search {
                 bindings = <&kp SLASH>;
-                key-positions = <48 50>;
+                key-positions = <48 49>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <100>;
             };
 
             command {
                 bindings = <&kp LS(SEMI)>;
-                key-positions = <59 61>;
+                key-positions = <61 60>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <100>;
             };
 
             escape {
                 bindings = <&kp ESCAPE>;
-                key-positions = <24 26>;
+                key-positions = <24 25>;
             };
 
             return {
                 bindings = <&kp RETURN>;
-                key-positions = <29 31>;
+                key-positions = <31 30>;
+            };
+
+            far {
+                bindings = <&far>;
+                key-positions = <74 60>;
+            };
+
+            tar {
+                bindings = <&tar>;
+                key-positions = <74 60 59>;
             };
         };
 
@@ -323,7 +347,7 @@
         bspc_num: bspc_num {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&thumb LAYER_num_right BSPC>, <&kp BSPC>;
+            bindings = <&thumb 3 BSPC>, <&kp BSPC>;
 
             mods = <(MOD_RCTL|MOD_LCTL)>;
             keep-mods = <(MOD_RCTL|MOD_LCTL)>;
@@ -564,7 +588,7 @@
 &excl_perc     &kp Q          &kp W   &kp F     &kp P      &kp B                                                                           &kp J  &kp L     &kp U         &kp Y       &kp SINGLE_QUOTE  &bslh_hash
 &kp LS(MINUS)  &kp A          &kp R   &kp S     &kp T      &kp G                                                                           &kp M  &kp N     &kp E         &ad_i       &kp O             &kp MINUS
 &dollar_tilde  &kp Z          &kp X   &kp C     &kp D      &kp V  &skq LSHFT  &kp LCTRL  &trans      &kp LGUI      &kp RCTRL   &skq RSHFT  &kp K  &kp H     &kp COMMA     &kp DOT     &kp SEMI          &pipe_grave
-&magic 9 0     &dollar_tilde  &trans  &kp LEFT  &kp RIGHT         &kp BSPC    &kp SLASH  &kp LALT    &kp LEFT_ALT  &kp RETURN  &kp SPACE          &kp DOWN  &kp UP_ARROW  &excl_perc  &pipe_grave       &magic 9 0
+&magic 5 0     &dollar_tilde  &trans  &kp LEFT  &kp RIGHT         &kp BSPC    &kp SLASH  &kp LALT    &kp LEFT_ALT  &kp RETURN  &kp SPACE          &kp DOWN  &kp UP_ARROW  &excl_perc  &pipe_grave       &magic 5 0
             >;
         };
 
@@ -572,43 +596,21 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                                                    &trans  &trans   &trans    &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans   &trans    &trans     &trans
-&trans  &kp B   &kp L   &kp D   &kp C   &kp V                                                     &kp Z   &kp Y   &kp O    &kp U     &kp COMMA  &trans
-&trans  &kp N   &kp R   &kp T   &kp S   &kp G                                                     &kp P   &kp H   &kp A    &kp E     &kp I      &kp FSLH
-&trans  &kp Q   &kp X   &kp M   &kp W   &kp J   &trans  &trans  &trans    &trans  &trans  &trans  &kp K   &kp F   &kp SQT  &kp SEMI  &kp DOT    &trans
+&trans  &kp B   &kp L   &kp D   &kp C   &kp V                                                     &kp J   &kp Y   &kp O    &kp U     &kp COMMA  &trans
+&trans  &kp N   &kp R   &kp T   &kp S   &kp G                                                     &kp P   &kp H   &kp A    &kp E     &kp I      &trans
+&trans  &kp Q   &kp X   &kp M   &kp W   &kp Z   &trans  &trans  &trans    &trans  &trans  &trans  &kp K   &kp F   &kp SQT  &kp SEMI  &kp DOT    &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans   &trans    &trans     &trans
-            >;
-        };
-
-        layer_alt_thumb {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp SPACE  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &mo 8              &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_alt_thumb_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                           &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &sl LAYER_Nav  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_alt_top {
-            bindings = <
-&trans     &trans         &trans  &trans  &trans                                                                    &trans  &trans  &trans      &trans       &trans
-&at_caret  &one           &two    &three  &four   &five                                                     &six    &seven  &eight  &nine       &zero        &kp MINUS
-&trans     &trans         &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans      &trans       &bslh_hash
-&trans     &trans         &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans      &trans       &trans
-&trans     &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans
-&trans     &dollar_tilde  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &excl_perc  &pipe_grave  &trans
+&trans  &trans  &trans  &trans  &trans                                                                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &sl 6   &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -620,28 +622,6 @@
 &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans                                                    &trans  &kp N4  &kp N5  &kp N6  &kp N0  &trans
 &trans  &trans     &trans     &trans    &trans    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
 &trans  &trans     &trans     &trans    &trans            &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_another_thumb {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &lsmartshift  &kp LCTRL  &trans    &trans  &kp RCTRL  &rsmartshift  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans        &trans     &trans    &trans  &trans     &trans                &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_another_thumb_2 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                                       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &sl LAYER_num_right  &kp LCTRL  &trans    &trans  &kp RCTRL  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &lsmartshift         &trans     &trans    &trans  &trans     &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -658,23 +638,23 @@
 
         layer_Magic {
             bindings = <
-&bt BT_CLR   &none            &none            &none            &none                                                                                       &none                 &none                   &none   &none   &bt BT_CLR_ALL
-&none        &none            &none            &none            &none            &none                                                               &none  &none                 &none                   &none   &none   &none
-&none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                     &none  &tog 1                &none                   &none   &none   &none
-&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                     &none  &trans                &none                   &none   &none   &bootloader
-&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &tog LAYER_alt_thumb  &tog LAYER_alt_thumb_2  &trans  &trans  &sys_reset
-&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB    &none  &none  &none         &none                 &none                   &none   &none   &none
+&bt BT_CLR   &none            &none            &none            &none                                                                                       &none   &none   &none   &none   &bt BT_CLR_ALL
+&none        &none            &none            &none            &none            &none                                                               &none  &none   &none   &none   &none   &none
+&none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                     &none  &tog 1  &none   &none   &none   &none
+&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                     &none  &trans  &none   &none   &none   &bootloader
+&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &tog 2  &trans  &trans  &trans  &sys_reset
+&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB    &none  &none  &none         &none   &none   &none   &none   &none
             >;
         };
 
         layer_Nav {
             bindings = <
-&trans  &trans      &trans     &trans     &trans                                                                            &trans    &trans        &trans        &trans      &trans
-&trans  &trans      &trans     &trans     &trans     &trans                                                       &trans    &trans    &trans        &trans        &trans      &trans
-&trans  &kp ESCAPE  &kp LC(W)  &kp LC(F)  &trans     &trans                                                       &trans    &kp BSPC  &kp LC(U)     &kp LC(BSPC)  &caps_word  &trans
-&trans  &sk LSHFT   &sk LCTRL  &sk LALT   &sk LGUI   &trans                                                       &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT     &kp BSPC    &trans
-&trans  &kp ESCAPE  &kp LC(X)  &kp LC(C)  &kp LC(D)  &kp LC(V)  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &kp BSPC  &kp TAB       &kp LC(A)     &kp RETURN  &trans
-&trans  &trans      &trans     &trans     &trans                &trans  &trans  &trans    &trans  &trans  &trans            &trans    &trans        &trans        &trans      &trans
+&trans  &trans      &trans     &trans     &trans                                                                         &trans    &trans    &trans     &trans   &trans
+&trans  &trans      &trans     &trans     &trans    &trans                                                    &trans     &trans    &trans    &trans     &trans   &trans
+&trans  &kp ESCAPE  &kp LC(W)  &kp LC(F)  &trans    &trans                                                    &kp PG_UP  &kp BSPC  &kp UP    &trans     &trans   &trans
+&trans  &sk LSHFT   &sk LCTRL  &sk LALT   &sk LGUI  &trans                                                    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET  &trans
+&trans  &kp ESCAPE  &kp LC(X)  &kp LC(C)  &trans    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans     &trans    &trans    &trans     &kp TAB  &trans
+&trans  &trans      &trans     &trans     &trans            &trans  &trans  &trans    &trans  &trans  &trans             &trans    &trans    &trans     &trans   &trans
             >;
         };
     };
