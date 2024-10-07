@@ -284,7 +284,7 @@
             layernav {
                 timeout-ms = <75>;
                 key-positions = <69 74>;
-                bindings = <&number_word 5>;
+                bindings = <&number_word 3>;
                 slow-release;
             };
 
