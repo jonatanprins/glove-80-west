@@ -347,7 +347,7 @@
         bspc_num: bspc_num {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&thumb 3 BSPC>, <&kp BSPC>;
+            bindings = <&none>, <&kp BSPC>;
 
             mods = <(MOD_RCTL|MOD_LCTL)>;
             keep-mods = <(MOD_RCTL|MOD_LCTL)>;
@@ -518,56 +518,6 @@
 
             mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
             keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
-        thumb: thumb {
-            compatible = "zmk,behavior-hold-tap";
-            label = "thumb";
-            #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-
-            // quick-tap-ms = <QUICK_TAP_MS>; // enable repeat
-
-            flavor = "balanced";
-            bindings = <&mo>, <&kp>;
-        };
-
-        thumb_hp: thumb_hp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "thumb_hp";
-            #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-
-            // quick-tap-ms = <QUICK_TAP_MS>; // enable repeat
-
-            flavor = "hold-preferred";
-            bindings = <&mo>, <&kp>;
-        };
-
-        thkp: thumb_space_kp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "THUMB_WITH_REPEAT";
-            #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-
-            // hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
-            // quick-tap-ms = <QUICK_TAP_MS>; // enable repeat
-
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
-
-        thumb_space: thumb_space {
-            compatible = "zmk,behavior-hold-tap";
-            label = "THUMB_WITH_REPEAT";
-            #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM_MS>;
-
-            // hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
-            // quick-tap-ms = <QUICK_TAP_MS>; // enable repeat
-
-            flavor = "balanced";
-            bindings = <&mo>, <&kp>;
         };
     };
 };
