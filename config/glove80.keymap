@@ -158,19 +158,6 @@
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
 
-        far: far {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp RBRC>;
-            label = "FAR";
-        };
-
-        tar: tar {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS &kp RPAR &kp SPACE &kp MINUS &kp GT &kp SPACE &kp LBRC &kp RBRC>;
-            label = "TAR";
-        };
     };
 
     #endif
@@ -271,7 +258,26 @@
 #define POS_RH_C6R6 79
 
 / {
+
+    macros {
+        far: far {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp RBRC>;
+            label = "FAR";
+        };
+
+        tar: tar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RPAR &kp SPACE &kp MINUS &kp GT &kp SPACE &kp LBRC &kp RBRC>;
+            label = "TAR";
+        };
+    };
+
     behaviors {
+
+
         combos {
             compatible = "zmk,combos";
 
@@ -522,10 +528,6 @@
     };
 };
 
-/ {
-    macros {
-    };
-};
 
 / {
     keymap {
