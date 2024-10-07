@@ -157,7 +157,6 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
-
     };
 
     #endif
@@ -258,7 +257,6 @@
 #define POS_RH_C6R6 79
 
 / {
-
     macros {
         far: far {
             compatible = "zmk,behavior-macro";
@@ -276,8 +274,6 @@
     };
 
     behaviors {
-
-
         combos {
             compatible = "zmk,combos";
 
@@ -528,7 +524,6 @@
     };
 };
 
-
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -536,9 +531,9 @@
         layer_colemakdh {
             bindings = <
 &trans         &trans         &trans  &trans    &trans                                                                                            &trans    &trans        &trans      &trans            &trans
-&at_caret      &one           &two    &three    &four      &five                                                                           &six   &seven    &eight        &nine       &zero             &none
-&excl_perc     &kp Q          &kp W   &kp F     &kp P      &kp B                                                                           &kp J  &kp L     &kp U         &kp Y       &kp SINGLE_QUOTE  &bslh_hash
-&kp LS(MINUS)  &kp A          &kp R   &kp S     &kp T      &kp G                                                                           &kp M  &kp N     &kp E         &ad_i       &kp O             &kp MINUS
+&at_caret      &one           &two    &three    &four      &five                                                                           &six   &seven    &eight        &nine       &zero             &excl_perc
+&kp TAB        &kp Q          &kp W   &kp F     &kp P      &kp B                                                                           &kp J  &kp L     &kp U         &kp Y       &kp SINGLE_QUOTE  &bslh_hash
+&kp ESCAPE     &kp A          &kp R   &kp S     &kp T      &kp G                                                                           &kp M  &kp N     &kp E         &ad_i       &kp O             &kp MINUS
 &dollar_tilde  &kp Z          &kp X   &kp C     &kp D      &kp V  &skq LSHFT  &kp LCTRL  &trans      &kp LGUI      &kp RCTRL   &skq RSHFT  &kp K  &kp H     &kp COMMA     &kp DOT     &kp SEMI          &pipe_grave
 &magic 5 0     &dollar_tilde  &trans  &kp LEFT  &kp RIGHT         &kp BSPC    &kp SLASH  &kp LALT    &kp LEFT_ALT  &kp RETURN  &kp SPACE          &kp DOWN  &kp UP_ARROW  &excl_perc  &pipe_grave       &magic 5 0
             >;
