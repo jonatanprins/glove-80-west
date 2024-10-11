@@ -310,12 +310,12 @@
 
             far {
                 bindings = <&far>;
-                key-positions = <74 60>;
+                key-positions = <>;
             };
 
             tar {
                 bindings = <&tar>;
-                key-positions = <74 60 59>;
+                key-positions = <>;
             };
         };
 
