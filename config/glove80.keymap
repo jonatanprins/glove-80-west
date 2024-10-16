@@ -279,33 +279,33 @@
 
             layernav {
                 timeout-ms = <75>;
-                key-positions = <69 74>;
+                key-positions = <>;
                 bindings = <&number_word 3>;
                 slow-release;
             };
 
             search {
                 bindings = <&kp SLASH>;
-                key-positions = <48 49>;
+                key-positions = <>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <100>;
             };
 
             command {
                 bindings = <&kp LS(SEMI)>;
-                key-positions = <61 60>;
+                key-positions = <>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <100>;
             };
 
             escape {
                 bindings = <&kp ESCAPE>;
-                key-positions = <24 25>;
+                key-positions = <>;
             };
 
             return {
                 bindings = <&kp RETURN>;
-                key-positions = <31 30>;
+                key-positions = <>;
             };
 
             far {
