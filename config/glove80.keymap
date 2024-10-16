@@ -597,7 +597,7 @@
 &trans  &trans            &trans                &trans                 &trans                                                                                        &trans         &trans          &trans           &trans     &trans
 &trans  &trans            &trans                &trans                 &trans              &trans                                                         &trans     &trans         &trans          &trans           &trans     &trans
 &trans  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET   &kp TILDE                                                      &trans     &kp CARET      &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GRAVE  &trans
-&trans  &kp MINUS         &kp STAR              &kp LS(EQUAL)          &kp LS(UNDERSCORE)  &kp DOLLAR                                                     &kp HASH   &kp RIGHT_GUI  &kp LEFT_ALT    &kp RCTRL        &kp RSHFT  &trans
+&trans  &kp MINUS         &kp STAR              &kp LS(EQUAL)          &kp LS(UNDERSCORE)  &kp DOLLAR                                                     &kp HASH   &sk RIGHT_GUI  &sk LEFT_ALT    &sk RCTRL        &sk RSHFT  &trans
 &trans  &kp PLUS          &kp PIPE              &kp AT                 &kp FSLH            &kp PERCENT  &trans  &trans  &trans    &trans  &trans  &trans  &kp GRAVE  &kp BSLH       &kp AMPS        &kp QUESTION     &kp EXCL   &trans
 &trans  &trans            &trans                &trans                 &trans                           &trans  &trans  &trans    &trans  &trans  &trans             &trans         &trans          &trans           &trans     &trans
             >;
