@@ -553,7 +553,7 @@
 &trans  &trans  &trans  &trans  &trans                                                                    &trans  &trans   &trans    &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans   &trans    &trans     &trans
 &trans  &kp B   &kp L   &kp D   &kp C   &kp V                                                     &kp J   &kp Y   &kp O    &kp U     &kp COMMA  &trans
-&trans  &kp N   &kp R   &kp T   &kp S   &kp G                                                     &kp P   &kp H   &kp A    &kp E     &kp I      &trans
+&trans  &kp N   &kp R   &kp T   &kp S   &kp G                                                     &kp P   &kp H   &kp A    &kp E     &ad_i      &trans
 &trans  &kp X   &kp Q   &kp M   &kp W   &kp Z   &trans  &trans  &trans    &trans  &trans  &trans  &kp K   &kp F   &kp SQT  &kp SEMI  &kp DOT    &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans   &trans    &trans     &trans
             >;
@@ -572,12 +572,12 @@
 
         thumb_right {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                                     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans     &trans    &trans  &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &lth 6 ESCAPE  &sk LSHFT  &trans    &trans  &kp SPACE  &lth 5 TAB          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                                                           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &lth 6 ESCAPE  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
