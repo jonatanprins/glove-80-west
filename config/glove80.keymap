@@ -480,7 +480,7 @@
         six: six_equal {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp KP_EQUAL>, <&kp N6>;
+            bindings = <&kp EQUAL>, <&kp N6>;
 
             mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
             keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
