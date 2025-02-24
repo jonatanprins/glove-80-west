@@ -607,7 +607,7 @@
             bindings = <
 &trans  &trans     &trans         &trans     &trans                                                                                       &trans    &trans     &trans      &trans     &trans
 &trans  &trans     &trans         &trans     &trans         &trans                                                         &trans         &trans    &trans     &trans      &trans     &trans
-&trans  &kp GRAVE  &kp LESS_THAN  &kp GT     &kp MINUS      &kp HASH                                                       &kp PIPE       &kp EXCL  &kp EQUAL  &kp DOLLAR  &trans     &trans
+&trans  &kp GRAVE  &kp LESS_THAN  &kp GT     &kp MINUS      &kp HASH                                                       &kp PIPE       &kp EXCL  &kp EQUAL  &kp DOLLAR  &kp DQT    &trans
 &trans  &sk LSHFT  &sk LCTRL      &sk LALT   &sk LGUI       &trans                                                         &kp LEFT       &kp DOWN  &kp UP     &kp RIGHT   &kp RET    &trans
 &trans  &kp TILDE  &kp PLUS       &kp LC(C)  &kp BACKSLASH  &kp PERCENT  &trans  &trans  &trans    &trans  &trans  &trans  &kp AMPERSAND  &kp BSPC  &kp TAB    &kp FSLH    &kp COLON  &trans
 &trans  &trans     &trans         &trans     &trans                      &trans  &trans  &trans    &trans  &trans  &trans                 &trans    &trans     &trans      &trans     &trans
