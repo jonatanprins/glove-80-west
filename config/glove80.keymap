@@ -542,7 +542,7 @@
 &trans         &trans         &trans  &trans    &trans                                                                                            &trans    &trans        &trans      &trans            &trans
 &at_caret      &one           &two    &three    &four      &five                                                                           &six   &seven    &eight        &nine       &zero             &excl_perc
 &kp TAB        &kp Q          &kp W   &kp F     &kp P      &kp B                                                                           &kp J  &kp L     &kp U         &kp Y       &kp SINGLE_QUOTE  &bslh_hash
-&kp ESCAPE     &kp A          &kp R   &kp S     &kp T      &kp G                                                                           &kp M  &kp N     &kp E         &ad_i       &kp O             &kp MINUS
+&kp ESCAPE     &kp A          &kp R   &kp S     &kp T      &kp G                                                                           &kp M  &kp N     &kp E         &kp I       &kp O             &kp MINUS
 &dollar_tilde  &kp Z          &kp X   &kp C     &kp D      &kp V  &skq LSHFT  &kp LCTRL  &kp F24     &kp LGUI      &kp RCTRL   &skq RSHFT  &kp K  &kp H     &kp COMMA     &kp DOT     &kp SEMI          &pipe_grave
 &magic 7 0     &dollar_tilde  &trans  &kp LEFT  &kp RIGHT         &kp BSPC    &kp SLASH  &kp LALT    &kp LEFT_ALT  &kp RETURN  &kp SPACE          &kp DOWN  &kp UP_ARROW  &excl_perc  &pipe_grave       &magic 7 0
             >;
