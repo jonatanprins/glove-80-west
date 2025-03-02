@@ -572,12 +572,12 @@
 
         thumb_right {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                           &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &lth 6 ESCAPE  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &trans  &trans  &trans                                                                    &trans  &trans  &trans  &trans           &trans
+&trans  &trans   &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans           &trans
+&trans  &trans   &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans           &trans
+&trans  &trans   &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans           &trans
+&trans  &lt 5 Z  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &lt 5 SEMICOLON  &trans
+&trans  &trans   &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans           &trans
             >;
         };
 
