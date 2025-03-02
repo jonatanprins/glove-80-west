@@ -594,12 +594,12 @@
 
         layer_sym_old {
             bindings = <
-&trans  &trans            &trans                &trans                 &trans                                                                                        &trans         &trans          &trans           &trans     &trans
-&trans  &trans            &trans                &trans                 &trans              &trans                                                         &trans     &trans         &trans          &trans           &trans     &trans
-&trans  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET   &kp TILDE                                                      &trans     &kp CARET      &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GRAVE  &trans
-&trans  &kp MINUS         &kp STAR              &kp EQUAL              &kp LS(UNDERSCORE)  &kp DOLLAR                                                     &kp HASH   &sk RIGHT_GUI  &sk LEFT_ALT    &sk RCTRL        &sk RSHFT  &trans
-&trans  &kp PLUS          &kp PIPE              &kp AT                 &kp FSLH            &kp PERCENT  &trans  &trans  &trans    &trans  &trans  &trans  &kp GRAVE  &kp BSLH       &kp AMPS        &kp QUESTION     &kp EXCL   &trans
-&trans  &trans            &trans                &trans                 &trans                           &trans  &trans  &trans    &trans  &trans  &trans             &trans         &trans          &trans           &trans     &trans
+&trans  &trans     &trans         &trans            &trans                                                                                         &trans                &trans                 &trans      &trans     &trans
+&trans  &trans     &trans         &trans            &trans             &trans                                                           &trans     &trans                &trans                 &trans      &trans     &trans
+&trans  &kp GRAVE  &kp LESS_THAN  &kp GT            &kp MINUS          &kp PIPE                                                         &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR  &kp GRAVE  &trans
+&trans  &kp EXCL   &kp STAR       &kp SLASH         &kp EQUAL          &kp AMPERSAND                                                    &kp HASH   &sk LEFT_PARENTHESIS  &sk RIGHT_PARENTHESIS  &sk SEMI    &sk DQT    &trans
+&trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans  &trans  &trans    &trans  &trans  &trans  &kp AT     &kp DOUBLE_QUOTES     &kp COMMA              &kp DOT     &kp SQT    &trans
+&trans  &trans     &trans         &trans            &trans                            &trans  &trans  &trans    &trans  &trans  &trans             &trans                &trans                 &trans      &trans     &trans
             >;
         };
 
