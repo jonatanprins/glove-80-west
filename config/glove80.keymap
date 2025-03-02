@@ -553,7 +553,7 @@
 &trans  &trans  &trans  &trans  &trans                                                                    &trans  &trans   &trans    &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans   &trans    &trans     &trans
 &trans  &kp B   &kp L   &kp D   &kp C   &kp V                                                     &kp J   &kp F   &kp O    &kp U     &kp COMMA  &trans
-&trans  &kp N   &kp R   &kp T   &kp S   &kp G                                                     &kp Y   &kp H   &kp A    &kp E     &ad_i      &trans
+&trans  &kp N   &kp R   &kp T   &kp S   &kp G                                                     &kp Y   &kp H   &kp A    &kp E     &kp I      &trans
 &trans  &kp X   &kp Q   &kp M   &kp W   &kp Z   &trans  &trans  &trans    &trans  &trans  &trans  &kp K   &kp P   &kp SQT  &kp SEMI  &kp DOT    &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans   &trans    &trans     &trans
             >;
@@ -594,12 +594,12 @@
 
         layer_sym_old {
             bindings = <
-&trans  &trans     &trans         &trans            &trans                                                                                         &trans                &trans                 &trans      &trans     &trans
-&trans  &trans     &trans         &trans            &trans             &trans                                                           &trans     &trans                &trans                 &trans      &trans     &trans
-&trans  &kp GRAVE  &kp LESS_THAN  &kp GT            &kp MINUS          &kp PIPE                                                         &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR  &kp GRAVE  &trans
-&trans  &kp EXCL   &kp STAR       &kp SLASH         &kp EQUAL          &kp AMPERSAND                                                    &kp HASH   &sk LEFT_PARENTHESIS  &sk RIGHT_PARENTHESIS  &sk SEMI    &sk DQT    &trans
-&trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans  &trans  &trans    &trans  &trans  &trans  &kp AT     &kp DOUBLE_QUOTES     &kp COMMA              &kp DOT     &kp SQT    &trans
-&trans  &trans     &trans         &trans            &trans                            &trans  &trans  &trans    &trans  &trans  &trans             &trans                &trans                 &trans      &trans     &trans
+&trans  &trans     &trans         &trans            &trans                                                                                         &trans                &trans                 &trans      &trans   &trans
+&trans  &trans     &trans         &trans            &trans             &trans                                                           &trans     &trans                &trans                 &trans      &trans   &trans
+&trans  &kp GRAVE  &kp LESS_THAN  &kp GT            &kp MINUS          &kp PIPE                                                         &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR  &trans   &trans
+&trans  &kp EXCL   &kp STAR       &kp SLASH         &kp EQUAL          &kp AMPERSAND                                                    &kp HASH   &sk LEFT_PARENTHESIS  &sk RIGHT_PARENTHESIS  &sk SEMI    &sk DQT  &trans
+&trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans  &trans  &trans    &trans  &trans  &trans  &kp AT     &kp DOUBLE_QUOTES     &kp COMMA              &kp DOT     &kp SQT  &trans
+&trans  &trans     &trans         &trans            &trans                            &trans  &trans  &trans    &trans  &trans  &trans             &trans                &trans                 &trans      &trans   &trans
             >;
         };
 
