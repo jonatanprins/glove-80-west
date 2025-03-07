@@ -610,19 +610,19 @@
 &trans  &trans     &trans         &trans            &trans             &trans                                                           &trans     &trans                &trans                 &trans      &trans   &trans
 &trans  &kp GRAVE  &kp LESS_THAN  &kp GT            &kp MINUS          &kp PIPE                                                         &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR  &trans   &trans
 &trans  &kp EXCL   &kp STAR       &kp SLASH         &kp EQUAL          &kp AMPERSAND                                                    &kp HASH   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI    &kp DQT  &trans
-&trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans  &trans  &trans    &trans  &trans  &trans  &kp AT     &kp COLON             &kp COMMA              &kp DOT     &kp SQT  &trans
+&trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans  &trans  &trans    &trans  &trans  &trans  &kp AT     &kp COLON             &kp BACKSLASH          &kp DOT     &kp SQT  &trans
 &trans  &trans     &trans         &trans            &trans                            &trans  &trans  &trans    &trans  &trans  &trans             &trans                &trans                 &trans      &trans   &trans
             >;
         };
 
         layer_Nav {
             bindings = <
-&trans  &trans     &trans         &trans     &trans                                                                                       &trans    &trans     &trans      &trans     &trans
-&trans  &trans     &trans         &trans     &trans         &trans                                                         &trans         &trans    &trans     &trans      &trans     &trans
-&trans  &kp GRAVE  &kp LESS_THAN  &kp GT     &kp MINUS      &kp HASH                                                       &kp PIPE       &kp EXCL  &kp EQUAL  &kp DOLLAR  &kp DQT    &trans
-&trans  &sk LSHFT  &sk LCTRL      &sk LALT   &sk LGUI       &trans                                                         &kp LEFT       &kp DOWN  &kp UP     &kp RIGHT   &kp RET    &trans
-&trans  &kp TILDE  &kp PLUS       &kp LC(C)  &kp BACKSLASH  &kp PERCENT  &trans  &trans  &trans    &trans  &trans  &trans  &kp AMPERSAND  &kp BSPC  &kp TAB    &kp FSLH    &kp COLON  &trans
-&trans  &trans     &trans         &trans     &trans                      &trans  &trans  &trans    &trans  &trans  &trans                 &trans    &trans     &trans      &trans     &trans
+&trans  &trans        &trans             &trans          &trans                                                                             &trans    &trans        &trans     &trans   &trans
+&trans  &trans        &trans             &trans          &trans    &trans                                                    &trans         &trans    &trans        &trans     &trans   &trans
+&trans  &trans        &kp LC(BACKSPACE)  &kp LC(F)       &trans    &trans                                                    &kp PAGE_DOWN  &kp HOME  &kp UP_ARROW  &kp END    &trans   &trans
+&trans  &sk LEFT_ALT  &sk LCTRL          &sk LEFT_SHIFT  &sk LGUI  &trans                                                    &trans         &kp LEFT  &kp DOWN      &kp RIGHT  &kp RET  &trans
+&trans  &trans        &trans             &kp LC(C)       &trans    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &kp PG_UP      &kp BSPC  &kp TAB       &trans     &trans   &trans
+&trans  &trans        &trans             &trans          &trans            &trans  &trans  &trans    &trans  &trans  &trans                 &trans    &trans        &trans     &trans   &trans
             >;
         };
 
