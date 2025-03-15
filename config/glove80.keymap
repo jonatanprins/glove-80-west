@@ -286,26 +286,26 @@
 
             search {
                 bindings = <&kp SLASH>;
-                key-positions = <>;
+                key-positions = <48 49>;
                 timeout-ms = <75>;
-                require-prior-idle-ms = <100>;
+                require-prior-idle-ms = <125>;
             };
 
             command {
                 bindings = <&kp LS(SEMI)>;
-                key-positions = <>;
+                key-positions = <60 61>;
                 timeout-ms = <75>;
-                require-prior-idle-ms = <100>;
+                require-prior-idle-ms = <125>;
             };
 
             escape {
                 bindings = <&kp ESCAPE>;
-                key-positions = <>;
+                key-positions = <24 25>;
             };
 
             return {
                 bindings = <&kp RETURN>;
-                key-positions = <>;
+                key-positions = <30 31>;
             };
 
             far {
@@ -366,7 +366,7 @@
         leftshift: leftshift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LS(COMMA)>, <&caps_word>;
+            bindings = <&skq LEFT_SHIFT>, <&caps_word>;
 
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
@@ -588,12 +588,12 @@
 
         cdh_experiment {
             bindings = <
-&trans             &trans         &trans        &trans    &trans                                                                                             &trans    &trans        &trans           &trans            &trans
-&at_caret          &one           &two          &three    &four      &five                                                                            &six   &seven    &eight        &nine            &zero             &excl_perc
-&kp TAB            &kp Q          &kp W         &kp F     &kp P      &kp B                                                                            &kp J  &kp L     &kp U         &kp Y            &kp SINGLE_QUOTE  &bslh_hash
-&kp BSPC           &kp A          &left_mt 6 R  &kp S     &kp T      &kp G                                                                            &kp M  &kp N     &kp E         &right_mt 6 I    &kp O             &kp MINUS
-&kp LS(SEMICOLON)  &kp Z          &kp X         &kp C     &kp D      &kp V  &none       &kp LCTRL   &kp F24     &kp LGUI      &kp RCTRL  &none        &kp K  &kp H     &kp COMMA     &right_mt 8 DOT  &kp SEMI          &kp RETURN
-&magic 9 0         &dollar_tilde  &trans        &kp LEFT  &kp RIGHT         &kp ESCAPE  &leftshift  &kp LALT    &kp LEFT_ALT  &kp SPACE  &key_repeat         &kp DOWN  &kp UP_ARROW  &excl_perc       &pipe_grave       &none
+&trans             &trans         &trans        &trans        &trans                                                                                           &trans    &trans         &trans           &trans            &trans
+&at_caret          &one           &two          &three        &four      &five                                                                          &six   &seven    &eight         &nine            &zero             &excl_perc
+&kp TAB            &kp Q          &kp W         &kp F         &kp P      &kp B                                                                          &kp J  &kp L     &kp U          &kp Y            &kp SINGLE_QUOTE  &bslh_hash
+&kp BSPC           &kp A          &left_mt 6 R  &left_mt 6 S  &kp T      &kp G                                                                          &kp M  &kp N     &right_mt 6 E  &right_mt 6 I    &kp O             &kp MINUS
+&kp LS(SEMICOLON)  &kp Z          &kp X         &kp C         &kp D      &kp V  &none      &kp LCTRL   &kp F24     &kp LGUI      &kp RCTRL  &none       &kp K  &kp H     &kp COMMA      &right_mt 8 DOT  &kp SEMI          &kp RETURN
+&magic 9 0         &dollar_tilde  &trans        &kp LEFT      &kp RIGHT         &kp UNDER  &leftshift  &kp LALT    &kp LEFT_ALT  &kp SPACE  &kp ESCAPE         &kp DOWN  &kp UP_ARROW   &excl_perc       &pipe_grave       &none
             >;
         };
 
