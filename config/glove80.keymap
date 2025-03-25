@@ -286,26 +286,26 @@
 
             search {
                 bindings = <&kp SLASH>;
-                key-positions = <48 49>;
+                key-positions = <>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <125>;
             };
 
             command {
                 bindings = <&kp LS(SEMI)>;
-                key-positions = <60 61>;
+                key-positions = <>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <125>;
             };
 
             escape {
                 bindings = <&kp ESCAPE>;
-                key-positions = <24 25>;
+                key-positions = <>;
             };
 
             return {
                 bindings = <&kp RETURN>;
-                key-positions = <30 31>;
+                key-positions = <>;
             };
 
             far {
