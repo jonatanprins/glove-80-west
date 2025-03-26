@@ -615,22 +615,22 @@
 &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &lth 9 BSPC  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &lth 8 BSPC  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        layer_10 {
+        z-win {
             bindings = <
 &trans  &trans  &trans        &trans  &trans                                                                    &trans  &trans  &trans         &trans            &trans
 &trans  &trans  &trans        &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans         &trans            &trans
 &trans  &trans  &trans        &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans         &trans            &trans
 &trans  &trans  &left_mt 9 R  &trans  &trans  &trans                                                    &trans  &trans  &trans  &right_mt 9 I  &trans            &trans
-&trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans         &right_mt 8 SEMI  &trans
+&trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans         &right_mt 7 SEMI  &trans
 &trans  &trans  &trans        &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans         &trans            &trans
             >;
         };
 
-        thumb_right {
+        z-symbol {
             bindings = <
 &trans  &trans        &trans  &trans  &trans                                                                    &trans  &trans  &trans  &trans                 &trans
 &trans  &trans        &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans                 &trans
