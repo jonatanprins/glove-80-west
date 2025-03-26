@@ -592,7 +592,7 @@
 &at_caret          &one           &two          &three        &four      &five                                                                          &six   &seven    &eight         &nine            &zero             &excl_perc
 &kp TAB            &kp Q          &kp W         &kp F         &kp P      &kp B                                                                          &kp J  &kp L     &kp U          &kp Y            &kp SINGLE_QUOTE  &bslh_hash
 &kp BSPC           &kp A          &left_mt 9 R  &left_mt 9 S  &kp T      &kp G                                                                          &kp M  &kp N     &right_mt 9 E  &right_mt 9 I    &kp O             &kp MINUS
-&kp LS(SEMICOLON)  &kp Z          &kp X         &kp C         &kp D      &kp V  &none      &kp LCTRL   &kp F24     &kp LGUI      &kp RCTRL  &none       &kp K  &kp H     &kp COMMA      &right_mt 3 DOT  &kp SEMI          &kp RETURN
+&kp LS(SEMICOLON)  &kp Z          &kp X         &kp C         &kp D      &kp V  &none      &kp LCTRL   &kp F24     &kp LGUI      &kp RCTRL  &none       &kp K  &kp H     &kp COMMA      &right_mt 8 DOT  &kp SEMI          &kp RETURN
 &magic 10 0        &dollar_tilde  &trans        &kp LEFT      &kp RIGHT         &kp UNDER  &leftshift  &kp LALT    &kp LEFT_ALT  &kp SPACE  &kp ESCAPE         &kp DOWN  &kp UP_ARROW   &excl_perc       &pipe_grave       &none
             >;
         };
@@ -608,17 +608,6 @@
             >;
         };
 
-        win_layer {
-            bindings = <
-&trans  &trans            &trans              &trans            &trans                                                                              &trans  &trans           &trans  &trans  &trans
-&trans  &trans            &trans              &trans            &trans            &trans                                                    &trans  &trans  &trans           &trans  &trans  &trans
-&trans  &trans            &kp LA(LEFT)        &kp LA(RIGHT)     &trans            &trans                                                    &trans  &trans  &trans           &trans  &trans  &trans
-&trans  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)    &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &trans                                                    &trans  &trans  &kp RIGHT_SHIFT  &trans  &trans  &trans
-&trans  &trans            &kp LA(LS(ESCAPE))  &kp LA(ESCAPE)    &trans            &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans
-&trans  &trans            &trans              &trans            &trans                    &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans           &trans  &trans  &trans
-            >;
-        };
-
         layer_alt_thumb_2 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                                                         &trans  &trans  &trans  &trans  &trans
@@ -626,7 +615,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &lth 8 BSPC  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &lth 9 BSPC  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -636,7 +625,7 @@
 &trans  &trans  &trans        &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans         &trans            &trans
 &trans  &trans  &trans        &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans         &trans            &trans
 &trans  &trans  &left_mt 9 R  &trans  &trans  &trans                                                    &trans  &trans  &trans  &right_mt 9 I  &trans            &trans
-&trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans         &right_mt 3 SEMI  &trans
+&trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans         &right_mt 8 SEMI  &trans
 &trans  &trans  &trans        &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans         &trans            &trans
             >;
         };
@@ -660,6 +649,17 @@
 &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans                                                    &trans  &kp N4  &kp N5  &kp N6  &kp N0  &trans
 &trans  &trans     &trans     &trans    &trans    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
 &trans  &trans     &trans     &trans    &trans            &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        win_layer {
+            bindings = <
+&trans  &trans            &trans              &trans            &trans                                                                              &trans  &trans           &trans  &trans  &trans
+&trans  &trans            &trans              &trans            &trans            &trans                                                    &trans  &trans  &trans           &trans  &trans  &trans
+&trans  &trans            &kp LA(LEFT)        &kp LA(RIGHT)     &trans            &trans                                                    &trans  &trans  &trans           &trans  &trans  &trans
+&trans  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)    &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &trans                                                    &trans  &trans  &kp RIGHT_SHIFT  &trans  &trans  &trans
+&trans  &trans            &kp LA(LS(ESCAPE))  &kp LA(ESCAPE)    &trans            &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans
+&trans  &trans            &trans              &trans            &trans                    &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans           &trans  &trans  &trans
             >;
         };
 
@@ -691,7 +691,7 @@
 &none        &none            &none            &none            &none            &none                                                               &none  &none   &none   &none   &none   &none
 &none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                     &none  &tog 2  &none   &none   &none   &none
 &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                     &none  &trans  &none   &none   &none   &bootloader
-&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &tog 4  &tog 6  &tog 5  &tog 1  &sys_reset
+&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &tog 3  &tog 5  &tog 4  &tog 1  &sys_reset
 &none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB    &none  &none  &none         &none   &none   &none   &none   &none
             >;
         };
