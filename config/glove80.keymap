@@ -577,7 +577,7 @@
 
         layer_colemakdh {
             bindings = <
-&trans       &trans         &trans  &trans    &trans                                                                                              &trans    &trans        &trans      &trans            &trans
+&trans       &kp F1         &kp F2  &trans    &trans                                                                                              &trans    &trans        &trans      &trans            &trans
 &at_caret    &one           &two    &three    &four      &five                                                                             &six   &seven    &eight        &nine       &zero             &excl_perc
 &kp TAB      &kp Q          &kp W   &kp F     &kp P      &kp B                                                                             &kp J  &kp L     &kp U         &kp Y       &kp SINGLE_QUOTE  &bslh_hash
 &kp ESCAPE   &kp A          &kp R   &kp S     &kp T      &kp G                                                                             &kp M  &kp N     &kp E         &kp I       &kp O             &kp MINUS
