@@ -586,14 +586,14 @@
             >;
         };
 
-        cdh_experiment {
+        sturdy {
             bindings = <
-&trans             &trans         &trans         &trans         &trans                                                                                           &trans    &trans          &trans           &trans            &trans
-&at_caret          &one           &two           &three         &four      &five                                                                          &six   &seven    &eight          &nine            &zero             &excl_perc
-&kp TAB            &kp Q          &kp W          &kp F          &kp P      &kp B                                                                          &kp J  &kp L     &kp U           &kp Y            &kp SINGLE_QUOTE  &bslh_hash
-&kp BSPC           &kp A          &left_mt 10 R  &left_mt 10 S  &kp T      &kp G                                                                          &kp M  &kp N     &right_mt 10 E  &right_mt 10 I   &kp O             &kp MINUS
-&kp LS(SEMICOLON)  &kp Z          &kp X          &kp C          &kp D      &kp V  &none      &kp LCTRL   &kp F24     &kp LGUI      &kp RCTRL  &none       &kp K  &kp H     &kp COMMA       &right_mt 9 DOT  &kp SEMI          &kp RETURN
-&magic 11 0        &dollar_tilde  &trans         &kp LEFT       &kp RIGHT         &kp UNDER  &leftshift  &kp LALT    &kp LEFT_ALT  &kp SPACE  &kp ESCAPE         &kp DOWN  &kp UP_ARROW    &excl_perc       &pipe_grave       &none
+&trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans   &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans   &trans  &trans   &trans    &trans     &trans
+&trans  &kp V   &kp M   &kp L   &kp C   &kp P                                                     &kp X    &kp F   &kp O    &kp U     &kp J      &trans
+&trans  &kp S   &kp T   &kp R   &kp D   &kp Y                                                     &kp DOT  &kp N   &kp A    &kp E     &kp I      &trans
+&trans  &kp Z   &kp K   &kp Q   &kp G   &kp W   &trans  &trans  &trans    &trans  &trans  &trans  &kp B    &kp H   &kp SQT  &kp SEMI  &kp COMMA  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans           &trans  &trans   &trans    &trans     &trans
             >;
         };
 
