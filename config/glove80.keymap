@@ -582,7 +582,7 @@
 &kp TAB      &kp Q          &kp W   &kp F     &kp P      &kp B                                                                              &kp J   &kp L     &kp U         &kp Y       &kp SINGLE_QUOTE  &bslh_hash
 &kp ESCAPE   &kp A          &kp R   &kp S     &kp T      &kp G                                                                              &kp M   &kp N     &kp E         &kp I       &kp O             &kp MINUS
 &sk LSHIFT   &kp Z          &kp X   &kp C     &kp D      &kp V   &skq LSHFT  &kp LCTRL  &kp DELETE    &kp LGUI      &kp RCTRL   &skq RSHFT  &kp K   &kp H     &kp COMMA     &kp DOT     &kp SEMI          &sk RSHIFT
-&magic 11 0  &dollar_tilde  &trans  &kp LEFT  &kp RIGHT          &kp BSPC    &kp SLASH  &kp LALT      &kp LEFT_ALT  &kp RETURN  &kp SPACE           &kp DOWN  &kp UP_ARROW  &excl_perc  &pipe_grave       &none
+&magic 12 0  &dollar_tilde  &trans  &kp LEFT  &kp RIGHT          &kp BSPC    &kp SLASH  &kp LALT      &kp LEFT_ALT  &kp RETURN  &kp SPACE           &kp DOWN  &kp UP_ARROW  &excl_perc  &pipe_grave       &none
             >;
         };
 
@@ -597,7 +597,18 @@
             >;
         };
 
-        layer_gallium {
+        focal {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans   &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans   &trans  &trans   &trans    &trans     &trans
+&trans  &kp V   &kp L   &kp H   &kp G   &kp K                                                     &kp Q    &kp F   &kp O    &kp U     &kp J      &trans
+&trans  &kp S   &kp R   &kp N   &kp T   &kp B                                                     &kp Y    &kp C   &kp A    &kp E     &kp I      &trans
+&trans  &kp Z   &kp X   &kp M   &kp D   &kp P   &trans  &trans  &trans    &trans  &trans  &trans  &kp SQT  &kp W   &kp DOT  &kp SEMI  &kp COMMA  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans           &trans  &trans   &trans    &trans     &trans
+            >;
+        };
+
+        gallium {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                                                    &trans  &trans     &trans   &trans            &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans     &trans   &trans            &trans
@@ -610,12 +621,12 @@
 
         layer_alt_thumb_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                         &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &lth 9 BSPC  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                                                          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &lth 10 BSPC  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -624,8 +635,8 @@
 &trans  &trans  &trans         &trans  &trans                                                                    &trans  &trans  &trans          &trans            &trans
 &trans  &trans  &trans         &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans          &trans            &trans
 &trans  &trans  &trans         &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans          &trans            &trans
-&trans  &trans  &left_mt 10 R  &trans  &trans  &trans                                                    &trans  &trans  &trans  &right_mt 10 I  &trans            &trans
-&trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans          &right_mt 8 SEMI  &trans
+&trans  &trans  &left_mt 11 R  &trans  &trans  &trans                                                    &trans  &trans  &trans  &right_mt 11 I  &trans            &trans
+&trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans          &right_mt 9 SEMI  &trans
 &trans  &trans  &trans         &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans          &trans            &trans
             >;
         };
@@ -636,7 +647,7 @@
 &trans  &trans         &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans                  &trans
 &trans  &trans         &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans                  &trans
 &trans  &trans         &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans                  &trans
-&trans  &left_mt 10 Z  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &right_mt 10 SEMICOLON  &trans
+&trans  &left_mt 11 Z  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &right_mt 11 SEMICOLON  &trans
 &trans  &trans         &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans                  &trans
             >;
         };
@@ -700,9 +711,9 @@
             bindings = <
 &bt BT_CLR   &none            &none            &none            &none                                                                                       &none   &none   &none   &none   &bt BT_CLR_ALL
 &none        &none            &none            &none            &none            &none                                                               &none  &none   &none   &none   &none   &none
-&none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                     &none  &tog 2  &none   &none   &none   &none
-&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                     &none  &tog 6  &none   &none   &none   &none
-&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &tog 3  &tog 5  &tog 4  &tog 1  &sys_reset
+&none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                     &none  &tog 3  &tog 2  &tog 1  &none   &none
+&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                     &none  &tog 7  &none   &none   &none   &none
+&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &tog 4  &tog 6  &tog 5  &trans  &sys_reset
 &none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB    &none  &none  &none         &none   &none   &none   &none   &none
             >;
         };
