@@ -643,12 +643,12 @@
 
         z-symbol {
             bindings = <
-&trans  &trans         &trans  &trans  &trans                                                                    &trans  &trans  &trans  &trans                  &trans
-&trans  &trans         &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans                  &trans
-&trans  &trans         &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans                  &trans
-&trans  &trans         &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans                  &trans
-&trans  &left_mt 11 Z  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &right_mt 11 SEMICOLON  &trans
-&trans  &trans         &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans                  &trans
+&trans  &trans  &trans         &trans  &trans                                                                    &trans  &trans  &trans          &trans  &trans
+&trans  &trans  &trans         &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans          &trans  &trans
+&trans  &trans  &trans         &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans          &trans  &trans
+&trans  &trans  &left_mt 11 R  &trans  &trans  &trans                                                    &trans  &trans  &trans  &right_mt 11 I  &trans  &trans
+&trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans
+&trans  &trans  &trans         &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans          &trans  &trans
             >;
         };
 
