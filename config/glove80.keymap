@@ -293,7 +293,7 @@
 
             command {
                 bindings = <&kp LS(SEMI)>;
-                key-positions = <>;
+                key-positions = <60 61>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <125>;
             };
