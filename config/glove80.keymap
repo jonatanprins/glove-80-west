@@ -317,6 +317,13 @@
                 bindings = <&tar>;
                 key-positions = <>;
             };
+
+            quote {
+                bindings = <&kp SINGLE_QUOTE>;
+                key-positions = <60 59>;
+                timeout-ms = <75>;
+                require-prior-idle-ms = <125>;
+            };
         };
 
         number_word: number_word {
@@ -547,6 +554,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_MT";
             bindings = <&mo>, <&kp>;
+
             #binding-cells = <2>;
             hold-trigger-key-positions = <28 40 58 29 41 59 60 42 30 32 31 43 61 62 44 33 45 63>;
             tapping-term-ms = <300>;
@@ -556,11 +564,11 @@
             hold-trigger-on-release;
         };
 
-
         left_hmr: left_hmr {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HMR";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             hold-trigger-key-positions = <28 40 58 29 41 59 60 42 30 32 31 43 61 62 44 33 45 63>;
             tapping-term-ms = <300>;
@@ -574,6 +582,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_MT";
             bindings = <&mo>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             quick-tap-ms = <200>;
@@ -582,12 +591,12 @@
             hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46>;
             hold-trigger-on-release;
         };
-
 
         right_hmr: right_hmr {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HMR";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             quick-tap-ms = <200>;
@@ -596,7 +605,6 @@
             hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46>;
             hold-trigger-on-release;
         };
-
     };
 };
 
@@ -672,12 +680,12 @@
 
         z-symbol {
             bindings = <
-&trans  &trans  &trans         &trans  &trans                                                                           &trans  &trans  &trans          &trans  &trans
-&trans  &trans  &trans         &trans  &trans         &trans                                                    &trans  &trans  &trans  &trans          &trans  &trans
-&trans  &trans  &trans         &trans  &trans         &trans                                                    &trans  &trans  &trans  &trans          &trans  &trans
-&trans  &trans  &left_mt 11 R  &trans  &left_mt 10 T  &trans                                                    &trans  &trans  &trans  &right_mt 11 I  &trans  &trans
-&trans  &trans  &trans         &trans  &trans         &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans
-&trans  &trans  &trans         &trans  &trans                 &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans          &trans  &trans
+&trans  &trans  &trans         &trans                  &trans                                                                               &trans              &trans                    &trans          &trans  &trans
+&trans  &trans  &trans         &trans                  &trans             &trans                                                    &trans  &trans              &trans                    &trans          &trans  &trans
+&trans  &trans  &trans         &trans                  &trans             &trans                                                    &trans  &trans              &trans                    &trans          &trans  &trans
+&trans  &trans  &left_mt 11 R  &left_hmr LEFT_SHIFT S  &left_mt 10 T      &trans                                                    &trans  &trans              &right_hmr RIGHT_SHIFT E  &right_mt 11 I  &trans  &trans
+&trans  &trans  &trans         &trans                  &left_hmr RCTRL D  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &right_hmr RCTRL H  &trans                    &trans          &trans  &trans
+&trans  &trans  &trans         &trans                  &trans                     &trans  &trans  &trans    &trans  &trans  &trans          &trans              &trans                    &trans          &trans  &trans
             >;
         };
 
