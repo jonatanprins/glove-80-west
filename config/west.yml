@@ -2,21 +2,11 @@ manifest:
   remotes:
     - name: moergo-sc
       url-base: https://github.com/moergo-sc
-    - name: ssbb
-      url-base: https://github.com/ssbb
-    - name: urob
-      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: moergo-sc
       revision: main
       import: app/west.yml
-    - name: zmk-antecedent-morph
-      remote: ssbb
-      revision: main
-    - name: zmk-auto-layer
-      remote: urob
-      revision: main
   self:
     path: config
 
