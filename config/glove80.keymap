@@ -285,16 +285,6 @@
                 key-positions = <>;
             };
 
-            far {
-                bindings = <&far>;
-                key-positions = <>;
-            };
-
-            tar {
-                bindings = <&tar>;
-                key-positions = <>;
-            };
-
             quote {
                 bindings = <&kp SINGLE_QUOTE>;
                 key-positions = <60 59>;
