@@ -261,13 +261,6 @@
         combos {
             compatible = "zmk,combos";
 
-            layernav {
-                timeout-ms = <75>;
-                key-positions = <>;
-                bindings = <&number_word 3>;
-                slow-release;
-            };
-
             search {
                 bindings = <&kp SLASH>;
                 key-positions = <>;
