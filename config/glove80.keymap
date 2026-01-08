@@ -257,22 +257,6 @@
 #define POS_RH_C6R6 79
 
 / {
-    macros {
-        far: far {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp RBRC>;
-            label = "FAR";
-        };
-
-        tar: tar {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS &kp RPAR &kp SPACE &kp MINUS &kp GT &kp SPACE &kp LBRC &kp RBRC>;
-            label = "TAR";
-        };
-    };
-
     behaviors {
         combos {
             compatible = "zmk,combos";
@@ -324,14 +308,6 @@
                 timeout-ms = <75>;
                 require-prior-idle-ms = <125>;
             };
-        };
-
-        number_word: number_word {
-            compatible = "zmk,behavior-auto-layer";
-            #binding-cells = <1>;
-            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
-            ignore-numbers;
-            ignore-modifiers;
         };
 
         skq: sticky_key_quick_release {
