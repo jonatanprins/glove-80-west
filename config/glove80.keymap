@@ -654,12 +654,12 @@
 
         z-symbol {
             bindings = <
-&trans  &trans  &trans         &trans                  &trans                                                                               &trans              &trans                    &trans          &trans  &trans
-&trans  &trans  &trans         &trans                  &trans             &trans                                                    &trans  &trans              &trans                    &trans          &trans  &trans
-&trans  &trans  &trans         &trans                  &trans             &trans                                                    &trans  &trans              &trans                    &trans          &trans  &trans
-&trans  &trans  &left_mt 10 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &trans                                                    &trans  &trans              &right_hmr RIGHT_SHIFT E  &right_mt 10 I  &trans  &trans
-&trans  &trans  &trans         &trans                  &left_hmr RCTRL D  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &right_hmr RCTRL H  &trans                    &trans          &trans  &trans
-&trans  &trans  &trans         &trans                  &trans                     &trans  &trans  &trans    &trans  &trans  &trans          &trans              &trans                    &trans          &trans  &trans
+&trans  &trans                &trans         &trans                  &trans                                                                               &trans              &trans                    &trans          &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans             &trans                                                    &trans  &trans              &trans                    &trans          &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans             &trans                                                    &trans  &trans              &trans                    &trans          &trans                 &trans
+&trans  &left_hmr LEFT_ALT A  &left_mt 10 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &trans                                                    &trans  &trans              &right_hmr RIGHT_SHIFT E  &right_mt 10 I  &right_hmr LEFT_ALT O  &trans
+&trans  &trans                &trans         &trans                  &left_hmr RCTRL D  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &right_hmr RCTRL H  &trans                    &trans          &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans                     &trans  &trans  &trans    &trans  &trans  &trans          &trans              &trans                    &trans          &trans                 &trans
             >;
         };
 
