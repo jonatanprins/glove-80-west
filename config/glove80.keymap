@@ -334,16 +334,6 @@
             ignore-modifiers;
         };
 
-        ad_i: adaptive_i {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "adaptive_i";
-            #binding-cells = <0>;
-            defaults = <&kp I>;
-            bindings = <&kp J>;
-            antecedents = <I>;
-            max-delay-ms = <250>;
-        };
-
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
@@ -351,47 +341,6 @@
             release-after-ms = <700>;
             quick-release;
             ignore-modifiers;
-        };
-
-        bspc_num: bspc_num {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&none>, <&kp BSPC>;
-
-            mods = <(MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_RCTL|MOD_LCTL)>;
-        };
-
-        lsmartshift: lsmartshift {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&skq LSHFT>, <&caps_word>;
-
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
-        leftshift: leftshift {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&skq LEFT_SHIFT>, <&caps_word>;
-
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
-        rightshift: rightshift {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LS(DOT)>, <&caps_word>;
-
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
-        rsmartshift: rsmartshift {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&skq RSHFT>, <&caps_word>;
-
-            mods = <(MOD_LSFT)>;
         };
 
         bslh_hash: bslh_hash {
@@ -434,96 +383,6 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LS(BSLH)>, <&kp GRAVE>;
-
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
-        one: one_plus {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LS(EQUAL)>, <&kp N1>;
-
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
-        two: two_lbracket {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT>, <&kp N2>;
-
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
-        three: three_lbrace {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LBKT)>, <&kp N3>;
-
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
-        four: four_lparen {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N9)>, <&kp N4>;
-
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
-        five: five_amps {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N7)>, <&kp N5>;
-
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
-        six: six_equal {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&kp N6>;
-
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
-        seven: seven_rparen {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N0)>, <&kp N7>;
-
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
-        eight: eight_rbrace {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LS(RBKT)>, <&kp N8>;
-
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
-        nine: nine_rbracket {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RBKT>, <&kp N9>;
-
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
-        zero: zero {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N8)>, <&kp N0>;
 
             mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
             keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
