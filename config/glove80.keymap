@@ -498,12 +498,12 @@
 
         number_layert {
             bindings = <
-&trans  &trans   &trans  &trans              &trans                                                                            &trans  &trans     &trans     &trans    &trans
-&trans  &trans   &trans  &trans              &trans          &trans                                                    &trans  &trans  &trans     &trans     &trans    &trans
-&trans  &trans   &trans  &trans              &trans          &trans                                                    &trans  &trans  &trans     &trans     &trans    &trans
-&trans  &trans   &trans  &kp LA(LS(ESCAPE))  &kp LA(ESCAPE)  &trans                                                    &trans  &trans  &kp E      &kp LCTRL  &kp LALT  &trans
-&trans  &kp TAB  &trans  &kp LG(LEFT)        &kp LG(RIGHT)   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT    &kp RGUI  &trans
-&trans  &trans   &trans  &trans              &trans                  &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans    &trans
+&trans  &trans       &trans  &trans              &trans                                                                               &trans  &trans     &trans     &trans    &trans
+&trans  &trans       &trans  &trans              &trans             &trans                                                    &trans  &trans  &trans     &trans     &trans    &trans
+&trans  &trans       &trans  &trans              &trans             &trans                                                    &trans  &trans  &trans     &trans     &trans    &trans
+&trans  &trans       &trans  &kp LA(LS(ESCAPE))  &kp LA(ESCAPE)     &trans                                                    &trans  &trans  &kp E      &kp LCTRL  &kp LALT  &trans
+&trans  &kp LG(TAB)  &trans  &kp LG(LC(LEFT))    &kp LG(LC(RIGHT))  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT    &kp RGUI  &trans
+&trans  &trans       &trans  &trans              &trans                     &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans    &trans
             >;
         };
 
