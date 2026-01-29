@@ -64,7 +64,6 @@
     #ifdef BT_DISC_CMD
 
     behaviors {
-
         bt_0: bt_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "BT_0";
@@ -259,8 +258,6 @@
 
 / {
     behaviors {
-
-
         combos {
             compatible = "zmk,combos";
 
@@ -296,7 +293,6 @@
             };
         };
 
-
         morph_caps: morph_caps {
             compatible = "zmk,behavior-mod-morph";
             label = "MOD_MORPH_CAPS";
@@ -317,7 +313,6 @@
                 bindings = <&kp J>;
             };
         };
-
 
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
@@ -502,12 +497,12 @@
 
         z-symbol {
             bindings = <
-&trans  &trans                &trans         &trans                  &trans                                                                               &trans              &trans                    &trans           &trans                 &trans
-&trans  &trans                &trans         &trans                  &trans             &trans                                                    &trans  &trans              &trans                    &trans           &trans                 &trans
-&trans  &trans                &trans         &trans                  &trans             &trans                                                    &trans  &trans              &trans                    &trans           &trans                 &trans
-&trans  &left_hmr LEFT_ALT A  &left_mt 10 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &trans                                                    &trans  &trans              &right_hmr RIGHT_SHIFT E  &right_mt 10 I   &right_hmr LEFT_ALT O  &trans
-&trans  &trans                &trans         &trans                  &left_hmr RCTRL D  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &right_hmr RCTRL H  &trans                    &right_mt 7 DOT  &trans                 &trans
-&trans  &trans                &trans         &trans                  &trans                     &trans  &trans  &trans    &trans  &trans  &trans          &trans              &trans                    &trans           &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans                                                                                         &trans              &trans                    &trans           &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans             &trans                                                              &trans  &trans              &trans                    &trans           &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans             &trans                                                              &trans  &trans              &trans                    &trans           &trans                 &trans
+&trans  &left_hmr LEFT_ALT A  &left_mt 10 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &trans                                                              &trans  &trans              &right_hmr RIGHT_SHIFT E  &right_mt 10 I   &right_hmr LEFT_ALT O  &trans
+&trans  &trans                &trans         &trans                  &left_hmr RCTRL D  &trans  &morph_caps  &trans  &trans    &trans  &trans  &morph_caps  &trans  &right_hmr RCTRL H  &trans                    &right_mt 7 DOT  &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans                     &magic_key   &trans  &trans    &trans  &trans  &trans               &trans              &trans                    &trans           &trans                 &trans
             >;
         };
 
