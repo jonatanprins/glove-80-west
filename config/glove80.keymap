@@ -64,6 +64,7 @@
     #ifdef BT_DISC_CMD
 
     behaviors {
+
         bt_0: bt_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "BT_0";
@@ -258,6 +259,8 @@
 
 / {
     behaviors {
+
+
         combos {
             compatible = "zmk,combos";
 
@@ -292,6 +295,29 @@
                 require-prior-idle-ms = <125>;
             };
         };
+
+
+        morph_caps: morph_caps {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOD_MORPH_CAPS";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT>, <&caps_word>;
+
+            mods = <(MOD_LSFT)>;
+        };
+
+        magic_key: magic_key {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&key_repeat>;
+
+            magic_ij {
+                trigger-keys = <I>;
+                max-prior-idle-ms = <500>;
+                bindings = <&kp J>;
+            };
+        };
+
 
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
