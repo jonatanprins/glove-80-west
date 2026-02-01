@@ -500,24 +500,24 @@
 &trans  &trans                &trans         &trans                  &trans                                                                                                 &trans              &trans                    &trans           &trans                 &trans
 &trans  &trans                &trans         &trans                  &trans             &trans                                                                      &trans  &trans              &trans                    &trans           &trans                 &trans
 &trans  &trans                &trans         &trans                  &trans             &trans                                                                      &trans  &trans              &trans                    &trans           &trans                 &trans
-&trans  &left_hmr LEFT_ALT A  &left_mt 10 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &trans                                                                      &trans  &trans              &right_hmr RIGHT_SHIFT E  &right_mt 10 I   &right_hmr LEFT_ALT O  &trans
+&trans  &left_hmr LEFT_ALT A  &left_mt 10 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &trans                                                                      &trans  &right_mt 6 N       &right_hmr RIGHT_SHIFT E  &right_mt 10 I   &right_hmr LEFT_ALT O  &trans
 &trans  &trans                &trans         &trans                  &left_hmr RCTRL D  &trans  &morph_caps  &trans  &trans    &trans  &trans          &morph_caps  &trans  &right_hmr RCTRL H  &trans                    &right_mt 7 DOT  &trans                 &trans
 &trans  &trans                &trans         &trans                  &trans                     &magic_key   &trans  &trans    &trans  &kp UNDERSCORE  &trans               &trans              &trans                    &trans           &trans                 &trans
             >;
         };
 
-        ctrl {
+        number_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp LEFT_ALT  &trans    &trans  &kp LEFT_ALT  &kp RCTRL  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans     &trans        &trans    &trans  &trans        &trans             &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans  &trans  &trans                                                                           &trans  &trans     &trans   &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans     &trans   &trans  &trans
+&trans  &kp FSLH   &kp N9  &kp N8  &kp N7  &kp LS(STAR)                                                     &trans  &trans  &trans     &trans   &trans  &trans
+&trans  &kp MINUS  &kp N3  &kp N2  &kp N1  &kp LS(PLUS)                                                     &trans  &trans  &trans     &trans   &trans  &trans
+&trans  &kp N0     &kp N6  &kp N5  &kp N4  &kp LS(PRCNT)  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT  &trans  &trans
+&trans  &trans     &trans  &trans  &trans                 &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans   &trans  &trans
             >;
         };
 
-        number_layert {
+        window_layer {
             bindings = <
 &trans  &trans       &trans      &trans              &trans                                                                                   &trans  &trans     &trans     &trans    &trans
 &trans  &trans       &trans      &trans              &trans             &trans                                                        &trans  &trans  &trans     &trans     &trans    &trans
