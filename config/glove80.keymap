@@ -502,7 +502,7 @@
 &trans  &trans                &trans         &trans                  &trans             &trans                                                                      &trans  &trans              &trans                    &trans           &trans                 &trans
 &trans  &left_hmr LEFT_ALT A  &left_mt 10 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &trans                                                                      &trans  &right_mt 6 N       &right_hmr RIGHT_SHIFT E  &right_mt 10 I   &right_hmr LEFT_ALT O  &trans
 &trans  &trans                &trans         &trans                  &left_hmr RCTRL D  &trans  &morph_caps  &trans  &trans    &trans  &trans          &morph_caps  &trans  &right_hmr RCTRL H  &trans                    &right_mt 7 DOT  &trans                 &trans
-&trans  &trans                &trans         &trans                  &trans                     &magic_key   &trans  &trans    &trans  &kp UNDERSCORE  &trans               &trans              &trans                    &trans           &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans                     &magic_key   &trans  &trans    &trans  &trans  &trans               &trans              &trans                    &trans           &trans                 &trans
             >;
         };
 
