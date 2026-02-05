@@ -272,7 +272,7 @@
                 bindings = <&kp LS(SEMI)>;
                 key-positions = <60 61>;
                 timeout-ms = <75>;
-                require-prior-idle-ms = <125>;
+                require-prior-idle-ms = <100>;
             };
 
             escape {
@@ -287,7 +287,7 @@
 
             quote {
                 bindings = <&kp SINGLE_QUOTE>;
-                key-positions = <60 59>;
+                key-positions = <>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <125>;
             };
