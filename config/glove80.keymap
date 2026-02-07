@@ -302,6 +302,13 @@
             mods = <(MOD_LSFT)>;
         };
 
+        td_shift_capsword: td_shift_capsword {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sk LSHIFT>, <&caps_word>;
+        };
+
         repeat_key: repeat_key {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
