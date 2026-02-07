@@ -372,52 +372,54 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_MT";
             bindings = <&mo>, <&kp>;
+
             #binding-cells = <2>;
             hold-trigger-key-positions = <28 40 58 29 41 59 60 42 30 32 31 43 61 62 44 33 45 63 16 17 18 19 20 21 57 73 74 62 75 76 77 78 79>;
             tapping-term-ms = <500>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             hold-trigger-on-release;
-            require-prior-idle-ms = <120>;
         };
 
         left_hmr: left_hmr {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HMR";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             hold-trigger-key-positions = <28 40 58 29 41 59 60 42 30 32 31 43 61 62 44 33 45 63 16 17 18 19 20 21 29 30 31 57 74 73 75 76 77 78 79>;
             tapping-term-ms = <500>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             hold-trigger-on-release;
-            require-prior-idle-ms = <120>;
         };
 
         right_mt: right_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_MT";
             bindings = <&mo>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <500>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46 10 11 12 13 14 15 52 69 70 46 47 64 65 66 67 68>;
             hold-trigger-on-release;
-            require-prior-idle-ms = <120>;
         };
 
         right_hmr: right_hmr {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HMR";
             bindings = <&kp>, <&kp>;
-u           #binding-cells = <2>;
+
+            u           #
+
+            binding-cells = <2>;
             tapping-term-ms = <500>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46 10 11 12 13 14 15 24 25 26 27 52 69 70 46 47 64 65 66 67 68>;
             hold-trigger-on-release;
-            require-prior-idle-ms = <120>;
         };
     };
 };
@@ -494,12 +496,12 @@ u           #binding-cells = <2>;
 
         number_layer {
             bindings = <
-&trans  &trans    &trans  &trans  &trans                                                                           &trans  &trans     &trans     &trans        &trans
-&trans  &trans    &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans     &trans     &trans        &trans
-&trans  &kp FSLH  &kp N7  &kp N8  &kp N9  &kp LS(STAR)                                                     &trans  &trans  &trans     &trans     &trans        &trans
-&trans  &kp N0    &kp N4  &kp N5  &kp N6  &kp LS(PLUS)                                                     &trans  &trans  &trans     &kp LCTRL  &kp LEFT_ALT  &trans
-&trans  &kp N0    &kp N1  &kp N2  &kp N3  &kp LS(PRCNT)  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT    &kp LGUI      &trans
-&trans  &trans    &trans  &trans  &trans                 &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans        &trans
+&trans  &trans     &trans  &trans  &trans                                                                           &trans  &trans     &trans     &trans        &trans
+&trans  &trans     &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans     &trans     &trans        &trans
+&trans  &kp FSLH   &kp N7  &kp N8  &kp N9  &kp LS(STAR)                                                     &trans  &trans  &trans     &trans     &trans        &trans
+&trans  &kp N0     &kp N4  &kp N5  &kp N6  &kp LS(PLUS)                                                     &trans  &trans  &trans     &kp LCTRL  &kp LEFT_ALT  &trans
+&trans  &kp MINUS  &kp N1  &kp N2  &kp N3  &kp LS(PRCNT)  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT    &kp LGUI      &trans
+&trans  &trans     &trans  &trans  &trans                 &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans        &trans
             >;
         };
 
@@ -527,12 +529,12 @@ u           #binding-cells = <2>;
 
         layer_Nav {
             bindings = <
-&trans  &trans        &trans     &trans          &trans                                                                             &trans    &trans        &trans     &trans   &trans
-&trans  &trans        &trans     &trans          &trans    &trans                                                    &trans         &trans    &trans        &trans     &trans   &trans
-&trans  &trans        &trans     &trans          &trans    &trans                                                    &kp PAGE_UP    &kp HOME  &kp UP_ARROW  &kp END    &trans   &trans
-&trans  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &sk LGUI  &trans                                                    &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &kp RET  &trans
-&trans  &kp HOME      &trans     &kp LC(C)       &kp END   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp BSPC  &kp TAB       &trans     &trans   &trans
-&trans  &trans        &trans     &trans          &trans            &trans  &trans  &trans    &trans  &trans  &trans                 &trans    &trans        &trans     &trans   &trans
+&trans  &trans        &trans     &trans          &trans                                                                             &trans    &trans        &trans      &trans   &trans
+&trans  &trans        &trans     &trans          &trans    &trans                                                    &trans         &trans    &trans        &trans      &trans   &trans
+&trans  &trans        &trans     &trans          &trans    &trans                                                    &kp PAGE_UP    &kp BSPC  &kp UP_ARROW  &kp DELETE  &trans   &trans
+&trans  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &sk LGUI  &trans                                                    &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT   &kp RET  &trans
+&trans  &kp HOME      &trans     &kp LC(C)       &kp END   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp TAB   &kp TAB       &trans      &trans   &trans
+&trans  &trans        &trans     &trans          &trans            &trans  &trans  &trans    &trans  &trans  &trans                 &trans    &trans        &trans      &trans   &trans
             >;
         };
 
