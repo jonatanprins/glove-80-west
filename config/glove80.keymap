@@ -368,24 +368,13 @@
             keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
         };
 
-        lth: lth {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LTH";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-        };
-
         left_mt: left_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_MT";
             bindings = <&mo>, <&kp>;
-
             #binding-cells = <2>;
             hold-trigger-key-positions = <28 40 58 29 41 59 60 42 30 32 31 43 61 62 44 33 45 63 16 17 18 19 20 21 57 73 74 62 75 76 77 78 79>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <500>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             hold-trigger-on-release;
@@ -396,10 +385,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HMR";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             hold-trigger-key-positions = <28 40 58 29 41 59 60 42 30 32 31 43 61 62 44 33 45 63 16 17 18 19 20 21 29 30 31 57 74 73 75 76 77 78 79>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <500>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             hold-trigger-on-release;
@@ -410,9 +398,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_MT";
             bindings = <&mo>, <&kp>;
-
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <500>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46 10 11 12 13 14 15 52 69 70 46 47 64 65 66 67 68>;
@@ -424,9 +411,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HMR";
             bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
+u           #binding-cells = <2>;
+            tapping-term-ms = <500>;
             quick-tap-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46 10 11 12 13 14 15 24 25 26 27 52 69 70 46 47 64 65 66 67 68>;
