@@ -302,7 +302,7 @@
             mods = <(MOD_LSFT)>;
         };
 
-        magic_key: magic_key {
+        repeat_key: repeat_key {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&key_repeat>;
@@ -323,56 +323,10 @@
             ignore-modifiers;
         };
 
-        bslh_hash: bslh_hash {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BSLH>, <&kp LS(N3)>;
-
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
-        excl_perc: excl_perc {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N1)>, <&kp LS(N5)>;
-
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
-        dollar_tilde: dollar_tilde {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N4)>, <&kp TILDE>;
-
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
-        at_caret: at_caret {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N2)>, <&kp LS(N6)>;
-
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
-        pipe_grave: pipe_grave {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LS(BSLH)>, <&kp GRAVE>;
-
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-            keep-mods = <(MOD_LALT|MOD_RCTL|MOD_LCTL)>;
-        };
-
         left_mt: left_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_MT";
             bindings = <&mo>, <&kp>;
-
             #binding-cells = <2>;
             hold-trigger-key-positions = <28 40 58 29 41 59 60 42 30 32 31 43 61 62 44 33 45 63 16 17 18 19 20 21 57 73 74 62 75 76 77 78 79>;
             tapping-term-ms = <500>;
@@ -385,7 +339,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HMR";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             hold-trigger-key-positions = <28 40 58 29 41 59 60 42 30 32 31 43 61 62 44 33 45 63 16 17 18 19 20 21 29 30 31 57 74 73 75 76 77 78 79>;
             tapping-term-ms = <500>;
@@ -398,7 +351,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_MT";
             bindings = <&mo>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <500>;
             quick-tap-ms = <200>;
@@ -411,10 +363,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HMR";
             bindings = <&kp>, <&kp>;
-
-            u           #
-
-            binding-cells = <2>;
+            #binding-cells = <2>;
             tapping-term-ms = <500>;
             quick-tap-ms = <200>;
             flavor = "balanced";
@@ -490,7 +439,7 @@
 &trans  &trans                &trans         &trans                  &trans             &trans                                                          &trans  &trans              &trans                    &trans           &trans                 &trans
 &trans  &left_hmr LEFT_ALT A  &left_mt 11 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &trans                                                          &trans  &right_mt 6 N       &right_hmr RIGHT_SHIFT E  &right_mt 11 I   &right_hmr LEFT_ALT O  &trans
 &trans  &trans                &trans         &trans                  &left_hmr RCTRL D  &trans  &morph_caps  &trans  &trans    &trans  &trans  &kp TAB  &trans  &right_hmr RCTRL H  &trans                    &right_mt 7 DOT  &trans                 &trans
-&trans  &trans                &trans         &trans                  &trans                     &magic_key   &trans  &trans    &trans  &trans  &trans           &trans              &trans                    &trans           &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans                     &repeat_key   &trans  &trans    &trans  &trans  &trans           &trans              &trans                    &trans           &trans                 &trans
             >;
         };
 
