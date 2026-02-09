@@ -340,6 +340,7 @@
             tapping-term-ms = <500>;
             flavor = "balanced";
             hold-trigger-on-release;
+            require-prior-idle-ms = <50>;
         };
 
         left_hmr: left_hmr {
@@ -352,6 +353,7 @@
             tapping-term-ms = <500>;
             flavor = "balanced";
             hold-trigger-on-release;
+            require-prior-idle-ms = <50>;
         };
 
         right_mt: right_mt {
@@ -364,6 +366,7 @@
             flavor = "balanced";
             hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46 10 11 12 13 14 15 52 69 70 46 47 64 65 66 67 68>;
             hold-trigger-on-release;
+            require-prior-idle-ms = <50>;
         };
 
         right_hmr: right_hmr {
@@ -376,6 +379,7 @@
             flavor = "balanced";
             hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46 10 11 12 13 14 15 24 25 26 27 52 69 70 46 47 64 65 66 67 68>;
             hold-trigger-on-release;
+            require-prior-idle-ms = <50>;
         };
     };
 };
@@ -441,12 +445,12 @@
 
         z-symbol {
             bindings = <
-&trans  &trans                &trans         &trans                  &trans                                                                                     &trans              &trans                    &trans           &trans                 &trans
-&trans  &trans                &trans         &trans                  &trans             &trans                                                          &trans  &trans              &trans                    &trans           &trans                 &trans
-&trans  &trans                &trans         &trans                  &trans             &trans                                                          &trans  &trans              &trans                    &trans           &trans                 &trans
-&trans  &left_hmr LEFT_ALT A  &left_mt 11 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &trans                                                          &trans  &right_mt 6 N       &right_hmr RIGHT_SHIFT E  &right_mt 11 I   &right_hmr LEFT_ALT O  &trans
-&trans  &trans                &trans         &trans                  &left_hmr RCTRL D  &trans  &morph_caps  &trans  &trans    &trans  &trans  &kp TAB  &trans  &right_hmr RCTRL H  &trans                    &right_mt 7 DOT  &trans                 &trans
-&trans  &trans                &trans         &trans                  &trans                     &repeat_key  &trans  &trans    &trans  &trans  &trans           &trans              &trans                    &trans           &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans                                                                                           &trans              &trans                    &trans           &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans             &trans                                                                &trans  &trans              &trans                    &trans           &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans             &trans                                                                &trans  &trans              &trans                    &trans           &trans                 &trans
+&trans  &left_hmr LEFT_ALT A  &left_mt 11 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &trans                                                                &trans  &right_mt 6 N       &right_hmr RIGHT_SHIFT E  &right_mt 11 I   &right_hmr LEFT_ALT O  &trans
+&trans  &trans                &trans         &trans                  &left_hmr RCTRL D  &trans  &morph_caps  &trans  &trans         &trans   &trans  &kp TAB  &trans  &right_hmr RCTRL H  &trans                    &right_mt 7 DOT  &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans                     &repeat_key  &trans  &morph_caps    &kp TAB  &trans  &trans           &trans              &trans                    &trans           &trans                 &trans
             >;
         };
 
@@ -457,7 +461,7 @@
 &trans  &kp FSLH   &kp N7  &kp N8  &kp N9  &kp LS(STAR)                                                     &trans  &trans  &trans     &trans     &trans        &trans
 &trans  &kp N0     &kp N4  &kp N5  &kp N6  &kp LS(PLUS)                                                     &trans  &trans  &trans     &kp LCTRL  &kp LEFT_ALT  &trans
 &trans  &kp MINUS  &kp N1  &kp N2  &kp N3  &kp LS(PRCNT)  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT    &kp LGUI      &trans
-&trans  &trans     &trans  &trans  &trans                 &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans        &trans
+&trans  &trans     &trans  &trans  &trans                 &kp N0  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans        &trans
             >;
         };
 
