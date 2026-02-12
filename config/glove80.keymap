@@ -266,6 +266,7 @@
                 key-positions = <>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <125>;
+                layers = <0>;
             };
 
             command {
@@ -273,6 +274,7 @@
                 key-positions = <60 61>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <60>;
+                layers = <0>;
             };
 
             escape {
@@ -280,13 +282,15 @@
                 key-positions = <24 25>;
                 timeout-ms = <60>;
                 require-prior-idle-ms = <140>;
+                layers = <0>;
             };
 
             tab {
                 bindings = <&kp TAB>;
                 key-positions = <36 37>;
-                timeout-ms = <60>;
+                timeout-ms = <55>;
                 require-prior-idle-ms = <140>;
+                layers = <0>;
             };
 
             quote {
@@ -294,6 +298,7 @@
                 key-positions = <60 59>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <140>;
+                layers = <0>;
             };
         };
 
@@ -497,7 +502,7 @@
 &trans  &trans        &trans     &trans          &trans   &trans                                                    &trans         &trans            &trans             &trans      &trans   &trans
 &trans  &trans        &trans     &trans          &trans   &trans                                                    &kp PAGE_UP    &kp BSPC          &kp UP_ARROW       &kp DELETE  &trans   &trans
 &trans  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &none    &trans                                                    &kp PAGE_DOWN  &kp LEFT          &kp DOWN           &kp RIGHT   &kp RET  &trans
-&trans  &kp HOME      &trans     &kp LC(C)       &kp END  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kt LS(LC(LEFT))  &kp LS(LC(RIGHT))  &trans      &trans   &trans
+&trans  &kp HOME      &trans     &kp LC(C)       &kp END  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &trans      &trans   &trans
 &trans  &trans        &trans     &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans                 &trans            &trans             &trans      &trans   &trans
             >;
         };
