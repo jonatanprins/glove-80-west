@@ -266,7 +266,6 @@
                 key-positions = <>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <125>;
-                layers = <0>;
             };
 
             command {
@@ -274,7 +273,6 @@
                 key-positions = <60 61>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <60>;
-                layers = <0>;
             };
 
             escape {
@@ -282,7 +280,6 @@
                 key-positions = <24 25>;
                 timeout-ms = <60>;
                 require-prior-idle-ms = <140>;
-                layers = <0>;
             };
 
             tab {
@@ -290,7 +287,6 @@
                 key-positions = <36 37>;
                 timeout-ms = <55>;
                 require-prior-idle-ms = <140>;
-                layers = <0>;
             };
 
             quote {
@@ -298,7 +294,6 @@
                 key-positions = <60 59>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <140>;
-                layers = <0>;
             };
         };
 
