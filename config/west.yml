@@ -1,16 +1,17 @@
 manifest:
+  defaults: 
+      revision: v0.3 # Should match ZMK release.
   remotes:
-    - name: moergo-sc
-      url-base: https://github.com/moergo-sc
     - name: urob
       url-base: https://github.com/urob
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
   projects:
     - name: zmk-adaptive-key
       remote: urob
-      revision: v0.3 # Should match ZMK release.
     - name: zmk
-      remote: moergo-sc
-      revision: main
+      revision: v3.5.0+zmk-fixes
+      remote: zmkfirmware
       import: app/west.yml
   self:
     path: config
