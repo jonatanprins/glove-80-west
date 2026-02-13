@@ -372,7 +372,7 @@
 &trans  &trans                &trans         &trans                  &trans             &trans                                                                &trans  &trans              &trans                    &trans           &trans                 &trans
 &trans  &trans                &trans         &trans                  &trans             &trans                                                                &trans  &trans              &trans                    &trans           &trans                 &trans
 &trans  &left_hmr LEFT_ALT A  &left_mt 11 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &trans                                                                &trans  &right_mt 6 N       &right_hmr RIGHT_SHIFT E  &right_mt 11 I   &right_hmr LEFT_ALT O  &trans
-&trans  &trans                &trans         &trans                  &left_hmr RCTRL D  &trans  &morph_caps  &trans  &trans         &trans   &trans  &kp TAB  &trans  &right_hmr RCTRL H  &trans                    &right_mt 7 DOT  &trans                 &trans
+&trans  &trans                &trans         &trans                  &left_hmr RCTRL D  &trans  &morph_caps  &trans  &trans         &trans   &trans  &morph_caps    &trans  &right_hmr RCTRL H  &trans                    &right_mt 7 DOT  &trans                 &trans
 &trans  &trans                &trans         &trans                  &trans                     &repeat_key  &trans  &morph_caps    &kp TAB  &trans  &trans           &trans              &trans                    &trans           &trans                 &trans
             >;
         };
@@ -416,7 +416,7 @@
 &trans  &trans        &trans     &trans          &trans   &trans                                                    &trans         &trans        &trans            &trans             &trans   &trans
 &trans  &trans        &trans     &trans          &trans   &trans                                                    &kp PAGE_UP    &kp BSPC      &kp UP_ARROW      &kp DELETE         &trans   &trans
 &trans  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &none    &trans                                                    &kp PAGE_DOWN  &kp LEFT      &kp DOWN          &kp RIGHT          &kp RET  &trans
-&trans  &kp HOME      &trans     &kp LC(C)       &kp END  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp LC(BSPC)  &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &trans   &trans
+&trans  &kp HOME      &trans     &kp LC(C)       &kp END  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp LS(LC(LEFT))  &kp LS(LC(RIGHT))  &trans  &trans   &trans
 &trans  &trans        &trans     &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans                 &trans        &trans            &trans             &trans   &trans
             >;
         };
