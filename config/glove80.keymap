@@ -194,13 +194,6 @@
                 require-prior-idle-ms = <60>;
             };
 
-            escape {
-                bindings = <&kp ESCAPE>;
-                key-positions = <24 25>;
-                timeout-ms = <60>;
-                require-prior-idle-ms = <140>;
-            };
-
             tab {
                 bindings = <&kp TAB>;
                 key-positions = <36 37>;
