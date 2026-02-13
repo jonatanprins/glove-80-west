@@ -51,12 +51,12 @@
 
 / {
     macros {
-        rgb_ug_status_macro: rgb_ug_status_macro {
-            label = "RGB_UG_STATUS";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_STATUS>;
-        };
+        // rgb_ug_status_macro: rgb_ug_status_macro {
+        //     label = "RGB_UG_STATUS";
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     bindings = <&rgb_ug RGB_STATUS>;
+        // };
     };
 };
 
@@ -164,14 +164,14 @@
 
 / {
     behaviors {
-        magic: magic {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAGIC_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&rgb_ug_status_macro>;
-        };
+        // magic: magic {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "MAGIC_HOLD_TAP";
+        //     #binding-cells = <2>;
+        //     flavor = "tap-preferred";
+        //     tapping-term-ms = <200>;
+        //     bindings = <&mo>, <&rgb_ug_status_macro>;
+        // };
     };
 };
 
@@ -318,7 +318,7 @@
 &none         &kp Q   &kp W   &kp F   &kp P   &kp B                                                                                  &kp J   &kp L   &kp U      &kp Y    &kp SINGLE_QUOTE  &none
 &kp ESCAPE    &kp A   &kp R   &kp S   &kp T   &kp G                                                                                  &kp M   &kp N   &kp E      &kp I    &kp O             &kp MINUS
 &kp LS(SEMI)  &kp Z   &kp X   &kp C   &kp D   &kp V   &skq LSHFT  &kp LCTRL   &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &skq RSHFT  &kp K   &kp H   &kp COMMA  &kp DOT  &kp SLASH         &kp ENTER
-&magic 12 0   &none   &none   &none   &none           &kp BSPC    &kp ESCAPE  &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE           &none   &none      &none    &none             &none
+&mo 12 &none   &none   &none   &none           &kp BSPC    &kp ESCAPE  &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE           &none   &none      &none    &none             &none
             >;
         };
 
