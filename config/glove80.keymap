@@ -51,12 +51,14 @@
 
 / {
     macros {
-        // rgb_ug_status_macro: rgb_ug_status_macro {
-        //     label = "RGB_UG_STATUS";
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings = <&rgb_ug RGB_STATUS>;
-        // };
+        escape_k_cancel: escape_k_cancel {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp ESCAPE>
+                , <&kp K_CANCEL>
+                ;
+        };
     };
 };
 
@@ -225,20 +227,21 @@
 
         };
 
-        enter_control: enter_control {
+
+        df_mt_k_cancel: df_mt_k_cancel {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp LCTRL>, <&kp ENTER>;
+            bindings = <&kp>, <&escape_k_cancel>;
         };
 
-        escape_control: escape_control {
+        df_mt: df_mt {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp LCTRL>, <&kp ESCAPE>;
+            bindings = <&kp>, <&kp>;
         };
 
         skq: sticky_key_quick_release {
@@ -317,7 +320,7 @@ keymap {
 &none         &kp Q   &kp W   &kp F   &kp P   &kp B                                                                                  &kp J   &kp L   &kp U      &kp Y    &kp SINGLE_QUOTE  &none
 &kp ESCAPE    &kp A   &kp R   &kp S   &kp T   &kp G                                                                                  &kp M   &kp N   &kp E      &kp I    &kp O             &kp MINUS
 &kp LS(SEMI)  &kp Z   &kp X   &kp C   &kp D   &kp V   &skq LSHFT  &kp LCTRL   &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &skq RSHFT  &kp K   &kp H   &kp COMMA  &kp DOT  &kp SLASH         &kp ENTER
-&mo 10 &none   &none   &none   &none           &kp BSPC    &escape_control    &kp LEFT_ALT     &kp LEFT_ALT  &enter_control  &kp SPACE           &none   &none      &none    &none             &none
+&mo 10 &none   &none   &none   &none           &kp BSPC    &df_mt_k_cancel LCTRL 0    &kp LEFT_ALT     &kp LEFT_ALT  &df_mt LCTRL RETURN  &kp SPACE           &none   &none      &none    &none             &none
             >;
         };
 
