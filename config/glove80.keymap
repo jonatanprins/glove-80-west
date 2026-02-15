@@ -320,7 +320,7 @@ keymap {
 &none         &kp Q   &kp W   &kp F   &kp P   &kp B                                                                                  &kp J   &kp L   &kp U      &kp Y    &kp SINGLE_QUOTE  &none
 &kp ESCAPE    &kp A   &kp R   &kp S   &kp T   &kp G                                                                                  &kp M   &kp N   &kp E      &kp I    &kp O             &kp MINUS
 &kp LS(SEMI)  &kp Z   &kp X   &kp C   &kp D   &kp V   &skq LSHFT  &kp LCTRL   &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &skq RSHFT  &kp K   &kp H   &kp COMMA  &kp DOT  &kp SLASH         &kp ENTER
-&mo 10 &none   &none   &none   &none           &kp BSPC    &df_mt_k_cancel LCTRL 0    &kp LEFT_ALT     &kp LEFT_ALT  &df_mt LCTRL RETURN  &kp SPACE           &none   &none      &none    &none             &none
+&mo 10 &none   &none   &none   &none           &kp BSPC    &kp ESC  &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE           &none   &none      &none    &none             &none
             >;
         };
 
