@@ -197,12 +197,10 @@
          bindings = <&kp BSPC>;
          key-positions = <30 30 29 29 30>;
          timeout-ms = <75>;
-         layers = <0>;
          require-prior-idle-ms = <140>;};delete {
          bindings = <&kp DELETE>;
          key-positions = <30 30 30 31>;
          timeout-ms = <75>;
-         layers = <0>;
          require-prior-idle-ms = <140>;};
         };
 
@@ -317,6 +315,8 @@
 
 / {
     
+behaviors {};
+
 behaviors {};
 
 behaviors {};
