@@ -193,15 +193,19 @@
                 key-positions = <60 59>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <60>;
-            };backspace {
-         bindings = <&kp BSPC>;
-         key-positions = <30 30 29 29 30>;
-         timeout-ms = <75>;
-         require-prior-idle-ms = <140>;};delete {
-         bindings = <&kp DELETE>;
-         key-positions = <30 30 30 31>;
-         timeout-ms = <75>;
-         require-prior-idle-ms = <140>;};
+            };
+            backspace {
+                bindings = <&kp BSPC>;
+                key-positions = <30 29 >;
+                timeout-ms = <75>;
+                require-prior-idle-ms = <140>;
+            };
+            delete {
+                bindings = <&kp DELETE>;
+                key-positions = <30 31>;
+                timeout-ms = <75>;
+                require-prior-idle-ms = <140>;
+            };
         };
 
         morph_caps: morph_caps {
