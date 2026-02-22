@@ -205,33 +205,73 @@
             mods = <(MOD_LSFT)>;
         };
 
-        td_shift_capsword: td_shift_capsword {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk LSHIFT>, <&caps_word>;
-        };
+		strdy_magic: strdy_magic {
+			compatible = "zmk,behavior-adaptive-key";
+			#binding-cells = <0>;
+			bindings = <&sk LSHFT>;
 
-        repeat_key: repeat_key {
-            compatible = "zmk,behavior-adaptive-key";
-            #binding-cells = <0>;
-            bindings = <&sk LSHFT>;
+			o_follows_a {
+				trigger-keys = <A>;
+				bindings = <&kp O>;
+				strict-modifiers;
+			};
 
-            j_follows_i {
-                trigger-keys = <I>;
-                max-prior-idle-ms = <350>;
-                bindings = <&kp J>;
-                strict-modifiers;
-            };
+			y_follows_c {
+				trigger-keys = <C>;
+				bindings = <&kp Y>;
+				strict-modifiers;
+			};
 
-            repeat_alpha {
-                trigger-keys = <A B C D E F G H J K L M N O P Q R S T U V W X Y Z>;
-                bindings = <&key_repeat>;
-                max-prior-idle-ms = <350>;
-                strict-modifiers;
-            };
-        };
+			y_follows_d {
+				trigger-keys = <D>;
+				bindings = <&kp Y>;
+				strict-modifiers;
+			};
 
+			u_follows_e {
+				trigger-keys = <E>;
+				bindings = <&kp U>;
+				strict-modifiers;
+			};
+
+			y_follows_g {
+				trigger-keys = <G>;
+				bindings = <&kp Y>;
+				strict-modifiers;
+			};
+
+			y_follows_g {
+				trigger-keys = <G>;
+				bindings = <&kp Y>;
+				strict-modifiers;
+			};
+
+			on_follows_i {
+				trigger-keys = <G>;
+				bindings = <&kp Y>;
+				strict-modifiers;
+			};
+		};
+
+		repeat_key: repeat_key {
+			compatible = "zmk,behavior-adaptive-key";
+			#binding-cells = <0>;
+			bindings = <&morph_caps>;
+
+			j_follows_i {
+				trigger-keys = <I>;
+				max-prior-idle-ms = <800>;
+				bindings = <&kp J>;
+				strict-modifiers;
+			};
+
+			repeat_alpha {
+				trigger-keys = <A B C D E F G H J K L M N O P Q R S T U V W X Y Z>;
+				bindings = <&key_repeat>;
+				max-prior-idle-ms = <800>;
+				strict-modifiers;
+			};
+		};
 
         df_mt_k_cancel: df_mt_k_cancel {
             compatible = "zmk,behavior-hold-tap";
@@ -312,25 +352,6 @@
 
 / {
     
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
@@ -339,9 +360,9 @@ keymap {
 &trans        &kp F1  &kp F2  &kp F3  &kp F4                                                                                                &trans  &trans     &trans   &trans            &trans
 &none         &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                                                &kp N6  &kp N7  &kp N8     &kp N9   &kp N0            &none
 &none         &kp Q   &kp W   &kp F   &kp P   &kp B                                                                                 &kp J   &kp L   &kp U      &kp Y    &kp SINGLE_QUOTE  &none
-&kp ESCAPE    &kp A   &kp R   &kp S   &kp T   &kp G                                                                                 &kp M   &kp N   &kp E      &kp I    &kp O             &kp MINUS
-&kp LS(SEMI)  &kp Z   &kp X   &kp C   &kp D   &kp V   &skq LSHFT  &kp LCTRL  &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &skq RSHFT  &kp K   &kp H   &kp COMMA  &kp DOT  &kp SLASH         &kp ENTER
-&mo 10        &none   &none   &none   &none           &kp BSPC    &kp ESC    &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE           &none   &none      &none    &none             &none
+&kp ESCAPE    &left_hmr LEFT_ALT A  &left_mt 9 R  &left_hmr LEFT_SHIFT S  &left_mt 8 T   &kp G                                                                                 &kp M   &right_mt 6 N       &right_hmr RIGHT_SHIFT E  &right_mt 9 I    &right_hmr LEFT_ALT O             &kp MINUS
+&kp LS(SEMI)  &kp Z   &kp X   &kp C   &left_hmr RCTRL D   &kp V   &morph_caps  &kp LCTRL  &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &skq RSHFT  &kp K   &right_hmr RCTRL H   &kp COMMA  &right_mt 7 DOT  &kp SLASH         &kp ENTER
+&mo 10        &none   &none   &none   &none           &repeat_alpha    &kp ESC    &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE           &none   &none      &none    &none             &none
 >;
         };
 
