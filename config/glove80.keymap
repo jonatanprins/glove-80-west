@@ -240,12 +240,6 @@
 				strict-modifiers;
 			};
 
-			y_follows_g {
-				trigger-keys = <G>;
-				bindings = <&kp Y>;
-				strict-modifiers;
-			};
-
 			on_follows_i {
 				trigger-keys = <G>;
 				bindings = <&kp Y>;
