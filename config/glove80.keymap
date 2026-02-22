@@ -1,3 +1,5 @@
+
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -18,443 +20,448 @@
 #define QUICK_TAP_MS 180
 #define TAPPING_TERM_MS 290
 #define PRIOR_IDLE_MS 170
-#define LEFT_HAND_KEYS      \
-            0  1  2  3  4         \
-           10 11 12 13 14 15      \
-           22 23 24 25 26 27      \
-           34 35 36 37 38 39      \
-           46 47 48 49 50 51      \
-           64 65 66 67 68
-#define                              RIGHT_HAND_KEYS \
-                                             5  6  7  8  9 \
-                                         16 17 18 19 20 21 \
-                                         28 29 30 31 32 33 \
-                                         40 41 42 43 44 45 \
-                                         58 59 60 61 62 63 \
-                                            75 76 77 78 79
-#define THUMB_KEYS          \
-                          69 52       57 74                \
-                           70 53     56 73                 \
 
 &sk {
-    release-after-ms = <700>;
-    quick-release;
+	release-after-ms = <700>;
+	quick-release;
 };
 
 &caps_word {
-    /delete-property/ ignore-modifiers;
+	/delete-property/ ignore-modifiers;
 
-    continue-list = <UNDERSCORE MINUS BACKSPACE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
+	continue-list = <UNDERSCORE MINUS BACKSPACE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
 };
 
 &sl { release-after-ms = <700>; };
 
 / {
-    macros {
-        escape_k_cancel: escape_k_cancel {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ESCAPE &kp K_CANCEL>;
-        };
-    };
+	macros {
+		escape_k_cancel: escape_k_cancel {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp ESCAPE &kp K_CANCEL>;
+		};
+	};
 };
 
 / {
-    #ifdef BT_DISC_CMD
+#ifdef BT_DISC_CMD
 
-    behaviors {
-        bt_0: bt_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BT_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&bt_select_0>, <&bt BT_DISC 0>;
-        };
+behaviors {
+	bt_0: bt_0 {
+		compatible = "zmk,behavior-tap-dance";
+		label = "BT_0";
+		#binding-cells = <0>;
+		tapping-term-ms = <200>;
+		bindings = <&bt_select_0>, <&bt BT_DISC 0>;
+	};
 
-        bt_1: bt_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BT_1";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&bt_select_1>, <&bt BT_DISC 1>;
-        };
+	bt_1: bt_1 {
+		compatible = "zmk,behavior-tap-dance";
+		label = "BT_1";
+		#binding-cells = <0>;
+		tapping-term-ms = <200>;
+		bindings = <&bt_select_1>, <&bt BT_DISC 1>;
+	};
 
-        bt_2: bt_2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BT_2";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&bt_select_2>, <&bt BT_DISC 2>;
-        };
+	bt_2: bt_2 {
+		compatible = "zmk,behavior-tap-dance";
+		label = "BT_2";
+		#binding-cells = <0>;
+		tapping-term-ms = <200>;
+		bindings = <&bt_select_2>, <&bt BT_DISC 2>;
+	};
 
-        bt_3: bt_3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BT_3";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&bt_select_3>, <&bt BT_DISC 3>;
-        };
-    };
+	bt_3: bt_3 {
+		compatible = "zmk,behavior-tap-dance";
+		label = "BT_3";
+		#binding-cells = <0>;
+		tapping-term-ms = <200>;
+		bindings = <&bt_select_3>, <&bt BT_DISC 3>;
+	};
+};
 
-    macros {
-        bt_select_0: bt_select_0 {
-            label = "BT_SELECT_0";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 0>;
-        };
+macros {
+	bt_select_0: bt_select_0 {
+		label = "BT_SELECT_0";
+		compatible = "zmk,behavior-macro";
+		#binding-cells = <0>;
+		bindings = <&out OUT_BLE &bt BT_SEL 0>;
+	};
 
-        bt_select_1: bt_select_1 {
-            label = "BT_SELECT_1";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 1>;
-        };
+	bt_select_1: bt_select_1 {
+		label = "BT_SELECT_1";
+		compatible = "zmk,behavior-macro";
+		#binding-cells = <0>;
+		bindings = <&out OUT_BLE &bt BT_SEL 1>;
+	};
 
-        bt_select_2: bt_select_2 {
-            label = "BT_SELECT_2";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 2>;
-        };
+	bt_select_2: bt_select_2 {
+		label = "BT_SELECT_2";
+		compatible = "zmk,behavior-macro";
+		#binding-cells = <0>;
+		bindings = <&out OUT_BLE &bt BT_SEL 2>;
+	};
 
-        bt_select_3: bt_select_3 {
-            label = "BT_SELECT_3";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 3>;
-        };
-    };
+	bt_select_3: bt_select_3 {
+		label = "BT_SELECT_3";
+		compatible = "zmk,behavior-macro";
+		#binding-cells = <0>;
+		bindings = <&out OUT_BLE &bt BT_SEL 3>;
+	};
+};
 
-    #else
+#else
 
-    macros {
-        bt_0: bt_0 {
-            label = "BT_0";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 0>;
-        };
+macros {
+	bt_0: bt_0 {
+		label = "BT_0";
+		compatible = "zmk,behavior-macro";
+		#binding-cells = <0>;
+		bindings = <&out OUT_BLE &bt BT_SEL 0>;
+	};
 
-        bt_1: bt_1 {
-            label = "BT_1";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 1>;
-        };
+	bt_1: bt_1 {
+		label = "BT_1";
+		compatible = "zmk,behavior-macro";
+		#binding-cells = <0>;
+		bindings = <&out OUT_BLE &bt BT_SEL 1>;
+	};
 
-        bt_2: bt_2 {
-            label = "BT_2";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 2>;
-        };
+	bt_2: bt_2 {
+		label = "BT_2";
+		compatible = "zmk,behavior-macro";
+		#binding-cells = <0>;
+		bindings = <&out OUT_BLE &bt BT_SEL 2>;
+	};
 
-        bt_3: bt_3 {
-            label = "BT_3";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 3>;
-        };
-    };
+	bt_3: bt_3 {
+		label = "BT_3";
+		compatible = "zmk,behavior-macro";
+		#binding-cells = <0>;
+		bindings = <&out OUT_BLE &bt BT_SEL 3>;
+	};
+};
 
-    #endif
+#endif
 };
 
 / {
-    behaviors {
-        combos {
-            compatible = "zmk,combos";
+	behaviors {
+		combos {
+			compatible = "zmk,combos";
 
-            search {
-                bindings = <&kp SLASH>;
-                key-positions = <48 49>;
-                timeout-ms = <75>;
-                require-prior-idle-ms = <150>;
-            
-         layers = <0>;};
+			search {
+				bindings = <&kp SLASH>;
+				key-positions = <48 49>;
+				timeout-ms = <75>;
+				require-prior-idle-ms = <150>;
 
-            command {
-                bindings = <&kp LS(SEMI)>;
-                key-positions = <60 61>;
-                timeout-ms = <75>;
-                require-prior-idle-ms = <10>;
-            };
+				layers = <0>;};
 
-            tab {
-                bindings = <&kp TAB>;
-                key-positions = <36 37>;
-                timeout-ms = <55>;
-                require-prior-idle-ms = <140>;
-            };
+				command {
+					bindings = <&kp LS(SEMI)>;
+					key-positions = <60 61>;
+					timeout-ms = <75>;
+					require-prior-idle-ms = <10>;
+				};
 
-            quote {
-                bindings = <&kp UNDERSCORE>;
-                key-positions = <60 59>;
-                timeout-ms = <75>;
-                require-prior-idle-ms = <60>;
-            };
-        };
+				tab {
+					bindings = <&kp TAB>;
+					key-positions = <36 37>;
+					timeout-ms = <55>;
+					require-prior-idle-ms = <140>;
+				};
 
-        morph_caps: morph_caps {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MOD_MORPH_CAPS";
-            #binding-cells = <0>;
-            bindings = <&sk LSHIFT>, <&caps_word>;
+				quote {
+					bindings = <&kp UNDERSCORE>;
+					key-positions = <60 59>;
+					timeout-ms = <75>;
+					require-prior-idle-ms = <60>;
+				};
+		};
 
-            mods = <(MOD_LSFT)>;
-        };
+		morph_caps: morph_caps {
+			compatible = "zmk,behavior-mod-morph";
+			label = "MOD_MORPH_CAPS";
+			#binding-cells = <0>;
+			bindings = <&sk LSHIFT>, <&caps_word>;
+			mods = <(MOD_LSFT)>;
+		};
 
-        td_shift_capsword: td_shift_capsword {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk LSHIFT>, <&caps_word>;
-        };
+		strdy_magic: strdy_magic {
+			compatible = "zmk,behavior-adaptive-key";
+			#binding-cells = <0>;
+			bindings = <&sk LSHFT>;
 
-        repeat_key: repeat_key {
-            compatible = "zmk,behavior-adaptive-key";
-            #binding-cells = <0>;
-            bindings = <&sk LSHFT>;
+			o_follows_a {
+				trigger-keys = <A>;
+				bindings = <&kp O>;
+				strict-modifiers;
+			};
 
-            j_follows_i {
-                trigger-keys = <I>;
-                max-prior-idle-ms = <350>;
-                bindings = <&kp J>;
-                strict-modifiers;
-            };
+			y_follows_c {
+				trigger-keys = <C>;
+				bindings = <&kp Y>;
+				strict-modifiers;
+			};
 
-            repeat_alpha {
-                trigger-keys = <A B C D E F G H J K L M N O P Q R S T U V W X Y Z>;
-                bindings = <&key_repeat>;
-                max-prior-idle-ms = <350>;
-                strict-modifiers;
-            };
-        };
+			y_follows_d {
+				trigger-keys = <D>;
+				bindings = <&kp Y>;
+				strict-modifiers;
+			};
+
+			u_follows_e {
+				trigger-keys = <E>;
+				bindings = <&kp U>;
+				strict-modifiers;
+			};
+
+			y_follows_g {
+				trigger-keys = <G>;
+				bindings = <&kp Y>;
+				strict-modifiers;
+			};
+
+			y_follows_g {
+				trigger-keys = <G>;
+				bindings = <&kp Y>;
+				strict-modifiers;
+			};
+
+			on_follows_i {
+				trigger-keys = <G>;
+				bindings = <&kp Y>;
+				strict-modifiers;
+			};
+		};
+
+		repeat_key: repeat_key {
+			compatible = "zmk,behavior-adaptive-key";
+			#binding-cells = <0>;
+			bindings = <&morph_caps>;
+
+			j_follows_i {
+				trigger-keys = <I>;
+				max-prior-idle-ms = <800>;
+				bindings = <&kp J>;
+				strict-modifiers;
+			};
+
+			repeat_alpha {
+				trigger-keys = <A B C D E F G H J K L M N O P Q R S T U V W X Y Z>;
+				bindings = <&key_repeat>;
+				max-prior-idle-ms = <800>;
+				strict-modifiers;
+			};
+		};
 
 
-        df_mt_k_cancel: df_mt_k_cancel {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&escape_k_cancel>;
-        };
+		df_mt_k_cancel: df_mt_k_cancel {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <200>;
+			bindings = <&kp>, <&escape_k_cancel>;
+		};
 
-        df_mt: df_mt {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
-        };
+		df_mt: df_mt {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <200>;
+			bindings = <&kp>, <&kp>;
+		};
 
-        skq: sticky_key_quick_release {
-            compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
-            bindings = <&kp>;
-            release-after-ms = <700>;
-            quick-release;
-            ignore-modifiers;
-        };
+		skq: sticky_key_quick_release {
+			compatible = "zmk,behavior-sticky-key";
+			#binding-cells = <1>;
+			bindings = <&kp>;
+			release-after-ms = <700>;
+			quick-release;
+			ignore-modifiers;
+		};
 
-        left_mt: left_mt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_MT";
-            bindings = <&mo>, <&kp>;
+		left_mt: left_mt {
+			compatible = "zmk,behavior-hold-tap";
+			label = "LEFT_MT";
+			bindings = <&mo>, <&kp>;
 
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <28 40 58 29 41 59 60 42 30 32 31 43 61 62 44 33 45 63 16 17 18 19 20 21 57 73 74 62 75 76 77 78 79 52 69 70>;
-            tapping-term-ms = <350>;
-            flavor = "balanced";
-            hold-trigger-on-release;
-        };
+			#binding-cells = <2>;
+			hold-trigger-key-positions = <28 40 58 29 41 59 60 42 30 32 31 43 61 62 44 33 45 63 16 17 18 19 20 21 57 73 74 62 75 76 77 78 79 52 69 70>;
+			tapping-term-ms = <350>;
+			flavor = "balanced";
+			hold-trigger-on-release;
+		};
 
-        left_hmr: left_hmr {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_HMR";
-            bindings = <&kp>, <&kp>;
+		left_hmr: left_hmr {
+			compatible = "zmk,behavior-hold-tap";
+			label = "LEFT_HMR";
+			bindings = <&kp>, <&kp>;
 
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <28 40 58 29 41 59 60 42 30 32 31 43 61 62 44 33 45 63 16 17 18 19 20 21 29 30 31 57 74 73 75 76 77 78 79 52 69 70>;
-            tapping-term-ms = <350>;
-            flavor = "balanced";
-            require-prior-idle-ms = <150>;
-            hold-trigger-on-release;
-        };
+			#binding-cells = <2>;
+			hold-trigger-key-positions = <28 40 58 29 41 59 60 42 30 32 31 43 61 62 44 33 45 63 16 17 18 19 20 21 29 30 31 57 74 73 75 76 77 78 79 52 69 70>;
+			tapping-term-ms = <350>;
+			flavor = "balanced";
+			require-prior-idle-ms = <150>;
+			hold-trigger-on-release;
+		};
 
-        right_mt: right_mt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_MT";
-            bindings = <&mo>, <&kp>;
+		right_mt: right_mt {
+			compatible = "zmk,behavior-hold-tap";
+			label = "RIGHT_MT";
+			bindings = <&mo>, <&kp>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <350>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46 10 11 12 13 14 15 52 69 70 46 47 64 65 66 67 68 73 57 74>;
-            hold-trigger-on-release;
-        };
+			#binding-cells = <2>;
+			tapping-term-ms = <350>;
+			flavor = "balanced";
+			hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46 10 11 12 13 14 15 52 69 70 46 47 64 65 66 67 68 73 57 74>;
+			hold-trigger-on-release;
+		};
 
-        right_hmr: right_hmr {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_HMR";
-            bindings = <&kp>, <&kp>;
+		right_hmr: right_hmr {
+			compatible = "zmk,behavior-hold-tap";
+			label = "RIGHT_HMR";
+			bindings = <&kp>, <&kp>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <350>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46 10 11 12 13 14 15 24 25 26 27 52 69 70 46 47 64 65 66 67 68 57 73 74>;
-            require-prior-idle-ms = <150>;
-            hold-trigger-on-release;
-        };
-    };
+			#binding-cells = <2>;
+			tapping-term-ms = <350>;
+			flavor = "balanced";
+			hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46 10 11 12 13 14 15 24 25 26 27 52 69 70 46 47 64 65 66 67 68 57 73 74>;
+			require-prior-idle-ms = <150>;
+			hold-trigger-on-release;
+		};
+	};
 };
 
 / {
-    
-behaviors {};
 
-behaviors {};
+	keymap {
+		compatible = "zmk,keymap";
 
-behaviors {};
+		layer_colemakdh {
+			bindings = <
+				&trans        &kp F1  &kp F2  &kp F3  &kp F4                                                                                                &trans  &trans     &trans   &trans            &trans
+				&none         &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                                                &kp N6  &kp N7  &kp N8     &kp N9   &kp N0            &none
+				&none         &kp Q   &kp W   &kp F   &kp P   &kp B                                                                                 &kp J   &kp L   &kp U      &kp Y    &kp SINGLE_QUOTE  &none
+				&kp ESCAPE    &left_hmr LEFT_ALT A  &left_mt 9 R  &left_hmr LEFT_SHIFT S  &left_mt 8 T   &kp G                                      &right_mt 6 N       &right_hmr RIGHT_SHIFT E  &right_mt 9 I    &right_hmr LEFT_ALT O             &kp MINUS
+				&kp LS(SEMI)  &kp Z   &kp X   &kp C   &left_hmr RCTRL D   &kp V
+				&morph_caps  &kp LCTRL  &kp LG(GRAVE)    &kp LGUI      &kp
+				RCTRL   &morph_caps  &kp K   &right_hmr LCTRL H   &kp COMMA
+				&kp DOT  &kp SLASH         &kp ENTER
+				&mo 10        &none   &none   &none   &none           &repeat_key    &kp ESC    &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE           &none   &none      &none    &none             &none
+			>;
+		};
 
-behaviors {};
+		sturdy_magic {
+			bindings = <
+				&trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans   &trans    &trans     &trans
+				&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans   &trans  &trans   &trans    &trans     &trans
+				&trans  &kp V   &kp M   &kp L   &kp C   &kp P                                                     &kp B    &strdy_magic   &kp O    &kp U     &kp Q      &trans
+				&trans  &kp S   &kp T   &kp R   &kp D   &kp Y                                                     &kp F    &kp N   &kp A    &kp E     &kp I      &trans
+				&trans  &kp X   &kp K   &kp J   &kp G   &kp W   &trans  &trans  &trans    &trans  &trans  &trans  &kp Z    &kp H   &kp COMMA  &kp DOT  &kp SEMI  &trans
+				&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans           &trans  &trans   &trans    &trans     &trans
+			>;
+		};
 
-behaviors {};
+		focal {
+			bindings = <
+				&trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans   &trans    &trans     &trans
+				&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans   &trans  &trans   &trans    &trans     &trans
+				&trans  &kp V   &kp L   &kp H   &kp G   &kp K                                                     &kp Q    &kp F   &kp O    &kp U     &kp J      &trans
+				&trans  &kp S   &kp R   &kp N   &kp T   &kp B                                                     &kp Y    &kp C   &kp A    &kp E     &kp I      &trans
+				&trans  &kp Z   &kp X   &kp M   &kp D   &kp P   &trans  &trans  &trans    &trans  &trans  &trans  &kp SQT  &kp W   &kp DOT  &kp SEMI  &kp COMMA  &trans
+				&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans           &trans  &trans   &trans    &trans     &trans
+			>;
+		};
 
-behaviors {};
+		gallium {
+			bindings = <
+				&trans  &trans  &trans  &trans  &trans                                                                    &trans  &trans     &trans   &trans            &trans
+				&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans     &trans   &trans            &trans
+				&trans  &kp B   &kp L   &kp D   &kp C   &kp V                                                     &kp J   &kp Y   &kp O      &kp U    &kp SINGLE_QUOTE  &trans
+				&trans  &kp N   &kp R   &kp T   &kp S   &kp G                                                     &kp P   &kp H   &kp A      &kp E    &kp I             &trans
+				&trans  &kp X   &kp Q   &kp M   &kp W   &kp Z   &trans  &trans  &trans    &trans  &trans  &trans  &kp K   &kp F   &kp COMMA  &kp DOT  &kp SEMI          &trans
+				&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans   &trans            &trans
+			>;
+		};
 
-behaviors {};
+		layer_alt_thumb_2 {
+			bindings = <
+				&trans    &trans  &trans  &trans  &trans                                                                    &trans  &trans  &trans  &trans  &trans
+				&trans    &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
+				&trans    &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
+				&kp BSPC  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
+				&trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+				&trans    &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+			>;
+		};
 
-behaviors {};
+		z-symbol {
+			bindings = <
+				&trans  &trans                &trans        &trans                  &trans                                                                                               &trans              &trans                    &trans           &trans                 &trans
+				&trans  &trans                &trans        &trans                  &trans             &trans                                                                    &trans  &trans              &trans                    &trans           &trans                 &trans
+				&trans  &trans                &trans        &trans                  &trans             &trans                                                                    &trans  &trans              &trans                    &trans           &trans                 &trans
+				&trans  &left_hmr LEFT_ALT A  &left_mt 9 R  &left_hmr LEFT_SHIFT S  &left_mt 8 T       &trans                                                                    &trans  &right_mt 6 N       &right_hmr RIGHT_SHIFT E  &right_mt 9 I    &right_hmr LEFT_ALT O  &trans
+				&trans  &trans                &trans        &trans                  &left_hmr RCTRL D  &trans  &morph_caps  &trans  &trans         &trans   &trans  &morph_caps  &trans  &right_hmr RCTRL H  &trans                    &right_mt 7 DOT  &trans                 &trans
+				&trans  &trans                &trans        &trans                  &trans                     &repeat_key  &trans  &morph_caps    &kp TAB  &trans  &trans               &trans              &trans                    &trans           &trans                 &trans
+			>;
+		};
 
-behaviors {};
+		number_layer {
+			bindings = <
+				&trans  &trans     &trans  &trans  &trans                                                                           &trans  &trans     &trans     &trans        &trans
+				&trans  &trans     &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans     &trans     &trans        &trans
+				&trans  &kp FSLH   &kp N7  &kp N8  &kp N9  &kp LS(STAR)                                                     &trans  &trans  &trans     &trans     &trans        &trans
+				&trans  &kp DOT    &kp N4  &kp N5  &kp N6  &kp LS(PLUS)                                                     &trans  &trans  &trans     &kp LCTRL  &kp LEFT_ALT  &trans
+				&trans  &kp MINUS  &kp N1  &kp N2  &kp N3  &kp LS(PRCNT)  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT    &kp LGUI      &trans
+				&trans  &trans     &trans  &trans  &trans                 &kp N0  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans        &trans
+			>;
+		};
 
-behaviors {};
-keymap {
-        compatible = "zmk,keymap";
-
-        layer_colemakdh {
-            bindings = <
-&trans        &kp F1  &kp F2  &kp F3  &kp F4                                                                                                &trans  &trans     &trans   &trans            &trans
-&none         &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                                                &kp N6  &kp N7  &kp N8     &kp N9   &kp N0            &none
-&none         &kp Q   &kp W   &kp F   &kp P   &kp B                                                                                 &kp J   &kp L   &kp U      &kp Y    &kp SINGLE_QUOTE  &none
-&kp ESCAPE    &kp A   &kp R   &kp S   &kp T   &kp G                                                                                 &kp M   &kp N   &kp E      &kp I    &kp O             &kp MINUS
-&kp LS(SEMI)  &kp Z   &kp X   &kp C   &kp D   &kp V   &skq LSHFT  &kp LCTRL  &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &skq RSHFT  &kp K   &kp H   &kp COMMA  &kp DOT  &kp SLASH         &kp ENTER
-&mo 10        &none   &none   &none   &none           &kp BSPC    &kp ESC    &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE           &none   &none      &none    &none             &none
->;
-        };
-
-        sturdy {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans   &trans    &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans   &trans  &trans   &trans    &trans     &trans
-&trans  &kp V   &kp M   &kp L   &kp C   &kp P                                                     &kp X    &kp F   &kp O    &kp U     &kp J      &trans
-&trans  &kp S   &kp T   &kp R   &kp D   &kp Y                                                     &kp DOT  &kp N   &kp A    &kp E     &kp I      &trans
-&trans  &kp Z   &kp K   &kp Q   &kp G   &kp W   &trans  &trans  &trans    &trans  &trans  &trans  &kp B    &kp H   &kp SQT  &kp SEMI  &kp COMMA  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans           &trans  &trans   &trans    &trans     &trans
->;
-        };
-
-        focal {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans   &trans    &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans   &trans  &trans   &trans    &trans     &trans
-&trans  &kp V   &kp L   &kp H   &kp G   &kp K                                                     &kp Q    &kp F   &kp O    &kp U     &kp J      &trans
-&trans  &kp S   &kp R   &kp N   &kp T   &kp B                                                     &kp Y    &kp C   &kp A    &kp E     &kp I      &trans
-&trans  &kp Z   &kp X   &kp M   &kp D   &kp P   &trans  &trans  &trans    &trans  &trans  &trans  &kp SQT  &kp W   &kp DOT  &kp SEMI  &kp COMMA  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans           &trans  &trans   &trans    &trans     &trans
->;
-        };
-
-        gallium {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                    &trans  &trans     &trans   &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans     &trans   &trans            &trans
-&trans  &kp B   &kp L   &kp D   &kp C   &kp V                                                     &kp J   &kp Y   &kp O      &kp U    &kp SINGLE_QUOTE  &trans
-&trans  &kp N   &kp R   &kp T   &kp S   &kp G                                                     &kp P   &kp H   &kp A      &kp E    &kp I             &trans
-&trans  &kp X   &kp Q   &kp M   &kp W   &kp Z   &trans  &trans  &trans    &trans  &trans  &trans  &kp K   &kp F   &kp COMMA  &kp DOT  &kp SEMI          &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans   &trans            &trans
->;
-        };
-
-        layer_alt_thumb_2 {
-            bindings = <
-&trans    &trans  &trans  &trans  &trans                                                                    &trans  &trans  &trans  &trans  &trans
-&trans    &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans    &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp BSPC  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans    &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
->;
-        };
-
-        z-symbol {
-            bindings = <
-&trans  &trans                &trans        &trans                  &trans                                                                                               &trans              &trans                    &trans           &trans                 &trans
-&trans  &trans                &trans        &trans                  &trans             &trans                                                                    &trans  &trans              &trans                    &trans           &trans                 &trans
-&trans  &trans                &trans        &trans                  &trans             &trans                                                                    &trans  &trans              &trans                    &trans           &trans                 &trans
-&trans  &left_hmr LEFT_ALT A  &left_mt 9 R  &left_hmr LEFT_SHIFT S  &left_mt 8 T       &trans                                                                    &trans  &right_mt 6 N       &right_hmr RIGHT_SHIFT E  &right_mt 9 I    &right_hmr LEFT_ALT O  &trans
-&trans  &trans                &trans        &trans                  &left_hmr RCTRL D  &trans  &morph_caps  &trans  &trans         &trans   &trans  &morph_caps  &trans  &right_hmr RCTRL H  &trans                    &right_mt 7 DOT  &trans                 &trans
-&trans  &trans                &trans        &trans                  &trans                     &repeat_key  &trans  &morph_caps    &kp TAB  &trans  &trans               &trans              &trans                    &trans           &trans                 &trans
->;
-        };
-
-        number_layer {
-            bindings = <
-&trans  &trans     &trans  &trans  &trans                                                                           &trans  &trans     &trans     &trans        &trans
-&trans  &trans     &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans     &trans     &trans        &trans
-&trans  &kp FSLH   &kp N7  &kp N8  &kp N9  &kp LS(STAR)                                                     &trans  &trans  &trans     &trans     &trans        &trans
-&trans  &kp DOT    &kp N4  &kp N5  &kp N6  &kp LS(PLUS)                                                     &trans  &trans  &trans     &kp LCTRL  &kp LEFT_ALT  &trans
-&trans  &kp MINUS  &kp N1  &kp N2  &kp N3  &kp LS(PRCNT)  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT    &kp LGUI      &trans
-&trans  &trans     &trans  &trans  &trans                 &kp N0  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans        &trans
->;
-        };
-
-        window_layer {
-            bindings = <
-&trans  &trans       &trans      &trans              &trans                                                                                   &trans  &trans     &trans     &trans    &trans
-&trans  &trans       &trans      &trans              &trans             &trans                                                        &trans  &trans  &trans     &trans     &trans    &trans
-&trans  &kp LA(N1)   &kp LA(N2)  &kp LA(N3)          &kp LA(N4)         &kp LA(N5)                                                    &trans  &trans  &trans     &trans     &trans    &trans
-&trans  &trans       &trans      &kp LA(LS(ESCAPE))  &kp LA(ESCAPE)     &trans                                                        &trans  &trans  &kp E      &kp LCTRL  &kp LALT  &trans
-&trans  &kp LG(TAB)  &trans      &kp LG(LC(LEFT))    &kp LG(LC(RIGHT))  &trans      &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT    &kp RGUI  &trans
-&trans  &trans       &trans      &trans              &trans                         &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans    &trans
->;
-        };
+		window_layer {
+			bindings = <
+				&trans  &trans       &trans      &trans              &trans                                                                                   &trans  &trans     &trans     &trans    &trans
+				&trans  &trans       &trans      &trans              &trans             &trans                                                        &trans  &trans  &trans     &trans     &trans    &trans
+				&trans  &kp LA(N1)   &kp LA(N2)  &kp LA(N3)          &kp LA(N4)         &kp LA(N5)                                                    &trans  &trans  &trans     &trans     &trans    &trans
+				&trans  &trans       &trans      &kp LA(LS(ESCAPE))  &kp LA(ESCAPE)     &trans                                                        &trans  &trans  &kp E      &kp LCTRL  &kp LALT  &trans
+				&trans  &kp LG(TAB)  &trans      &kp LG(LC(LEFT))    &kp LG(LC(RIGHT))  &trans      &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT    &kp RGUI  &trans
+				&trans  &trans       &trans      &trans              &trans                         &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans    &trans
+			>;
+		};
 
 
-        layer_Nav {
-            bindings = <
-&trans  &trans        &trans     &trans          &trans                                                                            &trans             &trans        &trans          &trans   &trans
-&trans  &trans        &trans     &trans          &trans   &trans                                                    &trans         &trans             &trans        &trans          &trans   &trans
-&trans  &trans        &trans     &trans          &trans   &trans                                                    &kp PAGE_UP    &kp BSPC           &kp UP_ARROW  &kp DELETE      &trans   &trans
-&trans  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &none    &trans                                                    &kp PAGE_DOWN  &kp LEFT           &kp DOWN      &kp RIGHT       &kp RET  &trans
-&trans  &kp HOME      &trans     &kp LC(C)       &kp END  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp LC(BACKSPACE)  &trans        &kp LC(DELETE)  &trans   &trans
-&trans  &trans        &trans     &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans                 &trans             &trans        &trans          &trans   &trans
->;
-        };
+		layer_Nav {
+			bindings = <
+				&trans  &trans        &trans     &trans          &trans                                                                            &trans             &trans        &trans          &trans   &trans
+				&trans  &trans        &trans     &trans          &trans   &trans                                                    &trans         &trans             &trans        &trans          &trans   &trans
+				&trans  &trans        &trans     &trans          &trans   &trans                                                    &kp PAGE_UP    &kp BSPC           &kp UP_ARROW  &kp LC(Y)      &trans   &trans
+				&trans  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &none    &trans                                                    &kp PAGE_DOWN  &kp LEFT           &kp DOWN      &kp RIGHT       &kp RET  &trans
+				&trans  &kp HOME      &trans     &kp LC(C)       &kp END  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp LC(BACKSPACE)  &trans        &kp LC(DELETE)  &trans   &trans
+				&trans  &trans        &trans     &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans                 &trans             &trans        &trans          &trans   &trans
+			>;
+		};
+		layer_sym_old {
+			bindings = <
+				&trans  &trans     &trans         &trans            &trans                                                                                         &trans                &trans                 &trans      &trans         &trans
+				&trans  &trans     &trans         &trans            &trans             &trans                                                           &trans     &trans                &trans                 &trans      &trans         &trans
+				&trans  &kp GRAVE  &kp LESS_THAN  &kp GT            &kp MINUS          &kp PIPE                                                         &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR  &kp BACKSLASH  &trans
+				&trans  &kp EXCL   &kp STAR       &kp SLASH         &kp EQUAL          &kp AMPERSAND                                                    &kp HASH   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI    &kp DQT        &trans
+				&trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans  &trans  &trans    &trans  &trans  &trans  &kp AT     &kp COLON             &kp COMMA              &kp DOT     &kp SQT        &trans
+				&trans  &trans     &trans         &trans            &trans                            &trans  &trans  &trans    &trans  &trans  &trans             &trans                &trans                 &trans      &trans         &trans
+			>;
+		};
 
-
-        layer_sym_old {
-            bindings = <
-&trans  &trans     &trans         &trans            &trans                                                                                         &trans                &trans                 &trans      &trans         &trans
-&trans  &trans     &trans         &trans            &trans             &trans                                                           &trans     &trans                &trans                 &trans      &trans         &trans
-&trans  &kp GRAVE  &kp LESS_THAN  &kp GT            &kp MINUS          &kp PIPE                                                         &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR  &kp BACKSLASH  &trans
-&trans  &kp EXCL   &kp STAR       &kp SLASH         &kp EQUAL          &kp AMPERSAND                                                    &kp HASH   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI    &kp DQT        &trans
-&trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans  &trans  &trans    &trans  &trans  &trans  &kp AT     &kp COLON             &kp COMMA              &kp DOT     &kp SQT        &trans
-&trans  &trans     &trans         &trans            &trans                            &trans  &trans  &trans    &trans  &trans  &trans             &trans                &trans                 &trans      &trans         &trans
->;
-        };
-
-        layer_Magic {
-            bindings = <
-&bt BT_CLR   &none            &none            &none            &none                                                                                       &none   &none   &none   &none   &bt BT_CLR_ALL
-&none        &none            &none            &none            &none            &none                                                               &none  &none   &none   &none   &none   &none
-&none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                     &none  &tog 3  &tog 2  &tog 1  &none   &none
-&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                     &none  &tog 6  &none   &none   &none   &bootloader
-&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &tog 4  &tog 5  &none   &trans  &sys_reset
-&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB    &none  &none  &none         &none   &none   &none   &none   &none
->;
-        };
-    };
+		layer_Magic {
+			bindings = <
+				&bt BT_CLR   &none            &none            &none            &none                                                                                       &none   &none   &none   &none   &bt BT_CLR_ALL
+				&none        &none            &none            &none            &none            &none                                                               &none  &none   &none   &none   &none   &none
+				&none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                     &none  &tog 3  &tog 2  &tog 1  &none   &none
+				&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                     &none  &tog 6  &none   &none   &none   &bootloader
+				&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &tog 4  &tog 5  &none   &trans  &sys_reset
+				&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB    &none  &none  &none         &none   &none   &none   &none   &none
+			>;
+		};
+	};
 };
