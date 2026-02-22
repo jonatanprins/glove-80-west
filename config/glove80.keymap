@@ -166,8 +166,8 @@
         combos {
             compatible = "zmk,combos";
 
-            search {
-                bindings = <&kp SLASH>;
+            escape {
+                bindings = <&kp ESC>;
                 key-positions = <48 49>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <150>;
