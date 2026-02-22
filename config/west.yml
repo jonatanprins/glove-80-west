@@ -11,6 +11,8 @@ manifest:
   projects:
     - name: zmk-adaptive-key
       remote: urob
+    - name: zmk-auto-layer
+      remote: urob
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
