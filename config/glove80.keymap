@@ -201,7 +201,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MOD_MORPH_CAPS";
             #binding-cells = <0>;
-            bindings = <&sk LSHIFT>, <&al_caps_word>;
+            bindings = <&sk LSHIFT>, <&al_caps_word 4>;
 
             mods = <(MOD_LSFT)>;
         };
