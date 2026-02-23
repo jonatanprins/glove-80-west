@@ -41,12 +41,6 @@
     quick-release;
 };
 
-&caps_word {
-    /delete-property/ ignore-modifiers;
-
-    continue-list = <UNDERSCORE MINUS BACKSPACE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
-};
-
 &sl { release-after-ms = <700>; };
 
 / {
@@ -196,11 +190,18 @@
             };
         };
 
+		al_caps_word: al_caps_word {
+			compatible = "zmk,behavior-auto-layer";
+			#binding-cells = <1>;
+			continue-list = <UNDERSCORE MINUS BACKSPACE>;
+			ignore-alphas;
+		};
+
         morph_caps: morph_caps {
             compatible = "zmk,behavior-mod-morph";
             label = "MOD_MORPH_CAPS";
             #binding-cells = <0>;
-            bindings = <&sk LSHIFT>, <&caps_word>;
+            bindings = <&sk LSHIFT>, <&al_caps_word>;
 
             mods = <(MOD_LSFT)>;
         };
@@ -345,11 +346,6 @@
 };
 
 / {
-    
-
-behaviors {};
-
-behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
