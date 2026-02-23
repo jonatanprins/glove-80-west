@@ -257,14 +257,12 @@
 				trigger-keys = <I>;
 				max-prior-idle-ms = <1200>;
 				bindings = <&kp J>;
-				strict-modifiers;
 			};
 
 			repeat_alpha {
 				trigger-keys = <A B C D E F G H J K L M N O P Q R S T U V W X Y Z>;
 				bindings = <&key_repeat>;
 				max-prior-idle-ms = <1200>;
-				strict-modifiers;
 			};
 		};
 
@@ -394,8 +392,8 @@ caps_word {
 &trans  &trans     &trans     &trans     &trans                                                                             &trans     &trans     &trans     &trans     &trans
 &trans  &trans     &trans     &trans     &trans     &trans                                                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans  &kp LS(Q)  &kp LS(W)  &kp LS(F)  &kp LS(P)  &kp LS(B)                                                    &kp LS(J)  &kp LS(L)  &kp LS(U)  &kp LS(Y)  &trans     &trans
-&trans  &kp LS(A)  &kp LS(R)  &kp LS(S)  &kp LS(T)  &kp LS(G)                                                    &kp LS(M)  &kp LS(N)  &kp LS(E)  &kp LS(I)  &kp LS(O)  &trans
-&trans  &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(D)  &kp LS(V)  &trans  &trans  &trans    &trans  &trans  &trans  &kp LS(K)  &kp LS(H)  &trans     &trans     &trans     &trans
+&trans  &left_hmr LEFT_ALT LS(A)  &left_mt 10 LS(R)  &left_hmr LEFT_SHIFT LS(S)  &left_mt 9 LS(T)  &kp LS(G)                                                    &kp LS(M)  &right_mt 7 LS(N)  &right_hmr RIGHT_SHIFT LS(E) &right_mt 10 LS(I)  &right_hmr LEFT_ALT LS(O)  &trans
+&trans  &kp LS(Z)  &kp LS(X)  &kp LS(C)  &left_hmr RCTRL LS(D)  &kp LS(V)  &trans  &trans  &trans    &trans  &trans  &trans  &kp LS(K)  &right_hmr RCTRL LS(H)  &trans     &trans     &trans     &trans
 &trans  &trans     &trans     &trans     &trans                &trans  &trans  &trans    &trans  &trans  &trans             &trans     &trans     &trans     &trans     &trans
 >;};
 layer_alt_thumb_2 {
