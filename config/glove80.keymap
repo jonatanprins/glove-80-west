@@ -348,21 +348,22 @@
     
 
 behaviors {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
         layer_colemakdh {
             bindings = <
-&trans        &kp F1                &kp F2        &kp F3                  &kp F4                                                                                                             &trans              &trans                    &trans           &trans                 &trans
-&none         &kp N1                &kp N2        &kp N3                  &kp N4             &kp N5                                                                                  &kp N6  &kp N7              &kp N8                    &kp N9           &kp N0                 &none
-&none         &kp Q                 &kp W         &kp F                   &kp P              &kp B                                                                                   &kp J   &kp L               &kp U                     &kp Y            &kp SINGLE_QUOTE       &none
-&kp ESCAPE    &left_hmr LEFT_ALT A  &left_mt 9 R  &left_hmr LEFT_SHIFT S  &left_mt 8 T       &kp G                                                                                   &kp M   &right_mt 6 N       &right_hmr RIGHT_SHIFT E  &right_mt 9 I    &right_hmr LEFT_ALT O  &kp MINUS
-&kp LS(SEMI)  &kp Z                 &kp X         &kp C                   &left_hmr RCTRL D  &kp V   &morph_caps  &kp LCTRL  &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &morph_caps  &kp K   &right_hmr RCTRL H  &kp COMMA                 &right_mt 7 DOT  &kp SLASH              &kp ENTER
-&mo 10        &none                 &none         &none                   &none                      &repeat_key  &kp ESC    &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE            &none               &none                     &none            &none                  &none
+&trans        &kp F1                &kp F2         &kp F3                  &kp F4                                                                                                             &trans              &trans                    &trans           &trans                 &trans
+&none         &kp N1                &kp N2         &kp N3                  &kp N4             &kp N5                                                                                  &kp N6  &kp N7              &kp N8                    &kp N9           &kp N0                 &none
+&none         &kp Q                 &kp W          &kp F                   &kp P              &kp B                                                                                   &kp J   &kp L               &kp U                     &kp Y            &kp SINGLE_QUOTE       &none
+&kp ESCAPE    &left_hmr LEFT_ALT A  &left_mt 10 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &kp G                                                                                   &kp M   &right_mt 7 N       &right_hmr RIGHT_SHIFT E  &right_mt 10 I   &right_hmr LEFT_ALT O  &kp MINUS
+&kp LS(SEMI)  &kp Z                 &kp X          &kp C                   &left_hmr RCTRL D  &kp V   &morph_caps  &kp LCTRL  &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &morph_caps  &kp K   &right_hmr RCTRL H  &kp COMMA                 &right_mt 8 DOT  &kp SLASH              &kp ENTER
+&mo 11        &none                 &none          &none                   &none                      &repeat_key  &kp ESC    &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE            &none               &none                     &none            &none                  &none
 >;
         };
-
-        sturdy {
+sturdy {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans   &trans    &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans   &trans  &trans   &trans    &trans     &trans
@@ -372,8 +373,7 @@ keymap {
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans           &trans  &trans   &trans    &trans     &trans
 >;
         };
-
-        focal {
+focal {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                                                     &trans  &trans   &trans    &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans   &trans  &trans   &trans    &trans     &trans
@@ -383,8 +383,7 @@ keymap {
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans           &trans  &trans   &trans    &trans     &trans
 >;
         };
-
-        gallium {
+gallium {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                                                    &trans  &trans     &trans   &trans            &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans     &trans   &trans            &trans
@@ -394,8 +393,16 @@ keymap {
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans   &trans            &trans
 >;
         };
-
-        layer_alt_thumb_2 {
+caps_word {
+         bindings = <
+&trans  &trans     &trans     &trans     &trans                                                                             &trans     &trans     &trans     &trans     &trans
+&trans  &trans     &trans     &trans     &trans     &trans                                                       &trans     &trans     &trans     &trans     &trans     &trans
+&trans  &kp LS(Q)  &kp LS(W)  &kp LS(F)  &kp LS(P)  &kp LS(B)                                                    &kp LS(J)  &kp LS(L)  &kp LS(U)  &kp LS(Y)  &trans     &trans
+&trans  &kp LS(A)  &kp LS(R)  &kp LS(S)  &kp LS(T)  &kp LS(G)                                                    &kp LS(M)  &kp LS(N)  &kp LS(E)  &kp LS(I)  &kp LS(O)  &trans
+&trans  &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(D)  &kp LS(V)  &trans  &trans  &trans    &trans  &trans  &trans  &kp LS(K)  &kp LS(H)  &trans     &trans     &trans     &trans
+&trans  &trans     &trans     &trans     &trans                &trans  &trans  &trans    &trans  &trans  &trans             &trans     &trans     &trans     &trans     &trans
+>;};
+layer_alt_thumb_2 {
             bindings = <
 &trans    &trans  &trans  &trans  &trans                                                                    &trans  &trans  &trans  &trans  &trans
 &trans    &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -405,19 +412,17 @@ keymap {
 &trans    &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
 >;
         };
-
-        z-symbol {
+z-symbol {
             bindings = <
-&trans  &trans                &trans        &trans                  &trans                                                                                               &trans              &trans                    &trans           &trans                 &trans
-&trans  &trans                &trans        &trans                  &trans             &trans                                                                    &trans  &trans              &trans                    &trans           &trans                 &trans
-&trans  &trans                &trans        &trans                  &trans             &trans                                                                    &trans  &trans              &trans                    &trans           &trans                 &trans
-&trans  &left_hmr LEFT_ALT A  &left_mt 9 R  &left_hmr LEFT_SHIFT S  &left_mt 8 T       &trans                                                                    &trans  &right_mt 6 N       &right_hmr RIGHT_SHIFT E  &right_mt 9 I    &right_hmr LEFT_ALT O  &trans
-&trans  &trans                &trans        &trans                  &left_hmr RCTRL D  &trans  &morph_caps  &trans  &trans         &trans   &trans  &morph_caps  &trans  &right_hmr RCTRL H  &trans                    &right_mt 7 DOT  &trans                 &trans
-&trans  &trans                &trans        &trans                  &trans                     &repeat_key  &trans  &morph_caps    &kp TAB  &trans  &trans               &trans              &trans                    &trans           &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans                                                                                               &trans              &trans                    &trans           &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans             &trans                                                                    &trans  &trans              &trans                    &trans           &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans             &trans                                                                    &trans  &trans              &trans                    &trans           &trans                 &trans
+&trans  &left_hmr LEFT_ALT A  &left_mt 10 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &trans                                                                    &trans  &right_mt 7 N       &right_hmr RIGHT_SHIFT E  &right_mt 10 I   &right_hmr LEFT_ALT O  &trans
+&trans  &trans                &trans         &trans                  &left_hmr RCTRL D  &trans  &morph_caps  &trans  &trans         &trans   &trans  &morph_caps  &trans  &right_hmr RCTRL H  &trans                    &right_mt 8 DOT  &trans                 &trans
+&trans  &trans                &trans         &trans                  &trans                     &repeat_key  &trans  &morph_caps    &kp TAB  &trans  &trans               &trans              &trans                    &trans           &trans                 &trans
 >;
         };
-
-        number_layer {
+number_layer {
             bindings = <
 &trans  &trans     &trans  &trans  &trans                                                                           &trans  &trans     &trans     &trans        &trans
 &trans  &trans     &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans     &trans     &trans        &trans
@@ -427,8 +432,7 @@ keymap {
 &trans  &trans     &trans  &trans  &trans                 &kp N0  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans        &trans
 >;
         };
-
-        window_layer {
+window_layer {
             bindings = <
 &trans  &trans       &trans      &trans              &trans                                                                                   &trans  &trans     &trans     &trans    &trans
 &trans  &trans       &trans      &trans              &trans             &trans                                                        &trans  &trans  &trans     &trans     &trans    &trans
@@ -438,9 +442,7 @@ keymap {
 &trans  &trans       &trans      &trans              &trans                         &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans    &trans
 >;
         };
-
-
-        layer_Nav {
+layer_Nav {
             bindings = <
 &trans  &trans        &trans     &trans          &trans                                                                            &trans             &trans        &trans          &trans   &trans
 &trans  &trans        &trans     &trans          &trans   &trans                                                    &trans         &trans             &trans        &trans          &trans   &trans
@@ -450,9 +452,7 @@ keymap {
 &trans  &trans        &trans     &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans                 &trans             &trans        &trans          &trans   &trans
 >;
         };
-
-
-        layer_sym_old {
+layer_sym_old {
             bindings = <
 &trans  &trans     &trans         &trans            &trans                                                                                         &trans                &trans                 &trans      &trans         &trans
 &trans  &trans     &trans         &trans            &trans             &trans                                                           &trans     &trans                &trans                 &trans      &trans         &trans
@@ -462,14 +462,13 @@ keymap {
 &trans  &trans     &trans         &trans            &trans                            &trans  &trans  &trans    &trans  &trans  &trans             &trans                &trans                 &trans      &trans         &trans
 >;
         };
-
-        layer_Magic {
+layer_Magic {
             bindings = <
 &bt BT_CLR   &none            &none            &none            &none                                                                                       &none   &none   &none   &none   &bt BT_CLR_ALL
 &none        &none            &none            &none            &none            &none                                                               &none  &none   &none   &none   &none   &none
 &none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                     &none  &tog 3  &tog 2  &tog 1  &none   &none
-&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                     &none  &tog 6  &none   &none   &none   &bootloader
-&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &tog 4  &tog 5  &none   &trans  &sys_reset
+&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                     &none  &tog 7  &none   &none   &none   &bootloader
+&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &tog 5  &tog 6  &none   &trans  &sys_reset
 &none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB    &none  &none  &none         &none   &none   &none   &none   &none
 >;
         };
