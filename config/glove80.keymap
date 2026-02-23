@@ -255,7 +255,7 @@
 
 			j_follows_i {
 				trigger-keys = <I>;
-				max-prior-idle-ms = <800>;
+				max-prior-idle-ms = <1200>;
 				bindings = <&kp J>;
 				strict-modifiers;
 			};
@@ -263,7 +263,7 @@
 			repeat_alpha {
 				trigger-keys = <A B C D E F G H J K L M N O P Q R S T U V W X Y Z>;
 				bindings = <&key_repeat>;
-				max-prior-idle-ms = <800>;
+				max-prior-idle-ms = <1200>;
 				strict-modifiers;
 			};
 		};
