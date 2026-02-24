@@ -251,18 +251,12 @@
 		repeat_key: repeat_key {
 			compatible = "zmk,behavior-adaptive-key";
 			#binding-cells = <0>;
-			bindings = <&morph_caps>;
+			bindings = <&key_repeat>;
 
 			j_follows_i {
 				trigger-keys = <I>;
 				max-prior-idle-ms = <1200>;
 				bindings = <&kp J>;
-			};
-
-			repeat_alpha {
-				trigger-keys = <A B C D E F G H J K L M N O P Q R S T U V W X Y Z>;
-				bindings = <&key_repeat>;
-				max-prior-idle-ms = <1200>;
 			};
 		};
 
