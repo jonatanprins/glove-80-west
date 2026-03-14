@@ -15,7 +15,7 @@ manifest:
     - name: zmk-auto-layer
       remote: urob
     - name: zmk
-      revision: main
+      revision: v25.11
       remote: moergo-sc
       import: app/west.yml
 
