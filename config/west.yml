@@ -5,8 +5,8 @@ manifest:
   remotes:
     - name: urob
       url-base: https://github.com/urob
-    - name: moergo-sc
-      url-base: https://github.com/moergo-sc
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
 
   projects:
     - name: zmk-adaptive-key
@@ -14,8 +14,7 @@ manifest:
     - name: zmk-auto-layer
       remote: urob
     - name: zmk
-      revision: v25.11
-      remote: moergo-sc
+      remote: zmkfirmware
       import: app/west.yml
 
   self:
