@@ -161,7 +161,7 @@
             compatible = "zmk,combos";
 
             command {
-                bindings = <&kp LS(SEMI)>;
+                bindings = <&kp SEMI>;
                 key-positions = <60 61>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <10>;
@@ -169,13 +169,13 @@
 
             tab {
                 bindings = <&kp TAB>;
-                key-positions = <36 37>;
+                key-positions = <>;
                 timeout-ms = <55>;
                 require-prior-idle-ms = <140>;
             };
 
             quote {
-                bindings = <&kp UNDERSCORE>;
+                bindings = <&kp SINGLE_QUOTE>;
                 key-positions = <60 59>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <60>;
@@ -325,22 +325,31 @@
             hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46 10 11 12 13 14 15 24 25 26 27 52 69 70 46 47 64 65 66 67 68 57 73 74>;
             require-prior-idle-ms = <150>;
             hold-trigger-on-release;
-        };
+        };forwardslash: forwardslash {
+      compatible = "zmk,behavior-mod-morph";
+    
+         label = "FORWARDSLASH";
+         bindings = <&kp SLASH>, <&kp BACKSLASH>;
+         #binding-cells = <0>;
+         mods = <(MOD_LSFT|MOD_RSFT)>;
+         keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;};
     };
 };
 
 / {
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
         layer_colemakdh {
             bindings = <
-&trans        &kp F1                &kp F2         &kp F3                  &kp F4                                                                                                             &trans              &trans                    &trans           &trans                 &trans
-&none         &kp N1                &kp N2         &kp N3                  &kp N4             &kp N5                                                                                  &kp N6  &kp N7              &kp N8                    &kp N9           &kp N0                 &none
-&none         &kp Q                 &kp W          &kp F                   &kp P              &kp B                                                                                   &kp J   &kp L               &kp U                     &kp Y            &kp SINGLE_QUOTE       &none
-&kp BACKSPACE    &left_hmr LEFT_ALT A  &left_mt 10 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &kp G                                                                                   &kp M   &right_mt 7 N       &right_hmr RIGHT_SHIFT E  &right_mt 10 I   &right_hmr LEFT_ALT O  &kp MINUS
-&kp LS(SEMI)  &kp Z                 &kp X          &kp C                   &left_hmr RCTRL D  &kp V   &morph_caps  &kp LCTRL  &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &morph_caps  &kp K   &right_hmr RCTRL H  &kp COMMA                 &right_mt 8 DOT  &kp SLASH              &kp ENTER
-&mo 11        &none                 &none          &none                   &none                      &repeat_key  &kp ESC    &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE            &none               &none                     &none            &none                  &none
+&trans         &kp F1                &kp F2         &kp F3                  &kp F4                                                                                                             &trans              &trans                    &trans           &trans                 &trans
+&none          &kp N1                &kp N2         &kp N3                  &kp N4             &kp N5                                                                                  &kp N6  &kp N7              &kp N8                    &kp N9           &kp N0                 &none
+&kp TAB        &kp Q                 &kp W          &kp F                   &kp P              &kp B                                                                                   &kp J   &kp L               &kp U                     &kp Y            &kp SINGLE_QUOTE       &forwardslash
+&kp BACKSPACE  &left_hmr LEFT_ALT A  &left_mt 10 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &kp G                                                                                   &kp M   &right_mt 7 N       &right_hmr RIGHT_SHIFT E  &right_mt 10 I   &right_hmr LEFT_ALT O  &kp MINUS
+&morph_caps    &kp Z                 &kp X          &kp C                   &left_hmr RCTRL D  &kp V   &morph_caps  &kp LCTRL  &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &morph_caps  &kp K   &right_hmr RCTRL H  &kp COMMA                 &right_mt 8 DOT  &kp SLASH              &morph_caps
+&mo 11         &none                 &none          &none                   &none                      &repeat_key  &kp ESC    &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE            &none               &none                     &none            &none                  &none
 >;
         };
 sturdy {
@@ -375,12 +384,12 @@ gallium {
         };
 caps_word {
          bindings = <
-&trans  &trans     &trans     &trans     &trans                                                                             &trans     &trans     &trans     &trans     &trans
-&trans  &trans     &trans     &trans     &trans     &trans                                                       &trans     &trans     &trans     &trans     &trans     &trans
-&trans  &kp LS(Q)  &kp LS(W)  &kp LS(F)  &kp LS(P)  &kp LS(B)                                                    &kp LS(J)  &kp LS(L)  &kp LS(U)  &kp LS(Y)  &trans     &trans
-&trans  &left_hmr LEFT_ALT LS(A)  &left_mt 10 LS(R)  &left_hmr LEFT_SHIFT LS(S)  &left_mt 9 LS(T)  &kp LS(G)                                                    &kp LS(M)  &right_mt 7 LS(N)  &right_hmr RIGHT_SHIFT LS(E) &right_mt 10 LS(I)  &right_hmr LEFT_ALT LS(O)  &trans
-&trans  &kp LS(Z)  &kp LS(X)  &kp LS(C)  &left_hmr RCTRL LS(D)  &kp LS(V)  &trans  &trans  &trans    &trans  &trans  &trans  &kp LS(K)  &right_hmr RCTRL LS(H)  &trans     &trans     &trans     &trans
-&trans  &trans     &trans     &trans     &trans                &trans  &trans  &trans    &trans  &trans  &trans             &trans     &trans     &trans     &trans     &trans
+&trans  &trans                    &trans             &trans                      &trans                                                                                         &trans                  &trans                        &trans              &trans                     &trans
+&trans  &trans                    &trans             &trans                      &trans                 &trans                                                       &trans     &trans                  &trans                        &trans              &trans                     &trans
+&trans  &kp LS(Q)                 &kp LS(W)          &kp LS(F)                   &kp LS(P)              &kp LS(B)                                                    &kp LS(J)  &kp LS(L)               &kp LS(U)                     &kp LS(Y)           &trans                     &trans
+&trans  &left_hmr LEFT_ALT LS(A)  &left_mt 10 LS(R)  &left_hmr LEFT_SHIFT LS(S)  &left_mt 9 LS(T)       &kp LS(G)                                                    &kp LS(M)  &right_mt 7 LS(N)       &right_hmr RIGHT_SHIFT LS(E)  &right_mt 10 LS(I)  &right_hmr LEFT_ALT LS(O)  &trans
+&trans  &kp LS(Z)                 &kp LS(X)          &kp LS(C)                   &left_hmr RCTRL LS(D)  &kp LS(V)  &trans  &trans  &trans    &trans  &trans  &trans  &kp LS(K)  &right_hmr RCTRL LS(H)  &trans                        &trans              &trans                     &trans
+&trans  &trans                    &trans             &trans                      &trans                            &trans  &trans  &trans    &trans  &trans  &trans             &trans                  &trans                        &trans              &trans                     &trans
 >;};
 layer_alt_thumb_2 {
             bindings = <
