@@ -9,10 +9,10 @@ manifest:
       url-base: https://github.com/moergo-sc
 
   projects:
-    # - name: zmk-adaptive-key
-    #   remote: urob
-    # - name: zmk-auto-layer
-    #   remote: urob
+    - name: zmk-adaptive-key
+      remote: urob
+    - name: zmk-auto-layer
+      remote: urob
     - name: zmk
       revision: v25.11
       remote: moergo-sc
