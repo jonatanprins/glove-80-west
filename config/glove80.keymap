@@ -189,12 +189,19 @@
 			ignore-alphas;
 		};
 
+        morph_esc: morph_esc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_ESC";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp ESC>;
+            mods = <(MOD_LCTL)>;
+        };
+
         morph_caps: morph_caps {
             compatible = "zmk,behavior-mod-morph";
             label = "MOD_MORPH_CAPS";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT>, <&al_caps_word 4>;
-
             mods = <(MOD_LSFT)>;
         };
 
@@ -375,8 +382,8 @@ keymap {
 &none          &kp N1                &kp N2         &kp N3                  &kp N4             &kp N5                                                                                  &kp N6  &kp N7              &kp N8                    &kp N9           &kp N0                 &none
 &kp TAB        &kp Q                 &kp W          &kp F                   &kp P              &kp B                                                                                   &kp J   &kp L               &kp U                     &kp Y            &kp SINGLE_QUOTE       &forwardslash
 &kp BACKSPACE  &left_hmr LEFT_ALT A  &left_mt 10 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T       &kp G                                                                                   &kp M   &right_mt 7 N       &right_hmr RIGHT_SHIFT E  &right_mt 10 I   &right_hmr LEFT_ALT O  &kp MINUS
-&kp UNDERSCORE     &kp Z                 &kp X          &kp C                   &left_hmr_short RCTRL D  &kp V   &morph_caps  &kp LCTRL  &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &morph_caps  &kp K   &right_hmr_short RCTRL H  &kp COMMA                 &right_mt 8 DOT  &kp SLASH              &kp LS(SEMI)
-&mo 11         &none                 &none          &none                   &none                      &repeat_key  &kp ESC    &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE            &none               &none                     &none            &none                  &none
+&kp UNDERSCORE     &kp Z                 &kp X          &kp C                   &left_hmr_short LCTRL D  &kp V   &morph_caps  &kp LCTRL  &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &morph_caps  &kp K   &right_hmr_short RCTRL H  &kp COMMA                 &right_mt 8 DOT  &kp SLASH              &kp LS(SEMI)
+&mo 11         &none                 &none          &none                   &none                      &repeat_key  &morph_esc    &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE            &none               &none                     &none            &none                  &none
 >;
         };
 sturdy {
