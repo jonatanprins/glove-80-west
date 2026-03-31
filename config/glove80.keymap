@@ -162,21 +162,21 @@
 
             command {
                 bindings = <&kp SEMI>;
-                key-positions = <60 61>;
+                key-positions = <>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <10>;
             };
 
             tab {
                 bindings = <&kp TAB>;
-                key-positions = <37 36>;
+                key-positions = <>;
                 timeout-ms = <55>;
                 require-prior-idle-ms = <140>;
             };
 
             quote {
                 bindings = <&kp SINGLE_QUOTE>;
-                key-positions = <60 59>;
+                key-positions = <>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <60>;
             };
@@ -373,6 +373,8 @@
 
 / {
 
+
+behaviors {};
 
 behaviors {};
 
