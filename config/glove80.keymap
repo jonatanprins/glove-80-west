@@ -375,6 +375,8 @@
 
 
 behaviors {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
@@ -461,7 +463,7 @@ window_layer {
             bindings = <
 &trans  &trans       &trans      &trans              &trans                                                                                   &trans  &trans     &trans     &trans    &trans
 &trans  &trans       &trans      &trans              &trans             &trans                                                        &trans  &trans  &trans     &trans     &trans    &trans
-&trans  &kp LA(N1)   &kp LA(N2)  &kp LA(N3)          &kp LA(N4)         &kp LA(N5)                                                    &trans  &trans  &trans     &trans     &trans    &trans
+&trans  &kp LG(N1)   &kp LG(N2)  &kp LG(N3)          &kp LG(N4)         &kp LG(N5)                                                    &trans  &trans  &trans     &trans     &trans    &trans
 &trans  &trans       &trans      &kp LA(LS(ESCAPE))  &kp LA(ESCAPE)     &trans                                                        &trans  &trans  &kp E      &kp LCTRL  &kp LALT  &trans
 &trans  &kp LG(TAB)  &trans      &kp LG(LC(LEFT))    &kp LG(LC(RIGHT))  &trans      &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT    &kp RGUI  &trans
 &trans  &trans       &trans      &trans              &trans                         &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans    &trans
