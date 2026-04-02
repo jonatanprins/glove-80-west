@@ -381,6 +381,8 @@ behaviors {};
 behaviors {};
 
 behaviors {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
@@ -475,12 +477,12 @@ window_layer {
         };
 layer_Nav {
             bindings = <
-&trans  &trans        &trans     &trans          &trans                                                                            &trans    &trans        &trans     &trans      &trans
-&trans  &trans        &trans     &trans          &trans   &trans                                                    &trans         &trans    &trans        &trans     &trans      &trans
-&trans  &trans        &trans     &trans          &trans   &trans                                                    &kp PAGE_UP    &kp BSPC  &kp UP_ARROW  &kp LC(Y)  &trans      &trans
-&trans  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &none    &trans                                                    &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &kp DELETE  &trans
-&trans  &kp HOME      &trans     &kp LC(C)       &kp END  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &trans    &trans        &trans     &trans      &trans
-&trans  &trans        &trans     &trans          &trans           &trans  &trans  &trans    &trans  &trans  &trans                 &trans    &trans        &trans     &trans      &trans
+&trans  &trans        &trans     &trans          &trans                                                                           &trans    &trans        &trans     &trans      &trans
+&trans  &trans        &trans     &trans          &trans  &trans                                                    &trans         &trans    &trans        &trans     &trans      &trans
+&trans  &trans        &trans     &trans          &trans  &trans                                                    &kp PAGE_UP    &kp BSPC  &kp UP_ARROW  &kp LC(Y)  &trans      &trans
+&trans  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &none   &trans                                                    &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &kp DELETE  &trans
+&trans  &kp LCMD      &trans     &kp LC(C)       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &trans    &trans        &trans     &trans      &trans
+&trans  &trans        &trans     &trans          &trans          &trans  &trans  &trans    &trans  &trans  &trans                 &trans    &trans        &trans     &trans      &trans
 >;
         };
 layer_sym_old {
