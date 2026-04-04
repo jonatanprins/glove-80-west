@@ -385,6 +385,8 @@ behaviors {};
 behaviors {};
 
 behaviors {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
@@ -461,30 +463,30 @@ number_layer {
             bindings = <
 &trans  &trans     &trans  &trans  &trans                                                                           &trans  &trans     &trans     &trans        &trans
 &trans  &trans     &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans     &trans     &trans        &trans
-&trans  &kp FSLH   &kp N7  &kp N8  &kp N9  &kp LS(STAR)                                                     &trans  &trans  &trans     &trans     &trans        &trans
-&trans  &kp DOT    &kp N4  &kp N5  &kp N6  &kp LS(PLUS)                                                     &trans  &trans  &trans     &kp LCTRL  &kp LEFT_ALT  &trans
-&trans  &kp MINUS  &kp N1  &kp N2  &kp N3  &kp LS(PRCNT)  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT    &kp LGUI      &trans
+&trans  &kp FSLH   &kp N9  &kp N8  &kp N7  &kp LS(STAR)                                                     &trans  &trans  &trans     &trans     &trans        &trans
+&trans  &kp DOT    &kp N3  &kp N2  &kp N1  &kp LS(PLUS)                                                     &trans  &trans  &trans     &kp LCTRL  &kp LEFT_ALT  &trans
+&trans  &kp MINUS  &kp N6  &kp N5  &kp N4  &kp LS(PRCNT)  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT    &kp LGUI      &trans
 &trans  &trans     &trans  &trans  &trans                 &kp N0  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans        &trans
 >;
         };
 window_layer {
             bindings = <
-&trans  &trans       &trans      &trans              &trans                                                                                   &trans  &trans     &trans     &trans    &trans
-&trans  &trans       &trans      &trans              &trans             &trans                                                        &trans  &trans  &trans     &trans     &trans    &trans
-&trans  &kp LG(N1)   &kp LG(N2)  &kp LG(N3)          &kp LG(N4)         &kp LG(N5)                                                    &trans  &trans  &trans     &trans     &trans    &trans
-&trans  &trans       &trans      &kp LA(LS(ESCAPE))  &kp LA(ESCAPE)     &trans                                                        &trans  &trans  &kp E      &kp LCTRL  &kp LALT  &trans
-&trans  &kp LG(TAB)  &trans      &kp LG(LC(LEFT))    &kp LG(LC(RIGHT))  &trans      &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT    &kp RGUI  &trans
-&trans  &trans       &trans      &trans              &trans                         &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans    &trans
+&trans  &trans       &trans      &trans      &trans                                                                            &trans  &trans     &trans     &trans    &trans
+&trans  &trans       &trans      &trans      &trans      &trans                                                        &trans  &trans  &trans     &trans     &trans    &trans
+&trans  &kp LG(N1)   &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)                                                    &trans  &trans  &trans     &trans     &trans    &trans
+&trans  &trans       &kp LG(N3)  &kp LG(N2)  &kp LG(N1)  &trans                                                        &trans  &trans  &kp E      &kp LCTRL  &kp LALT  &trans
+&trans  &kp LG(TAB)  &kp LG(N6)  &kp LG(N5)  &kp LG(N4)  &trans      &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT    &kp RGUI  &trans
+&trans  &trans       &trans      &trans      &trans                  &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans    &trans
 >;
         };
 layer_Nav {
             bindings = <
-&trans  &trans        &trans     &trans          &trans                                                                           &trans        &trans        &trans     &trans      &trans
-&trans  &trans        &trans     &trans          &trans  &trans                                                    &trans         &trans        &trans        &trans     &trans      &trans
-&trans  &trans        &trans     &trans          &trans  &trans                                                    &kp PAGE_UP    &kp LC(BSPC)  &kp UP_ARROW  &kp LC(Y)  &trans      &trans
-&trans  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &none   &trans                                                    &kp PAGE_DOWN  &kp LEFT      &kp DOWN      &kp RIGHT  &kp DELETE  &trans
-&trans  &kp LCMD      &trans     &kp LC(C)       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &trans        &trans        &trans     &trans      &trans
-&trans  &trans        &trans     &trans          &trans          &trans  &trans  &trans    &trans  &trans  &trans                 &trans        &trans        &trans     &trans      &trans
+&trans  &trans        &trans     &trans          &trans                                                                           &trans            &trans             &trans     &trans      &trans
+&trans  &trans        &trans     &trans          &trans  &trans                                                    &trans         &trans            &trans             &trans     &trans      &trans
+&trans  &trans        &trans     &trans          &trans  &trans                                                    &kp PAGE_UP    &kp HOME          &kp UP_ARROW       &kp END    &kp LC(Y)   &trans
+&trans  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &none   &trans                                                    &kp PAGE_DOWN  &kp LEFT          &kp DOWN           &kp RIGHT  &kp DELETE  &trans
+&trans  &kp LCMD      &trans     &kp LC(C)       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans         &kp LS(LC(LEFT))  &kp LC(LS(RIGHT))  &trans     &trans      &trans
+&trans  &trans        &trans     &trans          &trans          &trans  &trans  &trans    &trans  &trans  &trans                 &trans            &trans             &trans     &trans      &trans
 >;
         };
 layer_sym_old {
