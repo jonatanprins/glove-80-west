@@ -165,21 +165,24 @@
                 key-positions = <60 61>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <(-1)>;
-            };
+            
+         layers = <0 3>;};
 
             tab {
                 bindings = <&kp TAB>;
                 key-positions = <26 24>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <100>;
-            };
+            
+         layers = <0 3>;};
 
             slash {
                 bindings = <&kp SLASH>;
                 key-positions = <48 50>;
                 timeout-ms = <75>;
                 require-prior-idle-ms = <(-1)>;
-            };
+            
+         layers = <0 3>;};
         };
 
 		al_caps_word: al_caps_word {
@@ -371,6 +374,8 @@
 
 / {
 
+
+behaviors {};
 
 behaviors {};
 
