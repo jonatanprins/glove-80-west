@@ -293,7 +293,6 @@
             hold-trigger-key-positions = <28 40 58 29 41 59 60 42 30 32 31 43 61 62 44 33 45 63 16 17 18 19 20 21 57 73 74 62 75 76 77 78 79 52 69 70>;
             tapping-term-ms = <350>;
             flavor = "balanced";
-            hold-trigger-on-release;
         };
 
         left_hmr_short: left_hmr_short {
@@ -373,6 +372,8 @@
 
 / {
 
+
+behaviors {};
 
 behaviors {};
 
