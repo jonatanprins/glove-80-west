@@ -415,10 +415,12 @@ behaviors {};
 behaviors {};
 
 behaviors {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
-        layer_colemakdh {
+        colemakdh {
             bindings = <
 &trans          &kp F1                &kp F2        &kp F3                  &kp F4                                                                                                                    &trans                    &trans                    &trans           &trans                 &trans
 &none           &kp N1                &kp N2        &kp N3                  &kp N4                   &kp N5                                                                                   &kp N6  &kp N7                    &kp N8                    &kp N9           &kp N0                 &none
@@ -456,7 +458,7 @@ shelzuuz_toggle {
 &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans
 &trans  &trans  &trans        &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans         &trans  &trans
 >;};
-layer_alt_thumb_2 {
+no_repeat {
             bindings = <
 &trans    &trans  &trans  &trans  &trans                                                                           &trans  &trans  &trans  &trans  &trans
 &trans    &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans  &trans  &trans  &trans
@@ -466,7 +468,7 @@ layer_alt_thumb_2 {
 &trans    &trans  &trans  &trans  &trans          &kp BACKSPACE  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
 >;
         };
-number_layer {
+number {
             bindings = <
 &trans  &trans     &trans  &trans  &trans                                                                           &trans  &trans     &trans     &trans        &trans
 &trans  &trans     &trans  &trans  &trans  &trans                                                           &trans  &trans  &trans     &trans     &trans        &trans
@@ -476,7 +478,7 @@ number_layer {
 &trans  &trans     &trans  &trans  &trans                 &kp N0  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans        &trans
 >;
         };
-window_layer {
+window {
             bindings = <
 &trans  &trans       &trans            &trans            &trans                                                                                  &trans  &trans     &trans     &trans    &trans
 &trans  &trans       &trans            &trans            &trans            &trans                                                        &trans  &trans  &trans     &trans     &trans    &trans
@@ -486,7 +488,7 @@ window_layer {
 &trans  &trans       &trans            &trans            &trans                        &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans     &trans    &trans
 >;
         };
-layer_Nav {
+nav {
             bindings = <
 &trans  &trans        &trans     &trans          &trans                                                                      &trans         &trans         &trans         &trans      &trans
 &trans  &trans        &trans     &trans          &trans  &trans                                                    &trans    &trans         &trans         &trans         &trans      &trans
