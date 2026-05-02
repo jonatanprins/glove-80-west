@@ -331,7 +331,6 @@
             tapping-term-ms = <350>;
             flavor = "balanced";
             hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46 10 11 12 13 14 15 52 69 70 46 47 64 65 66 67 68 73 57 74>;
-            hold-trigger-on-release;
         };
 
         right_hmr: right_hmr {
@@ -372,6 +371,8 @@
 
 / {
 
+
+behaviors {};
 
 behaviors {};
 
