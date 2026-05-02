@@ -164,22 +164,21 @@
                 bindings = <&kp SEMI>;
                 key-positions = <60 61>;
                 timeout-ms = <75>;
-                require-prior-idle-ms = <100>;
+                require-prior-idle-ms = <(-1)>;
             };
 
             tab {
                 bindings = <&kp TAB>;
                 key-positions = <26 24>;
-                timeout-ms = <55>;
+                timeout-ms = <75>;
                 require-prior-idle-ms = <100>;
-            
-         layers = <0>;};
+            };
 
             slash {
                 bindings = <&kp SLASH>;
                 key-positions = <48 50>;
                 timeout-ms = <75>;
-                require-prior-idle-ms = <100>;
+                require-prior-idle-ms = <(-1)>;
             };
         };
 
@@ -372,6 +371,8 @@
 
 / {
 
+
+behaviors {};
 
 behaviors {};
 
