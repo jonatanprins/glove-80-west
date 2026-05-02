@@ -411,6 +411,8 @@ behaviors {};
 behaviors {};
 
 behaviors {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
@@ -421,7 +423,7 @@ keymap {
 &kp TAB         &kp Q                 &kp W          &kp F                   &kp P                    &kp B                                                                                    &kp J   &kp L                     &kp U                     &kp Y            &kp SEMI               &forwardslash
 &kp BACKSPACE   &left_hmr LEFT_ALT A  &left_mt 10 R  &left_hmr LEFT_SHIFT S  &left_mt 9 T             &kp G                                                                                    &kp M   &right_mt 7 N             &right_hmr RIGHT_SHIFT E  &right_mt 10 I   &right_hmr LEFT_ALT O  &kp MINUS
 &kp UNDERSCORE  &left_hmr LGUI Z      &kp X          &kp C                   &left_hmr_short LCTRL D  &kp V   &morph_caps  &kp LCTRL   &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &morph_caps  &kp K   &right_hmr_short RCTRL H  &kp COMMA                 &right_mt 8 DOT  &right_hmr RGUI SLASH  &kp LS(SEMI)
-&mo 11          &none                 &none          &none                   &none                            &repeat_key  &morph_esc  &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE            &none                     &none                     &none            &none                  &none
+&mo 12          &none                 &none          &none                   &none                            &repeat_key  &morph_esc  &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE            &none                     &none                     &none            &none                  &none
 >;
         };
 sturdy {
@@ -523,6 +525,15 @@ layer_sym_old {
 &trans  &trans     &trans         &trans            &trans                            &trans  &trans  &trans    &trans  &trans  &trans             &trans                &trans                 &trans      &trans         &trans
 >;
         };
+shelzuuz {
+         bindings = <
+&trans  &trans       &trans          &trans     &trans                                                                                     &trans                &trans                 &trans            &trans             &trans
+&trans  &trans       &trans          &trans     &trans         &trans                                                           &trans     &trans                &trans                 &trans            &trans             &trans
+&trans  &kp GRAVE    &kp TILDE       &kp HASH   &kp AMPERSAND  &kp PIPE                                                         &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans  &kp EXCL     &kp UNDERSCORE  &kp COLON  &kp EQUAL      &kp DOLLAR                                                       &kp AT     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp SEMICOLON      &trans
+&trans  &kp PERCENT  &kp QUESTION    &kp STAR   &kp PLUS       &kp BACKSLASH  &trans  &trans  &trans    &trans  &trans  &trans  &kp SLASH  &kp MINUS             &kp LESS_THAN          &kp GREATER_THAN  &kp DOUBLE_QUOTES  &trans
+&trans  &trans       &trans          &trans     &trans                        &trans  &trans  &trans    &trans  &trans  &trans             &trans                &trans                 &trans            &trans             &trans
+>;};
 layer_Magic {
             bindings = <
 &bt BT_CLR   &none            &none            &none            &none                                                                                       &none   &none   &none   &none   &bt BT_CLR_ALL
