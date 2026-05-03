@@ -224,7 +224,7 @@
                 trigger-keys = <TILDE>;
                 bindings = <&kp SLASH>;
                 strict-modifiers;
-            }
+            };
 		};
 
 		strdy_magic: strdy_magic {
