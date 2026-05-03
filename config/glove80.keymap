@@ -208,6 +208,25 @@
             mods = <(MOD_LSFT)>;
         };
 
+
+		zuuz_magic: zuuz_magic {
+			compatible = "zmk,behavior-adaptive-key";
+			#binding-cells = <0>;
+			bindings = <&kp HASH>;
+
+			fat_arrow {
+				trigger-keys = <EQUAL>;
+				bindings = <&kp GT>;
+				strict-modifiers;
+			};
+
+            home {
+                trigger-keys = <TILDE>;
+                bindings = <&kp SLASH>;
+                strict-modifiers;
+            }
+		};
+
 		strdy_magic: strdy_magic {
 			compatible = "zmk,behavior-adaptive-key";
 			#binding-cells = <0>;
@@ -374,62 +393,6 @@
 
 / {
 
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
-
-behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
@@ -525,7 +488,7 @@ shelzuuz {
          bindings = <
 &trans  &trans       &trans          &trans     &trans                                                                                     &trans                &trans                 &trans            &trans             &trans
 &trans  &trans       &trans          &trans     &trans         &trans                                                           &trans     &trans                &trans                 &trans            &trans             &trans
-&trans  &kp GRAVE    &kp TILDE       &kp HASH   &kp AMPERSAND  &kp PIPE                                                         &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans  &kp GRAVE    &kp TILDE       &zuuz_magic &kp AMPERSAND  &kp PIPE                                                         &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
 &trans  &kp EXCL     &kp UNDERSCORE  &kp COLON  &kp EQUAL      &kp DOLLAR                                                       &kp AT     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp SEMICOLON      &trans
 &trans  &kp PERCENT  &kp QUESTION    &kp STAR   &kp PLUS       &kp BACKSLASH  &trans  &trans  &trans    &trans  &trans  &trans  &kp SLASH  &kp MINUS             &kp LESS_THAN          &kp GREATER_THAN  &kp DOUBLE_QUOTES  &trans
 &trans  &trans       &trans          &trans     &trans                        &trans  &trans  &trans    &trans  &trans  &trans             &trans                &trans                 &trans            &trans             &trans
