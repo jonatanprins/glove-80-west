@@ -197,7 +197,7 @@
             label = "MORPH_ESC";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp ESC>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RGUI|MOD_RALT)>;
         };
 
         morph_caps: morph_caps {
@@ -393,6 +393,8 @@
 
 / {
 
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
@@ -486,12 +488,12 @@ pascal {
         };
 shelzuuz {
          bindings = <
-&trans  &trans       &trans          &trans     &trans                                                                                     &trans                &trans                 &trans            &trans             &trans
-&trans  &trans       &trans          &trans     &trans         &trans                                                           &trans     &trans                &trans                 &trans            &trans             &trans
-&trans  &kp GRAVE    &kp TILDE       &zuuz_magic &kp AMPERSAND  &kp PIPE                                                         &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&trans  &kp EXCL     &kp UNDERSCORE  &kp COLON  &kp EQUAL      &kp DOLLAR                                                       &kp AT     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp SEMICOLON      &trans
-&trans  &kp PERCENT  &kp QUESTION    &kp STAR   &kp PLUS       &kp BACKSLASH  &trans  &trans  &trans    &trans  &trans  &trans  &kp SLASH  &kp MINUS             &kp LESS_THAN          &kp GREATER_THAN  &kp DOUBLE_QUOTES  &trans
-&trans  &trans       &trans          &trans     &trans                        &trans  &trans  &trans    &trans  &trans  &trans             &trans                &trans                 &trans            &trans             &trans
+&trans  &trans       &trans          &trans       &trans                                                                                     &trans                &trans                 &trans            &trans             &trans
+&trans  &trans       &trans          &trans       &trans         &trans                                                           &trans     &trans                &trans                 &trans            &trans             &trans
+&trans  &kp GRAVE    &kp TILDE       &zuuz_magic  &kp AMPERSAND  &kp PIPE                                                         &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans  &kp EXCL     &kp UNDERSCORE  &kp COLON    &kp EQUAL      &kp DOLLAR                                                       &kp AT     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp SEMICOLON      &trans
+&trans  &kp PERCENT  &kp QUESTION    &kp STAR     &kp PLUS       &kp BACKSLASH  &trans  &trans  &trans    &trans  &trans  &trans  &kp SLASH  &kp MINUS             &kp LESS_THAN          &kp GREATER_THAN  &kp DOUBLE_QUOTES  &trans
+&trans  &trans       &trans          &trans       &trans                        &trans  &trans  &trans    &trans  &trans  &trans             &trans                &trans                 &trans            &trans             &trans
 >;};
 layer_Magic {
             bindings = <
