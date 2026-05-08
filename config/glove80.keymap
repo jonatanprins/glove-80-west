@@ -166,7 +166,7 @@
                 timeout-ms = <75>;
                 require-prior-idle-ms = <(-1)>;
             
-         layers = <0 3>;};
+         layers = <0 2>;};
 
             tab {
                 bindings = <&kp TAB>;
@@ -174,7 +174,7 @@
                 timeout-ms = <75>;
                 require-prior-idle-ms = <100>;
             
-         layers = <0 3>;};
+         layers = <0 2>;};
 
             slash {
                 bindings = <&kp SLASH>;
@@ -182,7 +182,7 @@
                 timeout-ms = <75>;
                 require-prior-idle-ms = <(-1)>;
             
-         layers = <0 3>;};
+         layers = <0 2>;};
         };
 
 		al_caps_word: al_caps_word {
@@ -403,6 +403,8 @@ behaviors {};
 behaviors {};
 
 behaviors {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
@@ -411,7 +413,7 @@ keymap {
 &trans          &kp F1                &kp F2        &kp F3                  &kp F4                                                                                                                    &trans                    &trans                    &trans           &trans                        &trans
 &none           &kp N1                &kp N2        &kp LC(C)               &kp N4                   &kp N5                                                                                   &kp N6  &kp N7                    &kp LC(A)                 &kp N9           &kp N0                        &none
 &kp TAB         &kp Q                 &kp W         &kp F                   &kp P                    &kp B                                                                                    &kp J   &kp L                     &kp U                     &kp Y            &kp SEMI                      &forwardslash
-&kp BACKSPACE   &left_hmr LEFT_ALT A  &left_mt 8 R  &left_hmr LEFT_SHIFT S  &left_mt 7 T             &kp G                                                                                    &kp M   &right_mt 5 N             &right_hmr RIGHT_SHIFT E  &right_mt 8 I    &right_hmr LEFT_ALT O         &kp MINUS
+&kp BACKSPACE   &left_hmr LEFT_ALT A  &left_mt 8 R  &left_hmr LEFT_SHIFT S  &left_mt 7 T             &kp G                                                                                    &kp M   &right_mt 6 N             &right_hmr RIGHT_SHIFT E  &right_mt 8 I    &right_hmr LEFT_ALT O         &kp MINUS
 &kp UNDERSCORE  &left_hmr LGUI Z      &kp X         &kp C                   &left_hmr_short LCTRL D  &kp V   &morph_caps  &kp LCTRL   &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &morph_caps  &kp K   &right_hmr_short RCTRL H  &kp COMMA                 &right_mt 6 DOT  &right_hmr RGUI SINGLE_QUOTE  &kp LS(SEMI)
 &mo 10          &none                 &none         &none                   &none                            &repeat_key  &morph_esc  &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE            &none                     &none                     &none            &none                         &none
 >;
@@ -426,15 +428,6 @@ gallium {
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans  &trans     &trans   &trans            &trans
 >;
         };
-caps_word {
-         bindings = <
-&trans  &trans                    &trans            &trans                      &trans                                                                                         &trans                  &trans                        &trans             &trans                     &trans
-&trans  &trans                    &trans            &trans                      &trans                 &trans                                                       &trans     &trans                  &trans                        &trans             &trans                     &trans
-&trans  &kp LS(Q)                 &kp LS(W)         &kp LS(F)                   &kp LS(P)              &kp LS(B)                                                    &kp LS(J)  &kp LS(L)               &kp LS(U)                     &kp LS(Y)          &trans                     &trans
-&trans  &left_hmr LEFT_ALT LS(A)  &left_mt 8 LS(R)  &left_hmr LEFT_SHIFT LS(S)  &left_mt 7 LS(T)       &kp LS(G)                                                    &kp LS(M)  &right_mt 5 LS(N)       &right_hmr RIGHT_SHIFT LS(E)  &right_mt 8 LS(I)  &right_hmr LEFT_ALT LS(O)  &trans
-&trans  &kp LS(Z)                 &kp LS(X)         &kp LS(C)                   &left_hmr RCTRL LS(D)  &kp LS(V)  &trans  &trans  &trans    &trans  &trans  &trans  &kp LS(K)  &right_hmr RCTRL LS(H)  &trans                        &trans             &trans                     &trans
-&trans  &trans                    &trans            &trans                      &trans                            &trans  &trans  &trans    &trans  &trans  &trans             &trans                  &trans                        &trans             &trans                     &trans
->;};
 shelzuuz_toggle {
          bindings = <
 &trans  &trans  &trans        &trans  &trans                                                                    &trans  &trans  &trans         &trans  &trans
@@ -454,6 +447,15 @@ no_repeat {
 &trans    &trans  &trans  &trans  &trans          &kp BACKSPACE  &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
 >;
         };
+caps_word {
+         bindings = <
+&trans  &trans                    &trans            &trans                      &trans                                                                                         &trans                  &trans                        &trans             &trans                     &trans
+&trans  &trans                    &trans            &trans                      &trans                 &trans                                                       &trans     &trans                  &trans                        &trans             &trans                     &trans
+&trans  &kp LS(Q)                 &kp LS(W)         &kp LS(F)                   &kp LS(P)              &kp LS(B)                                                    &kp LS(J)  &kp LS(L)               &kp LS(U)                     &kp LS(Y)          &trans                     &trans
+&trans  &left_hmr LEFT_ALT LS(A)  &left_mt 8 LS(R)  &left_hmr LEFT_SHIFT LS(S)  &left_mt 7 LS(T)       &kp LS(G)                                                    &kp LS(M)  &right_mt 6 LS(N)       &right_hmr RIGHT_SHIFT LS(E)  &right_mt 8 LS(I)  &right_hmr LEFT_ALT LS(O)  &trans
+&trans  &kp LS(Z)                 &kp LS(X)         &kp LS(C)                   &left_hmr RCTRL LS(D)  &kp LS(V)  &trans  &trans  &trans    &trans  &trans  &trans  &kp LS(K)  &right_hmr RCTRL LS(H)  &trans                        &trans             &trans                     &trans
+&trans  &trans                    &trans            &trans                      &trans                            &trans  &trans  &trans    &trans  &trans  &trans             &trans                  &trans                        &trans             &trans                     &trans
+>;};
 number {
             bindings = <
 &trans  &trans     &trans  &trans  &trans                                                                           &trans  &trans     &trans     &trans        &trans
@@ -509,7 +511,7 @@ layer_Magic {
 &none        &none            &none            &none            &none            &none                                                               &none  &none   &none   &none  &none   &none
 &none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                     &none  &tog 1  &none   &none  &none   &none
 &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                     &none  &none   &none   &none  &none   &bootloader
-&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &tog 4  &tog 3  &none  &trans  &sys_reset
+&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &tog 3  &tog 2  &none  &trans  &sys_reset
 &none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB    &none  &none  &none         &none   &none   &none  &none   &none
 >;
         };
