@@ -427,6 +427,8 @@ behaviors {};
 behaviors {};
 
 behaviors {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
@@ -500,12 +502,12 @@ window {
         };
 nav {
             bindings = <
-&trans  &trans        &trans     &trans          &trans                                                                      &trans            &trans             &trans     &trans      &trans
-&trans  &trans        &trans     &trans          &trans  &trans                                                    &trans    &trans            &trans             &trans     &trans      &trans
-&trans  &trans        &trans     &trans          &trans  &trans                                                    &kp HOME  &kp PAGE_DOWN     &kp PG_UP          &kp LC(Y)  &kp END     &trans
-&trans  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &none   &trans                                                    &kp LEFT  &kp DOWN          &kp UP_ARROW       &kp RIGHT  &kp DELETE  &trans
-&trans  &kp LCMD      &trans     &kp LC(C)       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &trans     &trans      &trans
-&trans  &trans        &trans     &trans          &trans          &trans  &trans  &trans    &trans  &trans  &trans            &trans            &trans             &trans     &trans      &trans
+&trans  &trans        &trans     &trans          &trans                                                                      &trans         &trans         &trans     &trans      &trans
+&trans  &trans        &trans     &trans          &trans  &trans                                                    &trans    &trans         &trans         &trans     &trans      &trans
+&trans  &trans        &trans     &trans          &trans  &trans                                                    &kp HOME  &kp PAGE_DOWN  &kp PG_UP      &kp LC(Y)  &kp END     &trans
+&trans  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &none   &trans                                                    &kp LEFT  &kp DOWN       &kp UP_ARROW   &kp RIGHT  &kp DELETE  &trans
+&trans  &kp LCMD      &trans     &kp LC(C)       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &kp LC(LEFT)   &kp LC(RIGHT)  &trans     &trans      &trans
+&trans  &trans        &trans     &trans          &trans          &trans  &trans  &trans    &trans  &trans  &trans            &trans         &trans         &trans     &trans      &trans
 >;
         };
 pascal {
