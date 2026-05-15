@@ -178,7 +178,7 @@
 
             slash {
                 bindings = <&kp SLASH>;
-                key-positions = <49 37>;
+                key-positions = <>;
                 timeout-ms = <100>;
             
          layers = <0 1 2>;};c-c {
@@ -188,8 +188,18 @@
          require-prior-idle-ms = <150>;
          layers = <0 2 1>;};underscore {
          bindings = <&kp UNDERSCORE>;
-         key-positions = <50 38>;
+         key-positions = <>;
          timeout-ms = <100>;
+         layers = <0 1 2>;};return {
+         bindings = <&kp ENTER>;
+         key-positions = <61 60>;
+         timeout-ms = <80>;
+         require-prior-idle-ms = <150>;
+         layers = <0 1 2>;};backspace {
+         bindings = <&kp BACKSPACE>;
+         key-positions = <30 31>;
+         timeout-ms = <80>;
+         require-prior-idle-ms = <150>;
          layers = <0 1 2>;};
         };
 
@@ -401,6 +411,8 @@
 
 / {
 
+
+behaviors {};
 
 behaviors {};
 
