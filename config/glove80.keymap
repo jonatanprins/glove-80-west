@@ -405,7 +405,33 @@
             bindings = <&kp SLASH>, <&kp BACKSLASH>;
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;};
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;};dot_questionmark: dot_questionmark {
+      compatible = "zmk,behavior-mod-morph";
+    
+         label = "DOT_QUESTIONMARK";
+         bindings = <&kp DOT>, <&kp QUESTION>;
+         #binding-cells = <0>;
+         mods = <(MOD_LSFT|MOD_RSFT)>;};comma_excl: comma_excl {
+      compatible = "zmk,behavior-mod-morph";
+    
+         label = "COMMA_EXCL";
+         bindings = <&kp COMMA>, <&kp EXCL>;
+         #binding-cells = <0>;
+         mods = <(MOD_LSFT|MOD_RSFT)>;};slash_backslash: slash_backslash {
+      compatible = "zmk,behavior-mod-morph";
+    
+         label = "SLASH_BACKSLASH";
+         bindings = <&kp SLASH>, <&kp BACKSLASH>;
+         #binding-cells = <0>;
+         mods = <(MOD_LSFT|MOD_RCTL)>;};right_mt_dot: right_mt_dot {
+      compatible = "zmk,behavior-hold-tap";
+    
+         label = "RIGHT_MT_DOT";
+         bindings = <&mo>, <&dot_questionmark>;
+         #binding-cells = <2>;
+         tapping-term-ms = <500>;
+         flavor = "balanced";
+         hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46 10 11 12 13 14 15 52 69 70 46 47 64 65 66 67 68>;};
     };
 };
 
@@ -441,17 +467,19 @@ behaviors {};
 behaviors {};
 
 behaviors {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
         colemakdh {
             bindings = <
-&trans          &kp F1                &kp F2        &kp F3                  &kp F4                                                                                                              &trans              &trans                    &trans           &trans                        &trans
-&none           &kp N1                &kp N2        &kp LC(C)               &kp N4             &kp N5                                                                                   &kp N6  &kp N7              &kp LC(A)                 &kp N9           &kp N0                        &none
-&kp TAB         &kp Q                 &kp W         &kp F                   &kp P              &kp B                                                                                    &kp J   &kp L               &kp U                     &kp Y            &kp SEMI                      &forwardslash
-&kp BACKSPACE   &left_hmr LEFT_ALT A  &left_mt 8 R  &left_hmr LEFT_SHIFT S  &left_mt 7 T       &kp G                                                                                    &kp M   &right_mt 5 N       &right_hmr RIGHT_SHIFT E  &right_mt 8 I    &right_hmr LEFT_ALT O         &kp MINUS
-&kp UNDERSCORE  &left_hmr LGUI Z      &kp X         &kp C                   &left_hmr LCTRL D  &kp V   &morph_caps  &kp LCTRL   &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &morph_caps  &kp K   &right_hmr RCTRL H  &kp COMMA                 &right_mt 6 DOT  &right_hmr RGUI SINGLE_QUOTE  &kp LS(SEMI)
-&mo 10          &none                 &none         &none                   &none                      &repeat_key  &morph_esc  &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE            &none               &none                     &none            &none                         &none
+&trans          &kp F1                &kp F2        &kp F3                  &kp F4                                                                                                              &trans              &trans                    &trans             &trans                        &trans
+&none           &kp N1                &kp N2        &kp LC(C)               &kp N4             &kp N5                                                                                   &kp N6  &kp N7              &kp LC(A)                 &kp N9             &kp N0                        &none
+&kp TAB         &kp Q                 &kp W         &kp F                   &kp P              &kp B                                                                                    &kp J   &kp L               &kp U                     &kp Y              &kp SEMI                      &forwardslash
+&kp BACKSPACE   &left_hmr LEFT_ALT A  &left_mt 8 R  &left_hmr LEFT_SHIFT S  &left_mt 7 T       &kp G                                                                                    &kp M   &right_mt 5 N       &right_hmr RIGHT_SHIFT E  &right_mt 8 I      &right_hmr LEFT_ALT O         &kp MINUS
+&kp UNDERSCORE  &left_hmr LGUI Z      &kp X         &kp C                   &left_hmr LCTRL D  &kp V   &morph_caps  &kp LCTRL   &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &morph_caps  &kp K   &right_hmr RCTRL H  &comma_excl               &right_mt_dot 6 0  &right_hmr RGUI SINGLE_QUOTE  &kp LS(SEMI)
+&mo 10          &none                 &none         &none                   &none                      &repeat_key  &morph_esc  &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE            &none               &none                     &none              &none                         &none
 >;
         };
 gallium {
@@ -527,7 +555,7 @@ pascal {
 &trans  &trans     &trans         &trans            &trans                                                                                         &trans                &trans                 &trans      &trans         &trans
 &trans  &trans     &trans         &trans            &trans             &trans                                                           &trans     &trans                &trans                 &trans      &trans         &trans
 &trans  &kp GRAVE  &kp LESS_THAN  &kp GT            &kp MINUS          &kp PIPE                                                         &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR  &kp BACKSLASH  &trans
-&trans  &kp EXCL   &kp STAR       &kp SLASH         &kp EQUAL          &kp AMPERSAND                                                    &kp HASH   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI    &kp DQT        &trans
+&trans  &kp EXCL   &kp STAR       &slash_backslash  &kp EQUAL          &kp AMPERSAND                                                    &kp HASH   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI    &kp DQT        &trans
 &trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans  &trans  &trans    &trans  &trans  &trans  &kp AT     &kp COLON             &kp COMMA              &kp DOT     &kp SQT        &trans
 &trans  &trans     &trans         &trans            &trans                            &trans  &trans  &trans    &trans  &trans  &trans             &trans                &trans                 &trans      &trans         &trans
 >;
