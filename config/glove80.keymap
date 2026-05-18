@@ -472,6 +472,8 @@ behaviors {};
 behaviors {};
 
 behaviors {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
@@ -519,7 +521,7 @@ caps_word {
 &trans  &trans                    &trans            &trans                      &trans                                                                                         &trans                  &trans                        &trans             &trans                     &trans
 &trans  &trans                    &trans            &trans                      &trans                 &trans                                                       &trans     &trans                  &trans                        &trans             &trans                     &trans
 &trans  &kp LS(Q)                 &kp LS(W)         &kp LS(F)                   &kp LS(P)              &kp LS(B)                                                    &kp LS(J)  &kp LS(L)               &kp LS(U)                     &kp LS(Y)          &trans                     &trans
-&trans  &left_hmr LEFT_ALT LS(A)  &left_mt 8 LS(R)  &left_hmr LEFT_SHIFT LS(S)  &left_mt 7 LS(T)       &kp LS(G)                                                    &kp LS(M)  &right_mt 6 LS(N)       &right_hmr RIGHT_SHIFT LS(E)  &right_mt 8 LS(I)  &right_hmr LEFT_ALT LS(O)  &trans
+&trans  &left_hmr LEFT_ALT LS(A)  &left_mt 8 LS(R)  &left_hmr LEFT_SHIFT LS(S)  &left_mt 7 LS(T)       &kp LS(G)                                                    &kp LS(M)  &right_mt 5 LS(N)       &right_hmr RIGHT_SHIFT LS(E)  &right_mt 8 LS(I)  &right_hmr LEFT_ALT LS(O)  &trans
 &trans  &kp LS(Z)                 &kp LS(X)         &kp LS(C)                   &left_hmr RCTRL LS(D)  &kp LS(V)  &trans  &trans  &trans    &trans  &trans  &trans  &kp LS(K)  &right_hmr RCTRL LS(H)  &trans                        &trans             &trans                     &trans
 &trans  &trans                    &trans            &trans                      &trans                            &trans  &trans  &trans    &trans  &trans  &trans             &trans                  &trans                        &trans             &trans                     &trans
 >;};
