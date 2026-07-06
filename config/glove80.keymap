@@ -162,7 +162,7 @@
 
             command {
                 bindings = <&kp ESCAPE>;
-                key-positions = <24 25>;
+                key-positions = <>;
                 timeout-ms = <80>;
                 require-prior-idle-ms = <150>;
             
@@ -183,7 +183,7 @@
             
          layers = <0 1 3>;};c-c {
          bindings = <&kp LC(C)>;
-         key-positions = <48 49>;
+         key-positions = <49 48>;
          timeout-ms = <80>;
          require-prior-idle-ms = <150>;
          layers = <0 3 1>;};underscore {
@@ -196,7 +196,7 @@
          timeout-ms = <80>;
          layers = <0 1 3>;};backspace {
          bindings = <&kp BACKSPACE>;
-         key-positions = <30 31>;
+         key-positions = <>;
          timeout-ms = <80>;
          require-prior-idle-ms = <150>;
          layers = <0 1 3>;};
@@ -446,6 +446,8 @@
 
 / {
 
+
+behaviors {};
 
 behaviors {};
 
