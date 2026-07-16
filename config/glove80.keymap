@@ -344,7 +344,8 @@
             tapping-term-ms = <500>;
             flavor = "balanced";
             hold-trigger-on-release;
-        };
+        
+         require-prior-idle-ms = <80>;};
 
 
         left_hmr: left_hmr {
@@ -357,7 +358,7 @@
 
             tapping-term-ms = <500>;
             flavor = "balanced";
-            require-prior-idle-ms = <80>;
+            require-prior-idle-ms = <135>;
             hold-trigger-on-release;
         };
 
@@ -381,7 +382,7 @@
             tapping-term-ms = <500>;
             flavor = "balanced";
             hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46 10 11 12 13 14 15 52 69 70 46 47 64 65 66 67 68>;
-            require-prior-idle-ms = <80>;
+            require-prior-idle-ms = <135>;
             hold-trigger-on-release;
         };
 
@@ -396,7 +397,8 @@
             flavor = "balanced";
             hold-trigger-key-positions = <27 39 51 50 38 25 26 37 49 48 36 24 23 35 47 34 22 46 10 11 12 13 14 15 52 69 70 46 47 64 65 66 67 68>;
             hold-trigger-on-release;
-        };
+        
+         require-prior-idle-ms = <80>;};
 
         forwardslash: forwardslash {
             compatible = "zmk,behavior-mod-morph";
@@ -518,17 +520,19 @@ behaviors {};
 behaviors {};
 
 behaviors {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
         colemakdh {
             bindings = <
-&trans          &kp F1                &kp F2        &kp F3                  &kp F4                                                                                                                      &trans              &trans                    &trans             &trans                   &trans
-&none           &kp N1                &kp N2        &kp LC(C)               &kp N4             &kp N5                                                                                           &kp N6  &kp N7              &kp LC(A)                 &kp N9             &kp N0                   &none
-&kp TAB         &kp Q                 &kp W         &kp F                   &kp P              &kp B                                                                                            &kp J   &kp L               &kp U                     &kp Y              &kp SINGLE_QUOTE         &forwardslash
-&kp BACKSPACE   &left_hmr LEFT_ALT A  &left_mt 8 R  &left_hmr LEFT_SHIFT S  &left_mt 7 T       &kp G                                                                                            &kp M   &right_mt 5 N       &right_hmr RIGHT_SHIFT E  &right_mt 8 I      &right_hmr LEFT_ALT O    &kp MINUS
-&kp UNDERSCORE  &left_hmr LGUI Z      &kp X         &kp C                   &left_hmr LCTRL D  &kp V   &morph_caps          &kp LCTRL   &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &morph_caps  &kp K   &right_hmr RCTRL H  &comma_excl               &right_mt_dot 6 0  &right_hmr_slash RGUI 0  &kp LS(SEMI)
-&mo 10          &none                 &none         &none                   &none                      &left_repeat_lt 7 0  &morph_esc  &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE            &none               &none                     &none              &none                    &none
+&trans          &kp F1                &kp F2        &kp F3                  &kp F4                                                                                                                            &trans                    &trans                    &trans             &trans                   &trans
+&none           &kp N1                &kp N2        &kp LC(C)               &kp N4                   &kp N5                                                                                           &kp N6  &kp N7                    &kp LC(A)                 &kp N9             &kp N0                   &none
+&kp TAB         &kp Q                 &kp W         &kp F                   &kp P                    &kp B                                                                                            &kp J   &kp L                     &kp U                     &kp Y              &kp SINGLE_QUOTE         &forwardslash
+&kp BACKSPACE   &left_hmr LEFT_ALT A  &left_mt 8 R  &left_hmr LEFT_SHIFT S  &left_mt 7 T             &kp G                                                                                            &kp M   &right_mt 5 N             &right_hmr RIGHT_SHIFT E  &right_mt 8 I      &right_hmr LEFT_ALT O    &kp MINUS
+&kp UNDERSCORE  &left_hmr LGUI Z      &kp X         &kp C                   &left_hmr_short LCTRL D  &kp V   &morph_caps          &kp LCTRL   &kp LG(GRAVE)    &kp LGUI      &kp RCTRL   &morph_caps  &kp K   &right_hmr_short RCTRL H  &comma_excl               &right_mt_dot 6 0  &right_hmr_slash RGUI 0  &kp LS(SEMI)
+&mo 10          &none                 &none         &none                   &none                            &left_repeat_lt 7 0  &morph_esc  &kp LEFT_ALT     &kp LEFT_ALT  &kp RETURN  &kp SPACE            &none                     &none                     &none              &none                    &none
 >;
         };
 gallium {
