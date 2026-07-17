@@ -522,6 +522,8 @@ behaviors {};
 behaviors {};
 
 behaviors {};
+
+behaviors {};
 keymap {
         compatible = "zmk,keymap";
 
@@ -607,7 +609,7 @@ pascal {
             bindings = <
 &trans  &trans     &trans         &trans            &trans                                                                                         &trans                &trans                 &trans      &trans            &trans
 &trans  &trans     &trans         &trans            &trans             &trans                                                           &trans     &trans                &trans                 &trans      &trans            &trans
-&trans  &kp GRAVE  &kp LESS_THAN  &kp GT            &kp MINUS          &kp PIPE                                                         &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR  &kp SINGLE_QUOTE  &trans
+&trans  &kp GRAVE  &kp LESS_THAN  &kp GT            &kp MINUS          &kp PIPE                                                         &kp CARET  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp DOLLAR  &kp SINGLE_QUOTE  &trans
 &trans  &kp EXCL   &kp STAR       &slash_backslash  &kp EQUAL          &kp AMPERSAND                                                    &kp HASH   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI    &kp DQT           &trans
 &trans  &kp TILDE  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans  &trans  &trans    &trans  &trans  &trans  &kp AT     &kp COLON             &kp COMMA              &kp DOT     &trans            &trans
 &trans  &trans     &trans         &trans            &trans                            &trans  &trans  &trans    &trans  &trans  &trans             &trans                &trans                 &trans      &trans            &trans
